@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+    body{
+        font-family: "DanaFaNum";
+    }
+}
+:root {
+  --primary: #748FAA;
+  --primary-50: #E3F1FF;
+  --primary-100: #CCE2F7;
+  --primary-200: #AECFEF;
+  --primary-300: #A1C2E2;
+  --primary-400: #91B0CE;
+  --primary-500: #82A0BF;
+  --primary-600: #748FAA;
+  --primary-700: #617D9A;
+  --primary-800: #516E8C;
+  --primary-900: #445E87;
+  --primary-950: #354969;
+
+  --secondary: #3F2F12;
+  --secondary-50: #EBE6DB;
+  --secondary-100: #C9BFB1;
+  --secondary-200: #A39583;
+  --secondary-300: #7C6D56;
+  --secondary-400: #625136;
+  --secondary-500: #483617;
+  --secondary-600: #3F2F12;
+  --secondary-700: #332409;
+  --secondary-800: #281800;
+  --secondary-900: #1D120E;
+  --secondary-950: #160E0B;
+
+
+  ---icon: url("");
+  --menu-icon: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M32 32H16C15.448 32 15 31.553 15 31C15 30.447 15.448 30 16 30H32C32.552 30 33 30.447 33 31C33 31.553 32.552 32 32 32Z' fill='%23284E65'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M32 18H16C15.448 18 15 17.553 15 17C15 16.447 15.448 16 16 16H32C32.552 16 33 16.447 33 17C33 17.553 32.552 18 32 18Z' fill='%23284E65'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M32 25H16C15.448 25 15 24.553 15 24C15 23.447 15.448 23 16 23H32C32.552 23 33 23.447 33 24C33 24.553 32.552 25 32 25Z' fill='%23284E65'/%3E%3C/svg%3E");
+ 
+  
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "DanaFaNum";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/DanaFaNum-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-display: swap;
+  font-family: "DanaFaNum";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./fonts/DanaFaNum-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-display: swap;
+  font-family: "DanaFaNum";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./fonts/DanaFaNum-Bold.ttf") format("truetype");
+}
