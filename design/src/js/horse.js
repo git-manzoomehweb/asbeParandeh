@@ -24,11 +24,11 @@ if (window.innerWidth >= 1024) {
 
 document.addEventListener("DOMContentLoaded", function () {
   const toggleDropdowns = document.querySelectorAll(".toggle-dropdown"); 
-  const dropdownIcon = document.querySelector(".dropdown-icon"); 
+  const dropdownIcons = document.querySelectorAll(".dropdown-icon"); 
 
-  toggleDropdowns.forEach(toggle => {
+  toggleDropdowns.forEach((toggle, index) => {
       const submenu = toggle.nextElementSibling; 
-
+      const dropdownIcon = dropdownIcons[index]
       
       toggle.addEventListener("click", function () {
         dropdownIcon.classList.toggle("rotate-180")

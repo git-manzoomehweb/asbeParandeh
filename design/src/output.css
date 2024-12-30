@@ -558,6 +558,40 @@ body{
   font-family: "DanaFaNum";
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
 .visible {
   visibility: visible;
 }
@@ -582,12 +616,16 @@ body{
   inset: 0px;
 }
 
-.right-\[5\%\] {
-  right: 5%;
+.top-0 {
+  top: 0px;
 }
 
 .top-full {
   top: 100%;
+}
+
+.z-10 {
+  z-index: 10;
 }
 
 .z-30 {
@@ -599,12 +637,32 @@ body{
   margin-right: auto;
 }
 
-.mt-6 {
-  margin-top: 1.5rem;
+.-mb-16 {
+  margin-bottom: -4rem;
+}
+
+.-mt-32 {
+  margin-top: -8rem;
+}
+
+.-mt-52 {
+  margin-top: -13rem;
 }
 
 .mb-3 {
   margin-bottom: 0.75rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .block {
@@ -623,6 +681,10 @@ body{
   height: 72px;
 }
 
+.h-\[745px\] {
+  height: 745px;
+}
+
 .h-full {
   height: 100%;
 }
@@ -637,6 +699,10 @@ body{
 
 .w-\[90\%\] {
   width: 90%;
+}
+
+.w-\[95\%\] {
+  width: 95%;
 }
 
 .w-full {
@@ -728,6 +794,11 @@ body{
   border-bottom-left-radius: 1.5rem;
 }
 
+.rounded-t-\[30px\] {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
 .border {
   border-width: 1px;
 }
@@ -755,6 +826,11 @@ body{
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-3 {
@@ -798,12 +874,21 @@ body{
   padding-top: 0.5rem;
 }
 
+.pt-20 {
+  padding-top: 5rem;
+}
+
 .text-center {
   text-align: center;
 }
 
 .text-justify {
   text-align: justify;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-sm {
@@ -819,18 +904,9 @@ body{
   font-weight: 500;
 }
 
-.text-primary-800 {
-  color: var(--primary-800);
-}
-
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.text-zinc-700 {
-  --tw-text-opacity: 1;
-  color: rgb(63 63 70 / var(--tw-text-opacity, 1));
 }
 
 .text-zinc-900 {
@@ -929,21 +1005,6 @@ body{
   src: url("./fonts/DanaFaNum-Bold.ttf") format("truetype");
 }
 
-.after\:content-bedIcon::after {
-  --tw-content: var(--bed-icon);
-  content: var(--tw-content);
-}
-
-.after\:content-imageIcon::after {
-  --tw-content: var(--image-icon);
-  content: var(--tw-content);
-}
-
-.after\:content-messageHeart::after {
-  --tw-content: var(--message-heart);
-  content: var(--tw-content);
-}
-
 .hover\:scale-105:hover {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
@@ -954,14 +1015,6 @@ body{
   --tw-scale-x: .9;
   --tw-scale-y: .9;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.hover\:bg-primary-100:hover {
-  background-color: var(--primary-100);
-}
-
-.hover\:bg-primary-50:hover {
-  background-color: var(--primary-50);
 }
 
 .hover\:bg-secondary-600:hover {
@@ -996,16 +1049,12 @@ body{
 }
 
 @media not all and (min-width: 1024px) {
+  .max-lg\:w-\[85\%\] {
+    width: 85%;
+  }
+
   .max-lg\:w-\[90\%\] {
     width: 90%;
-  }
-
-  .max-lg\:w-\[\] {
-    width: ;
-  }
-
-  .max-lg\:w-\[90\] {
-    width: 90;
   }
 }
 
@@ -1055,6 +1104,10 @@ body{
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
+  .lg\:items-center {
+    align-items: center;
+  }
+
   .lg\:overflow-auto {
     overflow: auto;
   }
@@ -1063,8 +1116,26 @@ body{
     border-radius: 0.25rem;
   }
 
+  .lg\:rounded-\[100px\] {
+    border-radius: 100px;
+  }
+
   .lg\:rounded-none {
     border-radius: 0px;
+  }
+
+  .lg\:p-6 {
+    padding: 1.5rem;
+  }
+
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .lg\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .lg\:opacity-0 {
