@@ -303,7 +303,7 @@
                                   class="searchList shadow-lg w-full hidden float-right text-sm absolute z-30 clear-both top-20 bg-white rounded-lg right-0 text-right leading-6">
                                   <div class="relative border-b border-neutralcolor-300 mb-2"><input type="text"
                                       aria-label="cities" placeholder="مبدا" oninput="city_search(this)" data-type="1"
-                                      class="country form-search-input font-danaregular pr-8 h-10 rounded-lg text-right w-95per m-auto my-2 block"
+                                      class="country form-search-input font-danaregular outline-none pr-8 h-10 rounded-lg text-right w-95per m-auto my-2 block"
                                       autocomplete="off" value="" />
                                     <div class="before:content-ariplaneIconSB absolute right-0 -top-1 ">
                                     </div>
@@ -311,8 +311,8 @@
                                       class="fas fa-spinner fa-spin not-italic"></i></span>
                                   <div class="countryFlight"></div>
                                   <div class="flex justify-between w-95per mx-auto ul-list">
-                                    <ul class="dir-rtl font-danaregular w-1/2">
-                                      <li class="bg-neutral-100 text-neutralcolor-950 text-base p-1 rounded-s-lg">
+                                    <ul class="dir-rtl font-danaregular text-center divide-y divide-primary-100 w-1/2">
+                                      <li class="bg-primary-900 text-white text-base p-1">
                                         <span>داخلی</span>
                                       </li>
                                       <li
@@ -341,8 +341,8 @@
                                         <span>رشت</span>
                                       </li>
                                     </ul>
-                                    <ul class="dir-rtl font-danaregular w-1/2 ">
-                                      <li class="bg-neutral-100 text-neutralcolor-950 text-base p-1 rounded-e-lg">
+                                    <ul class="dir-rtl font-danaregular w-1/2 divide-y divide-primary-100 text-center">
+                                      <li class="bg-primary-900 text-white text-base p-1 ">
                                         <span>خارجی</span>
                                       </li>
                                       <li
@@ -401,8 +401,8 @@
                                       class="fas fa-spinner fa-spin not-italic"></i></span>
                                   <div class="countryFlight"></div>
                                   <div class="flex justify-between w-95per mx-auto ul-list">
-                                    <ul class="dir-rtl font-danaregular w-1/2">
-                                      <li class="bg-neutral-100 text-neutralcolor-950 text-base p-1 rounded-s-lg">
+                                    <ul class="dir-rtl font-danaregular text-center divide-y divide-primary-100 w-1/2">
+                                      <li class="bg-primary-900 text-white text-base p-1">
                                         <span>داخلی</span>
                                       </li>
                                       <li
@@ -431,8 +431,8 @@
                                         <span>رشت</span>
                                       </li>
                                     </ul>
-                                    <ul class="dir-rtl font-danaregular w-1/2 ">
-                                      <li class="bg-neutral-100 text-neutralcolor-950 text-base p-1 rounded-e-lg">
+                                    <ul class="dir-rtl font-danaregular w-1/2 text-center divide-y divide-primary-100 ">
+                                      <li class="bg-primary-900 text-white text-base p-1">
                                         <span>خارجی</span>
                                       </li>
                                       <li
@@ -513,37 +513,56 @@
                               <div
                                 class="CountPassenger hidden font-danamedium absolute max-md:w-full my-auto inset-x-0 max-h-64 overflow-auto bg-white shadow-md p-2.5 text-xs z-20 top-20 rounded-lg ">
                                 <div
-                                  class="before:content-userIconSB flex justify-start items-center text-base font-danaregular border-b mb-4 leading-3">
+                                  class="before:content-userIconSB flex justify-start items-center text-base font-danaregular border-b mb-4">
                                   مسافران </div>
                                 <div class="item-Count Passenger-content contentRooms">
-                                  <div class="item-CountPassenger mb-4 flex justify-between">
+                                  <div class="item-CountPassenger mb-4 gap-2 flex flex-col justify-between">
                                     <div class="first-part-CountPassenger text-secondary w-1/2">
                                       بزرگسال<span class="mr-1">(+12)</span></div>
-                                    <div class="second-part-CountPassenger flex justify-between w-1/2 items-center ">
+                                    <div class="second-part-CountPassenger flex justify-between items-center ">
                                       <div class="passenger-button plus-minus"><span
-                                          class="plus-btn w-7 h-7 leading-38px bg-white border-neutralcolor-300 border hover:border-primary-600 rounded-2xl text-center cursor-pointer inline-block text-4xl font-danaregular ">+</span>
+                                          class="plus-btn flex items-center justify-center w-12 h-12 p-2 font-medium text-center cursor-pointer rounded-xl bg-primary-900 hover:scale-105 ">
+                                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 19C11.4477 19 11 18.5523 11 18L11 13L6 13C5.4477 13 5 12.5523 5 12C5 11.4477 5.4477 11 6 11L11 11L11 6C11 5.4477 11.4477 5 12 5C12.5523 5 13 5.4477 13 6L13 11L18 11C18.5523 11 19 11.4477 19 12C19 12.5523 18.5523 13 18 13L13 13L13 18C13 18.5523 12.5523 19 12 19Z" fill="white"/>
+                                            </svg>
+                                            
+                                        </span>
                                       </div>
                                       <div class="passenger-button text-base"><input type="text" name="adult"
                                           class="adult adult-count text-center w-full leading-6" readonly value="1">
                                       </div>
-                                      <div class="passenger-button plus-minus"><span
-                                          class="minus-btn w-7 h-7 leading-38px bg-white border-neutralcolor-300 border hover:border-primary-600 rounded-2xl text-center cursor-pointer inline-block text-4xl font-danaregular">-</span>
+                                      <div class="passenger-button plus-minus">
+                                        <span
+                                          class="minus-btn flex items-center justify-center w-12 h-12 p-2 font-medium text-center cursor-pointer rounded-xl bg-primary-900 hover:scale-105 ">
+                                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 11.0001C12.5523 11.0001 12.5 11 13 11H18C18.5523 11 19 11.4477 19 12C19 12.5523 18.5523 13 18 13H13C12.5 13 12.5523 13 12 13C11.4477 13 11.5 13 11 13L6 13C5.44772 13 5 12.5523 5 12C5 11.4477 5.44772 11 6 11H11C11.5 11 11.4477 11.0001 12 11.0001Z" fill="white"/>
+                                            </svg>                                              
+                                            
+                                        </span>
                                       </div>
                                     </div>
                                     <div class="clr"></div>
                                   </div>
                                   <div class="item-CountPassenger mb-4 ">
-                                    <div class="flex justify-between items-center">
+                                    <div class="flex justify-between flex-col gap-2">
                                       <div class="first-part-CountPassenger text-secondary w-1/2">
                                         کودک<span class="mr-1">(-11)</span></div>
-                                      <div class="second-part-CountPassenger flex justify-between w-1/2 items-center">
+                                      <div class="second-part-CountPassenger flex justify-between items-center">
                                         <div class="passenger-button plus-minus-ch"><span
-                                            class="plus-btn w-7 h-7 leading-38px bg-white border-neutralcolor-300 border hover:border-primary-600 rounded-2xl text-center cursor-pointer inline-block text-4xl font-danaregular ">+</span>
+                                            class="plus-btn flex items-center justify-center w-12 h-12 p-2 font-medium text-center cursor-pointer rounded-xl bg-primary-900 hover:scale-105 ">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 19C11.4477 19 11 18.5523 11 18L11 13L6 13C5.4477 13 5 12.5523 5 12C5 11.4477 5.4477 11 6 11L11 11L11 6C11 5.4477 11.4477 5 12 5C12.5523 5 13 5.4477 13 6L13 11L18 11C18.5523 11 19 11.4477 19 12C19 12.5523 18.5523 13 18 13L13 13L13 18C13 18.5523 12.5523 19 12 19Z" fill="white"/>
+                                              </svg>
+                                          </span>
                                         </div>
                                         <div class="passenger-button text-base"><input type="text"
                                             class="child-count text-center w-full leading-6" readonly value="0"></div>
                                         <div class="passenger-button plus-minus-ch"><span
-                                            class="minus-btn w-7 h-7 leading-38px bg-white border-neutralcolor-300 border hover:border-primary-600 rounded-2xl text-center cursor-pointer inline-block text-4xl font-danaregular">-</span>
+                                            class="minus-btn flex items-center justify-center w-12 h-12 p-2 font-medium text-center cursor-pointer rounded-xl bg-primary-900 hover:scale-105 ">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 11.0001C12.5523 11.0001 12.5 11 13 11H18C18.5523 11 19 11.4477 19 12C19 12.5523 18.5523 13 18 13H13C12.5 13 12.5523 13 12 13C11.4477 13 11.5 13 11 13L6 13C5.44772 13 5 12.5523 5 12C5 11.4477 5.44772 11 6 11H11C11.5 11 11.4477 11.0001 12 11.0001Z" fill="white"/>
+                                              </svg>
+                                          </span>
                                         </div>
                                       </div>
                                     </div><input type="hidden" value class="child" name="child">
@@ -554,7 +573,7 @@
                                     <div class="clr"></div>
                                   </div>
                                 </div><button type="button"
-                                  class="confirm w-full text-center bg-primary-600 text-neutralcolor-950 rounded-2xl py-2 hover:bg-primary-800 ">تایید
+                                  class="confirm w-full text-center flex items-center justify-center bg-primary-900 hover:bg-primary-700 h-10 text-white rounded-xl">تایید
                                 </button>
                               </div>
                             </div>
@@ -605,8 +624,8 @@
                                           aria-label="spinner"><i class="fas fa-spinner fa-spin not-italic"></i></span>
                                         <div class="countryFlight"></div>
                                         <div class="flex justify-between w-95per mx-auto ul-list">
-                                          <ul class="dir-rtl font-danaregular w-1/2">
-                                            <li class="bg-neutral-100 text-neutralcolor-950 text-base p-1 rounded-s-lg">
+                                          <ul class="dir-rtl font-danaregular w-1/2 text-center divide-y divide-primary-100">
+                                            <li class="bg-primary-900 text-white text-base p-1 ">
                                               <span>داخلی</span>
                                             </li>
                                             <li
@@ -635,8 +654,8 @@
                                               <span>رشت</span>
                                             </li>
                                           </ul>
-                                          <ul class="dir-rtl font-danaregular w-1/2 ">
-                                            <li class="bg-neutral-100 text-neutralcolor-950 text-base p-1 rounded-e-lg">
+                                          <ul class="dir-rtl font-danaregular w-1/2 text-center divide-y divide-primary-100">
+                                            <li class="bg-primary-900 text-white text-base p-1">
                                               <span>خارجی</span>
                                             </li>
                                             <li
@@ -688,7 +707,7 @@
                                         <div class="relative border-b border-neutralcolor-300 mb-2">
                                           <input type="text" aria-label="cities" placeholder="مقصد"
                                             oninput="city_search(this)" data-type="1"
-                                            class="country form-search-input font-danaregular pr-8 h-10 rounded-lg text-right w-95per m-auto my-2 block"
+                                            class="country form-search-input outline-none font-danaregular pr-8 h-10 rounded-lg text-right w-95per m-auto my-2 block"
                                             autocomplete="off" value="" />
                                           <div class="before:content-ariplaneIconSB absolute right-0 -top-1 ">
                                           </div>
@@ -696,8 +715,8 @@
                                           aria-label="spinner"><i class="fas fa-spinner fa-spin not-italic"></i></span>
                                         <div class="countryFlight"></div>
                                         <div class="flex justify-between w-95per mx-auto ul-list">
-                                          <ul class="dir-rtl font-danaregular w-1/2">
-                                            <li class="bg-neutral-100 text-neutralcolor-950 text-base p-1 rounded-s-lg">
+                                          <ul class="dir-rtl font-danaregular w-1/2 text-center divide-y divide-primary-100">
+                                            <li class="bg-primary-900 text-white text-base p-1">
                                               <span>داخلی</span>
                                             </li>
                                             <li
@@ -726,8 +745,8 @@
                                               <span>رشت</span>
                                             </li>
                                           </ul>
-                                          <ul class="dir-rtl font-danaregular w-1/2 ">
-                                            <li class="bg-neutral-100 text-neutralcolor-950 text-base p-1 rounded-e-lg">
+                                          <ul class="dir-rtl font-danaregular w-1/2 text-center divide-y divide-primary-100">
+                                            <li class="bg-primary-900 text-white text-base p-1">
                                               <span>خارجی</span>
                                             </li>
                                             <li
@@ -782,7 +801,7 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="route-content w-full pb-4 " data-index="2">
+                              <div class="route-content w-full pb-2 " data-index="2">
                                 <div
                                   class="multi-route-tlt text-zinc-900 font-danaregular text-base dir-rtl text-right pl-4 py-2 inline-block ">
                                   مقصد دوم </div>
@@ -812,8 +831,8 @@
                                           aria-label="spinner"><i class="fas fa-spinner fa-spin not-italic"></i></span>
                                         <div class="countryFlight"></div>
                                         <div class="flex justify-between w-95per mx-auto ul-list">
-                                          <ul class="dir-rtl font-danaregular w-1/2">
-                                            <li class="bg-neutral-100 text-neutralcolor-950 text-base p-1 rounded-s-lg">
+                                          <ul class="dir-rtl font-danaregular w-1/2 text-center divide-y divide-primary-100">
+                                            <li class="bg-primary-900 text-white text-base p-1 ">
                                               <span>داخلی</span>
                                             </li>
                                             <li
@@ -842,8 +861,8 @@
                                               <span>رشت</span>
                                             </li>
                                           </ul>
-                                          <ul class="dir-rtl font-danaregular w-1/2 ">
-                                            <li class="bg-neutral-100 text-neutralcolor-950 text-base p-1 rounded-e-lg">
+                                          <ul class="dir-rtl font-danaregular w-1/2 text-center divide-y divide-primary-100">
+                                            <li class="bg-primary-900 text-white text-base p-1">
                                               <span>خارجی</span>
                                             </li>
                                             <li
@@ -903,8 +922,8 @@
                                           aria-label="spinner"><i class="fas fa-spinner fa-spin not-italic"></i></span>
                                         <div class="countryFlight"></div>
                                         <div class="flex justify-between w-95per mx-auto ul-list">
-                                          <ul class="dir-rtl font-danaregular w-1/2">
-                                            <li class="bg-neutral-100 text-neutralcolor-950 text-base p-1 rounded-s-lg">
+                                          <ul class="dir-rtl font-danaregular w-1/2 text-center divide-y divide-primary-100">
+                                            <li class="bg-primary-900 text-white text-base p-1">
                                               <span>داخلی</span>
                                             </li>
                                             <li
@@ -933,8 +952,8 @@
                                               <span>رشت</span>
                                             </li>
                                           </ul>
-                                          <ul class="dir-rtl font-danaregular w-1/2 ">
-                                            <li class="bg-neutral-100 text-neutralcolor-950 text-base p-1 rounded-e-lg">
+                                          <ul class="dir-rtl font-danaregular w-1/2 text-center divide-y divide-primary-100">
+                                            <li class="bg-primary-900 text-white text-base p-1">
                                               <span>خارجی</span>
                                             </li>
                                             <li
@@ -993,19 +1012,22 @@
                             <div class="clr"></div>
                             <div class="passenger-section-mc w-full flex justify-between mx-auto ">
                               <div
-                                class="passengers-part w-2/5 max-lg:w-full ml-2 contentRooms pt-4 bg-white rounded-lg">
-                                <div class="flex justify-between relative w-full mb-4 ">
+                                class="passengers-part contentRooms relative w-full flex items-center justify-between gap-1 rounded-lg bg-secondary-50 h-[72px] pr-2">
+                                <div class=" ">
+                                  <span class="absolute top-0 right-0 pr-16 py-3">مسافر</span>
                                   <div
-                                    class="w-8 h-12 border-neutral-300 block before:content-userIconSB before:align-[-24px]">
+                                    class="w-8 h-12 border-neutral-300 hidden before:content-userIconSB before:align-[-24px]">
                                   </div>
                                   <div class="w-full h-full">
+                                    <img src="../icons/USER.svg" alt="icon" class="self-start " width="48" height="48" loading="lazy">
                                     <div
-                                      class="cursor-pointer passenger_section bg-transparent z-[1] w-full h-full absolute top-0 right-0 left-0 bottom-0 pr-12 flex items-center "
-                                      onclick="show_passengers(this)"><span
-                                        class="count-passengers text-black pl-3 font-danaregular text-base "><span
-                                          class="count ml-2 font-danaregular text-base">1
-                                        </span><span class="ml-2 text-base">مسافر</span></span><span
-                                        class="class-select pl-1 text-black text-base font-danaregular">اکونومی</span>
+                                      class="cursor-pointer passenger_section bg-transparent z-[1] w-full h-full absolute top-0 right-0 left-0 bottom-0 pr-10 flex items-center "
+                                      onclick="show_passengers(this)">
+                                      <span
+                                        class="count-passengers pr-6 pt-6 "><span
+                                          class="count ml-1 font-danaregular text-primary-800">1
+                                        </span><span class="ml-2 text-base text-primary-800">بزرگسال</span></span><span
+                                        class="class-select pl-1 hidden text-black text-base font-danaregular">اکونومی</span>
                                     </div>
                                   </div>
                                   <div
@@ -1061,18 +1083,20 @@
                                 </div>
                               </div>
                             </div>
-                            <div class="btns-part flex justify-between w-full gap-2 mt-5">
-                              <section class="section-submit-btn dir-ltr w-1/2 "><button
-                                  class="route-plus-btn form_search-btn w-48 text-center text-neutralcolor-500 bg-neutralcolor-200 rounded-27px hover:bg-primary-600 hover:text-neutralcolor-950 h-10 text-base font-danaregular flex px-2 items-center"
-                                  type="button" onclick="addMulticityRoute(this)"><svg width="26" height="26"
-                                    viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="0.5" y="0.500122" width="25" height="25" rx="12.5" stroke="#D4D4D8" />
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                      d="M14 8.00012C14 7.44784 13.5523 7.00012 13 7.00012C12.4477 7.00012 12 7.44784 12 8.00012V12.0001L8 12.0001C7.44772 12.0001 7 12.4478 7 13.0001C7 13.5524 7.44772 14.0001 8 14.0001L12 14.0001V18.0001C12 18.5524 12.4477 19.0001 13 19.0001C13.5523 19.0001 14 18.5524 14 18.0001V14.0001L18 14.0001C18.5523 14.0001 19 13.5524 19 13.0001C19 12.4478 18.5523 12.0001 18 12.0001L14 12.0001V8.00012Z"
-                                      fill="#18181B" />
-                                  </svg><span class="w-full">افزودن مقصد </span></button></section>
-                              <div class=" dir-ltr w-120px flex items-center"><button type="submit" aria-label="search"
-                                  class="w-full text-center text-neutralcolor-950 rounded-27px bg-primary-600 hover:bg-primary-700 h-10 text-base font-danaregular">جستجو
+                            <div class="btns-part flex justify-between flex-col w-full gap-2 mt-2">
+                              <section class="section-submit-btn dir-ltr ">
+                                <button
+                                  class="route-plus-btn form_search-btn rounded-xl w-full h-14 text-center bg-green-200 text-green-600 hover:bg-primary-600 flex px-2 items-center"
+                                  type="button" onclick="addMulticityRoute(this)">
+                                <span class="w-full">افزودن مسیر جدید</span>
+                              </button>
+                              </section>
+                              <div class=" dir-ltr flex items-center"><button type="submit" aria-label="search"
+                                  class="w-full text-center flex items-center justify-center bg-primary-900 hover:bg-primary-700 h-[72px] rounded-xl">
+                                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M23.1475 23.4451L27.7142 28M15.5099 4C21.7086 4 26.7332 9.02463 26.7332 15.2233C26.7332 21.4221 21.7086 26.448 15.5099 26.448C9.31113 26.448 4.2865 21.4221 4.2865 15.2233C4.2865 9.02463 9.31113 4 15.5099 4Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M17.776 8.98761C19.6403 9.55456 21.1141 11.005 21.7121 12.8537" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>     
                                 </button></div>
                             </div>
                           </form>
@@ -1108,8 +1132,8 @@
                                     class="fas fa-spinner fa-spin not-italic"></i></span>
                                 <div class="countryFlight"></div>
                                 <div class="flex justify-between w-95per mx-auto ul-list">
-                                  <ul class=" dir-rtl font-danaregular w-1/2">
-                                    <li class="bg-neutral-100 text-neutralcolor-950 text-base p-1 rounded-s-lg">
+                                  <ul class=" dir-rtl font-danaregular w-1/2 text-center divide-y divide-primary-100">
+                                    <li class="bg-primary-900 text-white text-base p-1 ">
                                       <span>داخلی</span>
                                     </li>
                                     <li
@@ -1133,8 +1157,8 @@
                                       onclick="SelectPlace(this)" data-id="1203561"><span>رشت</span>
                                     </li>
                                   </ul>
-                                  <ul class="dir-rtl font-danaregular w-1/2 ">
-                                    <li class="bg-neutral-100 text-neutralcolor-950 text-base p-1 rounded-e-lg">
+                                  <ul class="dir-rtl font-danaregular w-1/2 text-center divide-y divide-primary-100">
+                                    <li class="bg-primary-900 text-white text-base p-1 ">
                                       <span>خارجی</span>
                                     </li>
                                     <li
@@ -1318,8 +1342,8 @@
                                       class="fas fa-spinner fa-spin not-italic"></i></span>
                                   <div class="countryFlight"></div>
                                   <div class="flex justify-between w-95per mx-auto ul-list">
-                                    <ul class="dir-rtl font-danaregular w-1/2">
-                                      <li class="bg-neutral-100 text-neutralcolor-950 text-base p-1 rounded-s-lg">
+                                    <ul class="dir-rtl font-danaregular w-1/2 text-center divide-y divide-primary-100">
+                                      <li class="bg-primary-900 text-white text-base p-1">
                                         <span>داخلی</span>
                                       </li>
                                       <li
@@ -1348,8 +1372,8 @@
                                         <span>رشت</span>
                                       </li>
                                     </ul>
-                                    <ul class="dir-rtl font-danaregular w-1/2 ">
-                                      <li class="bg-neutral-100 text-neutralcolor-950 text-base p-1 rounded-e-lg">
+                                    <ul class="dir-rtl font-danaregular w-1/2 text-center divide-y divide-primary-100">
+                                      <li class="bg-primary-900 text-white text-base p-1">
                                         <span>خارجی</span>
                                       </li>
                                       <li
@@ -1410,8 +1434,8 @@
                                       class="fas fa-spinner fa-spin not-italic"></i></span>
                                   <div class="countryFlight"></div>
                                   <div class="flex justify-between w-95per mx-auto ul-list">
-                                    <ul class="dir-rtl font-danaregular w-1/2">
-                                      <li class="bg-neutral-100 text-neutralcolor-950 text-base p-1 rounded-s-lg">
+                                    <ul class="dir-rtl font-danaregular w-1/2 text-center divide-y divide-primary-100">
+                                      <li class="bg-primary-900 text-white text-base p-1">
                                         <span>داخلی</span>
                                       </li>
                                       <li
@@ -1440,8 +1464,8 @@
                                         <span>رشت</span>
                                       </li>
                                     </ul>
-                                    <ul class="dir-rtl font-danaregular w-1/2 ">
-                                      <li class="bg-neutral-100 text-neutralcolor-950 text-base p-1 rounded-e-lg">
+                                    <ul class="dir-rtl font-danaregular w-1/2 text-center divide-y divide-primary-100">
+                                      <li class="bg-primary-900 text-white text-base p-1">
                                         <span>خارجی</span>
                                       </li>
                                       <li

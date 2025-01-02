@@ -1132,6 +1132,23 @@ body {
   border-color: rgb(244 244 245 / var(--tw-divide-opacity, 1));
 }
 
+.divide-primary-200 > :not([hidden]) ~ :not([hidden]) {
+  border-color: var(--primary-200);
+}
+
+.divide-secondary-200 > :not([hidden]) ~ :not([hidden]) {
+  border-color: var(--secondary-200);
+}
+
+.divide-primary-100 > :not([hidden]) ~ :not([hidden]) {
+  border-color: var(--primary-100);
+}
+
+.divide-purple-200 > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-opacity: 1;
+  border-color: rgb(233 213 255 / var(--tw-divide-opacity, 1));
+}
+
 .self-start {
   align-self: flex-start;
 }
@@ -1288,6 +1305,11 @@ body {
   border-color: rgb(212 212 216 / var(--tw-border-opacity, 1));
 }
 
+.bg-green-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(187 247 208 / var(--tw-bg-opacity, 1));
+}
+
 .bg-neutral-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(245 245 245 / var(--tw-bg-opacity, 1));
@@ -1332,6 +1354,18 @@ body {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.bg-primary-200 {
+  background-color: var(--primary-200);
+}
+
+.bg-primary-800 {
+  background-color: var(--primary-800);
+}
+
+.bg-secondary-300 {
+  background-color: var(--secondary-300);
 }
 
 .bg-gradient-to-b {
@@ -1535,6 +1569,10 @@ body {
   padding-top: 1.5rem;
 }
 
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1615,9 +1653,9 @@ body {
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
 
-.text-gray-700 {
+.text-green-600 {
   --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity, 1));
+  color: rgb(22 163 74 / var(--tw-text-opacity, 1));
 }
 
 .text-neutral-500 {
@@ -1937,10 +1975,6 @@ body {
 
   .max-lg\:w-\[90\%\] {
     width: 90%;
-  }
-
-  .max-lg\:w-full {
-    width: 100%;
   }
 }
 
