@@ -235,41 +235,41 @@ $(document).ready(function () {
     // LoadSelection();
   });
 
-  $("#Insurance").click(function () {
-    if(innerWidth < 1024 && $(".search-engine-content").hasClass("hidden")){
-      $(".search-engine-content").removeClass("hidden")
-    }
-    $("#flight-type-items").hide();
-    $(".nav-module").each(function () {
-      var checknav = $(this).attr("data-nav");
-      if (checknav == "insurance") {
-        $(this).addClass("nav-module-selected");
-      } else {
-        $(this).removeClass("nav-module-selected");
-      }
-    });
-    sessionStorage.setItem("pageName", "insurance");
-    LoadInsurane();
+  // $("#Insurance").click(function () {
+  //   if(innerWidth < 1024 && $(".search-engine-content").hasClass("hidden")){
+  //     $(".search-engine-content").removeClass("hidden")
+  //   }
+  //   $("#flight-type-items").hide();
+  //   $(".nav-module").each(function () {
+  //     var checknav = $(this).attr("data-nav");
+  //     if (checknav == "insurance") {
+  //       $(this).addClass("nav-module-selected");
+  //     } else {
+  //       $(this).removeClass("nav-module-selected");
+  //     }
+  //   });
+  //   sessionStorage.setItem("pageName", "insurance");
+  //   LoadInsurane();
     // LoadSelection();
-  });
+  // });
 
-  $("#Train").click(function () {
-    if(innerWidth < 1024 && $(".search-engine-content").hasClass("hidden")){
-      $(".search-engine-content").removeClass("hidden")
-    }
-    $("#flight-type-items").hide();
-    $(".nav-module").each(function () {
-      var checknav = $(this).attr("data-nav");
-      if (checknav == "train") {
-        $(this).addClass("nav-module-selected");
-      } else {
-        $(this).removeClass("nav-module-selected");
-      }
-    });
-    sessionStorage.setItem("pageName", "train");
-    LoadTrain();
+  // $("#Train").click(function () {
+  //   if(innerWidth < 1024 && $(".search-engine-content").hasClass("hidden")){
+  //     $(".search-engine-content").removeClass("hidden")
+  //   }
+  //   $("#flight-type-items").hide();
+  //   $(".nav-module").each(function () {
+  //     var checknav = $(this).attr("data-nav");
+  //     if (checknav == "train") {
+  //       $(this).addClass("nav-module-selected");
+  //     } else {
+  //       $(this).removeClass("nav-module-selected");
+  //     }
+  //   });
+  //   sessionStorage.setItem("pageName", "train");
+  //   LoadTrain();
     // LoadSelection();
-  });
+  // });
 });
 
 // let searchbg = document.getElementById("banner-sb").classList
