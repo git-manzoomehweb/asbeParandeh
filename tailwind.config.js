@@ -3,17 +3,9 @@ module.exports = {
   content: ["./design/src/**/*.{html,js}"],
   theme: {
     extend: {
-      backgroundImage:{
-        "tourlist-back": "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);"
-        
-      },
       content:{
         menuIcon: "var(--menu-icon)",
-        messageHeart: "var(--message-heart)",
-        bedIcon: "var(--bed-icon)",
-        imageIcon: "var(--image-icon)",
-        emailFooter: "var(--email-footer)",
-        twitterIcon: "var(--twitter-icon)",
+        exchangeIcon: "var(--exchange-icon)"
       },
       colors: {
         primary: {

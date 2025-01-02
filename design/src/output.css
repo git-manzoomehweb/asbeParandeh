@@ -677,6 +677,22 @@ body {
   top: 100%;
 }
 
+.top-\[33\%\] {
+  top: 33%;
+}
+
+.left-\[13\%\] {
+  left: 13%;
+}
+
+.left-\[6\%\] {
+  left: 6%;
+}
+
+.top-\[55\%\] {
+  top: 55%;
+}
+
 .-z-10 {
   z-index: -10;
 }
@@ -849,6 +865,10 @@ body {
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .hidden {
   display: none;
 }
@@ -863,6 +883,10 @@ body {
 
 .h-12 {
   height: 3rem;
+}
+
+.h-14 {
+  height: 3.5rem;
 }
 
 .h-16 {
@@ -889,6 +913,10 @@ body {
   height: 387px;
 }
 
+.h-\[54px\] {
+  height: 54px;
+}
+
 .h-\[578px\] {
   height: 578px;
 }
@@ -899,6 +927,14 @@ body {
 
 .h-full {
   height: 100%;
+}
+
+.h-\[800\] {
+  height: 800;
+}
+
+.h-\[800px\] {
+  height: 800px;
 }
 
 .max-h-0 {
@@ -1025,6 +1061,10 @@ body {
   cursor: pointer;
 }
 
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -1077,9 +1117,8 @@ body {
   gap: 2rem;
 }
 
-.gap-x-8 {
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
+.gap-3 {
+  gap: 0.75rem;
 }
 
 .gap-y-7 {
@@ -1115,6 +1154,10 @@ body {
 .divide-zinc-100 > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-opacity: 1;
   border-color: rgb(244 244 245 / var(--tw-divide-opacity, 1));
+}
+
+.self-start {
+  align-self: flex-start;
 }
 
 .self-center {
@@ -1167,6 +1210,10 @@ body {
 
 .rounded-xl {
   border-radius: 0.75rem;
+}
+
+.rounded-3xl {
+  border-radius: 1.5rem;
 }
 
 .rounded-b-3xl {
@@ -1303,6 +1350,10 @@ body {
   background-color: var(--special-2);
 }
 
+.bg-specialcolor-3 {
+  background-color: var(--special-3);
+}
+
 .bg-transparent {
   background-color: transparent;
 }
@@ -1310,6 +1361,11 @@ body {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.bg-zinc-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(82 82 91 / var(--tw-bg-opacity, 1));
 }
 
 .bg-gradient-to-b {
@@ -1385,6 +1441,11 @@ body {
   padding-right: 1rem;
 }
 
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -1413,6 +1474,11 @@ body {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .pb-1 {
@@ -1467,6 +1533,14 @@ body {
   padding-right: 3rem;
 }
 
+.pr-16 {
+  padding-right: 4rem;
+}
+
+.pr-2 {
+  padding-right: 0.5rem;
+}
+
 .pr-4 {
   padding-right: 1rem;
 }
@@ -1483,12 +1557,20 @@ body {
   padding-top: 0.5rem;
 }
 
+.pt-3 {
+  padding-top: 0.75rem;
+}
+
 .pt-4 {
   padding-top: 1rem;
 }
 
 .pt-6 {
   padding-top: 1.5rem;
+}
+
+.pr-6 {
+  padding-right: 1.5rem;
 }
 
 .text-center {
@@ -1618,6 +1700,10 @@ body {
   color: rgb(24 24 27 / var(--tw-text-opacity, 1));
 }
 
+.text-secondary-900 {
+  color: var(--secondary-900);
+}
+
 .placeholder-neutral-800::-moz-placeholder {
   --tw-placeholder-opacity: 1;
   color: rgb(38 38 38 / var(--tw-placeholder-opacity, 1));
@@ -1644,6 +1730,11 @@ body {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
 .blur {
   --tw-blur: blur(8px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -1651,6 +1742,12 @@ body {
 
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.backdrop-blur-lg {
+  --tw-backdrop-blur: blur(16px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .backdrop-blur-sm {
@@ -1701,9 +1798,11 @@ body {
   --secondary-900: #1d120e;
   --secondary-950: #160e0b;
   --special-1: #00000080;
-  --special-2: #FFFFFF33;
+  --special-2: #ffffff33;
+  --special-3: #ffffff80;
   ---icon: url("");
   --menu-icon: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M32 32H16C15.448 32 15 31.553 15 31C15 30.447 15.448 30 16 30H32C32.552 30 33 30.447 33 31C33 31.553 32.552 32 32 32Z' fill='%23284E65'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M32 18H16C15.448 18 15 17.553 15 17C15 16.447 15.448 16 16 16H32C32.552 16 33 16.447 33 17C33 17.553 32.552 18 32 18Z' fill='%23284E65'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M32 25H16C15.448 25 15 24.553 15 24C15 23.447 15.448 23 16 23H32C32.552 23 33 23.447 33 24C33 24.553 32.552 25 32 25Z' fill='%23284E65'/%3E%3C/svg%3E");
+  --exchange-icon: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='47' height='47' rx='11.5' fill='%23EBE6DB'/%3E%3Crect x='0.5' y='0.5' width='47' height='47' rx='11.5' stroke='%237C6D56'/%3E%3Cpath d='M32.5 17.5C32.7761 17.5 33 17.2761 33 17C33 16.7239 32.7761 16.5 32.5 16.5L32.5 17.5ZM14.1464 16.6464C13.9512 16.8417 13.9512 17.1583 14.1464 17.3536L17.3284 20.5355C17.5237 20.7308 17.8403 20.7308 18.0355 20.5355C18.2308 20.3403 18.2308 20.0237 18.0355 19.8284L15.2071 17L18.0355 14.1716C18.2308 13.9763 18.2308 13.6597 18.0355 13.4645C17.8403 13.2692 17.5237 13.2692 17.3284 13.4645L14.1464 16.6464ZM32.5 16.5L14.5 16.5L14.5 17.5L32.5 17.5L32.5 16.5Z' fill='%23445E87'/%3E%3Cpath d='M14.5 30.5C14.2239 30.5 14 30.7239 14 31C14 31.2761 14.2239 31.5 14.5 31.5V30.5ZM32.8536 31.3536C33.0488 31.1583 33.0488 30.8417 32.8536 30.6464L29.6716 27.4645C29.4763 27.2692 29.1597 27.2692 28.9645 27.4645C28.7692 27.6597 28.7692 27.9763 28.9645 28.1716L31.7929 31L28.9645 33.8284C28.7692 34.0237 28.7692 34.3403 28.9645 34.5355C29.1597 34.7308 29.4763 34.7308 29.6716 34.5355L32.8536 31.3536ZM14.5 31.5H32.5V30.5H14.5V31.5Z' fill='%23445E87'/%3E%3C/svg%3E");
 }
 
 @font-face {
@@ -1748,6 +1847,14 @@ body {
   }
 }
 
+.placeholder\:text-primary-800::-moz-placeholder {
+  color: var(--primary-800);
+}
+
+.placeholder\:text-primary-800::placeholder {
+  color: var(--primary-800);
+}
+
 .before\:align-\[-24px\]::before {
   content: var(--tw-content);
   vertical-align: -24px;
@@ -1756,6 +1863,11 @@ body {
 .before\:align-\[-30px\]::before {
   content: var(--tw-content);
   vertical-align: -30px;
+}
+
+.before\:content-exchangeIcon::before {
+  --tw-content: var(--exchange-icon);
+  content: var(--tw-content);
 }
 
 .hover\:scale-105:hover {
@@ -1880,9 +1992,13 @@ body {
   }
 }
 
-@media not all and (min-width: 640px) {
-  .max-sm\:w-full {
-    width: 100%;
+@media (min-width: 640px) {
+  .sm\:left-\[7\%\] {
+    left: 7%;
+  }
+
+  .sm\:left-\[3\%\] {
+    left: 3%;
   }
 }
 

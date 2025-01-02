@@ -207,25 +207,37 @@
         <img src="../images/man-with-backpack-road 1.png" alt="man-with-backpack-road"
           class="absolute bottom-0 left-0 right-0 mx-auto" width="288" height="354" loading="lazy" />
 
-        <div class="absolute top-[60%] left-0 right-0 h-[1132px] bg-gray-500">
+        <div class="absolute top-[55%] left-0 right-0">
           <div class="search-box search-box-container bg-neutralcolor-50 rounded-10px min-h-44 p-5">
             <nav class="search-nav h-72px mb-6 ">
-              <ul class="dir-rtl text-right gap-x-8 h-10 w-full border-b border-neutralcolor-200">
+              <ul class="dir-rtl text-right grid grid-cols-2 gap-2 w-full ">
                 <li id="Flight" data-id="item-Flight" onclick="check_searchHistory('flight')"
-                  class="text-base font-danaregular text-neutralcolor-900 hover:text-secondary-700 inline-block h-10 w-fit max-sm:w-full rounded-10px px-4 text-center cursor-pointer ">
-                  <span class=" leading-72px">پرواز </span>
+                  class="text-base font-danaregular rounded-[32px] flex items-center justify-center w-full h-[54px] bg-primary-900 text-neutralcolor-900 hover:text-secondary-700 cursor-pointer ">
+                  <span class="flex items-center text-white">
+                    <img src="../icons/flight.svg" alt="flight-icon">
+                    پرواز
+                  </span>
                 </li>
                 <li id="Hotel" data-id="item-Hotel" onclick="check_searchHistory('hotel')"
-                  class="text-base font-danaregular text-neutralcolor-900 hover:text-secondary-700 inline-block h-10 w-fit max-sm:w-full rounded-10px px-4 text-center cursor-pointer ">
-                  <span class=" leading-72px">هتل </span>
+                  class="text-base font-danaregular rounded-[32px] border border-solid border-white flex items-center justify-center w-full h-[54px] bg-specialcolor-3 backdrop-blur-lg hover:text-secondary-700 cursor-pointer ">
+                  <span class="flex items-center">
+                    <img src="../icons/hotel.svg" alt="hotel-icon">
+                    هتل
+                  </span>
                 </li>
                 <li id="FlightHotel" data-id="item-FlightHotel" onclick="check_searchHistory('flightHotel')"
-                  class="text-base font-danaregular text-neutralcolor-900 hover:text-secondary-700 inline-block h-10 w-fit max-sm:w-full rounded-10px px-4 text-center cursor-pointer ">
-                  <span class=" leading-72px">پرواز + هتل </span>
+                  class="text-base font-danaregular rounded-[32px] border border-solid border-white flex items-center justify-center w-full h-[54px] bg-specialcolor-3 backdrop-blur-lg hover:text-secondary-700 cursor-pointer ">
+                  <span class="flex items-center">
+                    <img src="../icons/flight+hotel.svg" alt="hotel-flight">
+                    هتل + پرواز
+                  </span>
                 </li>
                 <li id="Tour" data-id="item-Tour" onclick="check_searchHistory('tour')"
-                  class="text-base font-danaregular text-neutralcolor-900 hover:text-secondary-700 inline-block h-10 w-fit max-sm:w-full rounded-10px px-4 text-center cursor-pointer ">
-                  <span class=" leading-72px">تور </span>
+                  class="text-base font-danaregular rounded-[32px] border border-solid border-white flex items-center justify-center w-full h-[54px] bg-specialcolor-3 backdrop-blur-lg hover:text-secondary-700 cursor-pointer ">
+                  <span class="flex items-center">
+                    <img src="../icons/tour.svg" alt="tour-icon">
+                    تور
+                  </span>
                 </li>
               </ul>
             </nav>
@@ -235,11 +247,12 @@
                   <div class="px-0">
                     <div id="item-Flight">
                       <div class="flight-engine">
-                        <div>
-                          <nav id="flight-type-items"
-                            class=" text-right rounded-[32px] w-full border border-secondary-300 border-solid bg-secondary-50 px-2 ml-2"><select
+                        <div class="bg-white rounded-3xl">
+                          <div class="py-3 px-2 flex flex-col gap-3">
+                            <nav id="flight-type-items"
+                            class=" text-right h-14 flex items-center rounded-[32px] w-full border border-secondary-300 border-solid bg-secondary-50 px-5"><select
                               onchange="setFlightType(this)" id="Flight-FlighttypeClass" name="FlighttypeClass"
-                              class="FlighttypeClass flighttype-class ul-drop-items h-12 bg-transparent w-full">
+                              class="FlighttypeClass outline-none flighttype-class ul-drop-items h-12 bg-transparent w-full">
                               <option id="oneway"
                                 onclick="document.getElementById('flight-form').action='/Tem3_Oneway_Search.bc';"
                                 class="p-2 rounded-t cursor-pointer hover:bg-primary hover:text-white font-danaregular"
@@ -252,8 +265,8 @@
                                 class="p-2 rounded-t cursor-pointer hover:bg-primary hover:text-white font-danaregular"
                                 value="multicity">چند مسیره</option>
                             </select></nav>
-                          <nav class="text-right rounded-[32px] w-full border border-secondary-300 border-solid bg-secondary-50 px-2 ml-2"><select
-                              id="selectflightclass" onchange="setFlightClass(this)" class="h-12 bg-transparent w-full">
+                          <nav class="text-right h-14 flex items-center rounded-[32px] w-full border border-secondary-300 border-solid bg-secondary-50 px-5"><select
+                              id="selectflightclass" onchange="setFlightClass(this)" class="h-12 outline-none bg-transparent w-full">
                               <option
                                 class="p-2 rounded-t cursor-pointer hover:bg-primary hover:text-white font-danaregular"
                                 data-cy="Economy" value="Economy">اکونومی</option>
@@ -264,20 +277,26 @@
                                 class="p-2 rounded-t cursor-pointer hover:bg-primary hover:text-white font-danaregular"
                                 data-cy="First" value="FirstClass">فرست</option>
                             </select></nav>
+                          </div>
                           <form id="flight-form" method="get" action="/Tem3_Oneway_Search.bc" data-form="flight"
                             onsubmit="form_search_isSubmited(this,event)" data-flightType="1" autocomplete="off"
-                            class="form-search text-gray flex flex-col justify-between h-76px mt-5 gap-2"><input type="hidden"
-                              name="persiancurrent" class="persiancurrent" value /><input type="hidden"
-                              name="select-age" class="select-age-value" value="0" /><input type="hidden"
-                              name="FlightClass" class="FlightClass select-flight-class" value="Economy" />
-                            <div class="flex flex-col justify-between gap-1 items-center">
-                              <div class="city relative w-full h-full rounded-2xl">
-                                <div class="relative flex items-center h-full bg-white rounded-lg">
-                                  <div class="w-12 h-12 block before:content-ariplaneIconSB"></div>
-                                  <div class=" w-40 h-full"><input id="dep1" type="text" onclick="empty_value(this)"
+                            class="form-search text-gray flex flex-col justify-between py-6 px-4 gap-2">
+                            <input type="hidden"
+                              name="persiancurrent" class="persiancurrent" value />
+                              <input type="hidden"
+                              name="select-age" class="select-age-value" value="0" />
+                              <input type="hidden" name="FlightClass" class="FlightClass select-flight-class" value="Economy" />
+                            <div class="relative flex flex-col items-center justify-between w-full gap-2 ">
+                              <div class="relative city rounded-2xl h-[72px] w-full">
+                                <div class="relative flex flex-col items-center h-full rounded-lg bg-secondary-50 pr-2">
+                                  <div class="w-12 h-12 hidden before:content-ariplaneIconSB"></div>
+                                  <img src="../icons/Frame 1261157095.svg" alt="icon" class="self-start pt-3 " width="48" height="48" loading="lazy">
+                                  <label for="" class="absolute right-0 pr-16 py-3 z-10">مبدا</label>
+                                  <div class=" w-40 h-full">
+                                    <input id="dep1" type="text" onclick="empty_value(this)"
                                       required autocomplete="off"
-                                      class="placeholder-neutral-800 font-danaregular text-base text-neutralcolor-800 block focus:outline-none w-full cursor-pointer bg-transparent pl-3 h-full overflow-hidden text-ellipsis absolute top-0 right-0 left-0 bottom-0 FCD1 text-value country departure pr-10 "
-                                      value="" placeholder="مبدا" /><input class="co-id FCDid1 from" value=""
+                                      class=" text-value absolute bottom-0 text-primary-800 left-0 right-0 block w-full h-full pr-16 py-3 overflow-hidden text-base cursor-pointer placeholder:text-primary-800 top-3 country font-danaregular bg-transparent focus:outline-none text-ellipsis FCD1 text-value departure "
+                                      value="" placeholder="انتخاب مبدا" /><input class="co-id FCDid1 from" value=""
                                       type="hidden" name="from" /></div>
                                 </div>
                                 <div
@@ -354,22 +373,20 @@
                                     </ul>
                                   </div>
                                 </div>
-                              </div><span class="exchange-icon cursor-pointer leading-56 -mx-5 absolute top-[20%] left-[20%] z-10"><svg
-                                  width="48" height="48" viewBox="0 0 48 48" fill="none"
-                                  xmlns="http://www.w3.org/2000/svg">
-                                  <rect class="hover:fill-primary-600" x="48" width="48" height="48" rx="24"
-                                    transform="rotate(90 48 0)" fill="#36B353" />
-                                  <path
-                                    d="M30.6885 18.9906H21.3302V21.6604H30.6885V25.6511L36 20.3396L30.6885 15V18.9906ZM12 28.3208L17.3396 33.6604V29.6698H26.6698V27H17.3396V23.0094L12 28.3208Z"
-                                    fill="#FAFAFA" />
-                                </svg></span>
-                              <div class="city relative w-full h-full rounded-2xl">
-                                <div class="relative flex items-center h-full bg-white rounded-lg">
-                                  <div class="mr-2 w-12 h-12 block before:content-ariplaneIconSB"></div>
-                                  <div class="w-40 "><input id="des1" type="text"
-                                      class="placeholder-neutral-800 font-danaregular text-base text-neutralcolor-800 block focus:outline-none w-full cursor-pointer bg-transparent pl-3 h-full FCD2 text-value country destination overflow-hidden text-ellipsis absolute top-0 right-0 left-0 bottom-0 pr-12"
+                              </div><span class="exchange-icon cursor-pointer leading-56 absolute top-[33%] left-[6%] z-10">
+                                <div class="before:content-exchangeIcon"></div>
+                              </span>
+                              <div class="relative city rounded-2xl h-[72px] w-full">
+                                <div class="relative flex  items-center h-full rounded-lg bg-secondary-50 pr-2">
+                                  <div class="mr-2 w-12 h-12 before:content-ariplaneIconSB hidden"></div>
+                                  <div class="w-40 h-full">
+                                    <label for="" class="absolute right-0 pr-16 py-3 z-10">مقصد</label>
+                                    <img src="../icons/flight 2.svg" alt="icon" class="self-start pt-3 " width="48" height="48" loading="lazy">
+                                    <input id="des1" type="text"
+                                      class="FCD2 text-value country destination text-primary-800 text-value absolute bottom-0 left-0 right-0 block w-full h-full pr-16 py-3 overflow-hidden text-base cursor-pointer placeholder:text-primary-800 top-3 font-danaregular bg-transparent focus:outline-none text-ellipsis"
                                       value="" onclick="empty_value(this)" required autocomplete="off"
-                                      placeholder="مقصد" data-type="1" /><input class="co-id FCDid2 to" type="hidden"
+                                      placeholder="انتخاب مقصد" data-type="1" />
+                                      <input class="co-id FCDid2 to" type="hidden"
                                       name="to" value="" /></div>
                                 </div>
                                 <div
@@ -449,40 +466,48 @@
                               </div>
                             </div>
                             <div
-                              class=" font-danaregular text-base Basis_Date_Box flex flex-col justify-between gap-2 items-cente">
+                              class=" font-danaregular text-base Basis_Date_Box flex flex-col justify-between gap-2 items-center">
                               <div
-                                class="flex justify-between items-center gap-1 h-full relative bg-white rounded-lg">
-                                <div class="w-8 h-12 block before:content-calendarIconSB before:align-[-30px]">
+                                class="relative w-full flex items-center justify-between gap-1 rounded-lg bg-secondary-50 h-[72px] pr-2">
+                                <div class="w-8 h-12 hidden before:content-calendarIconSB before:align-[-30px]">
                                 </div>
-                                <div class="rounded-2xl w-full"><input type="text"
-                                    class="placeholder-neutral-800 font-danaregular text-base Basis_Date start_date block focus:outline-none w-full cursor-pointer h-full bg-transparent pl-3 overflow-hidden absolute top-0 right-0 left-0 bottom-0 pr-12 text-ellipsis "
+                                <div class="h-full w-full">
+                                  <label for="" class="absolute right-0 pr-16 py-3 z-10">تاریخ رفت</label>
+                                  <img src="../icons/date.svg" alt="icon" class="self-start pt-3 " width="48" height="48" loading="lazy">
+                                  <input type="text"
+                                    class="Basis_Date start_date CD2 text-value absolute bottom-0 left-0 right-0 block w-full h-full pr-16 py-3 overflow-hidden text-base cursor-pointer placeholder:text-primary-800 top-3 font-danaregular bg-transparent focus:outline-none text-ellipsis"
                                     value onclick="Basis_Calendar(this,'[##cms.cms.date##]')" data-lang="fa"
                                     data-active="0" data-cache="0" readonly required name="fdate"
-                                    placeholder="تاریخ رفت" /></div>
+                                    placeholder="" /></div>
                               </div>
                               <div
-                                class="flex justify-between items-center gap-1 h-full relative  bg-white rounded-lg opc-50">
-                                <div class="w-8 h-12 block before:content-calendarIconSB before:align-[-30px]">
+                                class="relative w-full flex items-center justify-between gap-1 rounded-lg bg-secondary-50 h-[72px] pr-2">
+                                <div class="w-8 h-12 hidden before:content-calendarIconSB before:align-[-30px]">
                                 </div>
-                                <div class="rounded-2xl w-full "><input type="text"
-                                    class="Noactive-date placeholder-neutral-800 font-danaregular text-base Basis_Date end_date block focus:outline-none w-full cursor-pointer h-full bg-transparent pl-3 overflow-hidden absolute top-0 right-0 left-0 bottom-0 pr-12 text-ellipsis"
+                                <div class="h-full w-full ">
+                                  <label for="" class="absolute right-0 pr-16 py-3 z-10">تاریخ برگشت</label>
+                                  <img src="../icons/date.svg" alt="icon" class="self-start pt-3 " width="48" height="48" loading="lazy">
+                                  <input type="text"
+                                    class="Noactive-date Basis_Date end_date text-value absolute bottom-0 left-0 right-0 block w-full h-full pr-16 py-3 overflow-hidden text-base cursor-pointer placeholder:text-primary-800 top-3 font-danaregular bg-transparent focus:outline-none text-ellipsis"
                                     value onclick="Basis_Calendar(this,'[##cms.cms.date##]')" data-lang="fa"
-                                    data-active="0" data-cache="0" readonly name="tdate" placeholder="تاریخ برگشت"
+                                    data-active="0" data-cache="0" readonly name="tdate" placeholder=""
                                     disabled /></div>
                               </div>
                             </div>
-                            <div class="flex justify-between items-center relative bg-white rounded-lg">
+                            <div class="relative w-full flex items-center justify-between gap-1 rounded-lg bg-secondary-50 h-[72px] pr-2">
+                              <span class="absolute top-0 right-0 pr-16 py-3">مسافر</span>
                               <div
-                                class="w-8 h-12 border-neutral-300 block before:content-userIconSB before:align-[-24px]">
+                                class="w-8 h-12 border-neutral-300 hidden before:content-userIconSB before:align-[-24px]">
                               </div>
                               <div class="w-full h-full">
+                                <img src="../icons/USER.svg" alt="icon" class="self-start pt-3 " width="48" height="48" loading="lazy">
                                 <div
                                   class="cursor-pointer passenger_section bg-transparent z-[1] w-full h-full absolute top-0 right-0 left-0 bottom-0 pr-10 flex items-center"
                                   onclick="show_passengers(this)"><span
-                                    class="count-passengers text-black pr-1 pl-3 font-danaregular text-base"><span
-                                      class="count ml-2 font-danaregular">1 </span><span
-                                      class="ml-2">مسافر</span></span><span
-                                    class="class-select pl-1 text-black text-base font-danaregular">اکونومی</span>
+                                    class="count-passengers pr-6 pt-6 "><span
+                                      class="count ml-1 font-danaregular text-primary-800">1 </span><span
+                                      class="ml-2 text-primary-800">بزرگسال</span></span><span
+                                    class="class-select pl-1 hidden text-black text-base font-danaregular">اکونومی</span>
                                 </div>
                               </div>
                               <div
@@ -534,7 +559,11 @@
                               </div>
                             </div>
                             <div class=" dir-ltr w-120px flex items-center"><button type="submit" aria-label="search"
-                                class="w-full text-center text-neutralcolor-950 rounded-27px bg-primary-600 hover:bg-primary-700 h-10 text-base font-danaregular">جستجو
+                                class="w-full text-center flex items-center justify-center bg-primary-900 hover:bg-primary-700 h-[72px] rounded-xl">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M23.1475 23.4451L27.7142 28M15.5099 4C21.7086 4 26.7332 9.02463 26.7332 15.2233C26.7332 21.4221 21.7086 26.448 15.5099 26.448C9.31113 26.448 4.2865 21.4221 4.2865 15.2233C4.2865 9.02463 9.31113 4 15.5099 4Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M17.776 8.98761C19.6403 9.55456 21.1141 11.005 21.7121 12.8537" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>                                  
                               </button></div>
                           </form>
                           <form id="multi-flight-form" method="post" action="/Tem3_Multicity_Search.bc"
