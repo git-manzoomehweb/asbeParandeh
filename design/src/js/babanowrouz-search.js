@@ -275,7 +275,7 @@ $(document).ready(function () {
 // let searchbg = document.getElementById("banner-sb").classList
 
 function LoadHotel() {
-  window.changeParentBackground("hotelmodule-bg");
+  // window.changeParentBackground("hotelmodule-bg");
   // $("#banner-sb").addClass('bg-hotelmodule');
   // $("#banner-sb").removeClass('bg-flighthotelmodule');
   // $("#banner-sb").removeClass('bg-flightmodule');
@@ -305,7 +305,7 @@ function LoadHotel() {
   }
 }
 function LoadFlight() {
-  window.changeParentBackground("flightmodule-bg");
+  // window.changeParentBackground("flightmodule-bg");
   // $("#banner-sb").addClass('bg-flightmodule');
   // $("#banner-sb").removeClass('bg-flighthotelmodule');
   // $("#banner-sb").removeClass('bg-hotelmodule');
@@ -336,7 +336,7 @@ function LoadFlight() {
 }
 
 function LoadFlightHotel() {
-  window.changeParentBackground("flighthotelmodule-bg");
+  // window.changeParentBackground("flighthotelmodule-bg");
   // $("#banner-sb").addClass('bg-flighthotelmodule');
   // $("#banner-sb").removeClass('bg-flightmodule');
   // $("#banner-sb").removeClass('bg-hotelmodule');
@@ -366,7 +366,7 @@ function LoadFlightHotel() {
 }
 
 function LoadTour() {
-  window.changeParentBackground("tourmodule-bg");
+  // window.changeParentBackground("tourmodule-bg");
   // $("#banner-sb").addClass('bg-tourmodule');
   // $("#banner-sb").removeClass('bg-flighthotelmodule');
   // $("#banner-sb").removeClass('bg-flightmodule');
@@ -396,7 +396,7 @@ function LoadTour() {
 }
 
 function LoadInsurane() {
-  window.changeParentBackground("insurancemodule-bg");
+  // window.changeParentBackground("insurancemodule-bg");
   // $("#banner-sb").addClass('bg-insurancemodule');
   // $("#banner-sb").removeClass('bg-flighthotelmodule');
   // $("#banner-sb").removeClass('bg-flightmodule');
@@ -425,7 +425,7 @@ function LoadInsurane() {
   }
 }
 function LoadTrain() {
-  window.changeParentBackground("trainmodule-bg");
+  // window.changeParentBackground("trainmodule-bg");
   // $("#banner-sb").addClass('bg-trainmodule');
   // $("#banner-sb").removeClass('bg-flighthotelmodule');
   // $("#banner-sb").removeClass('bg-flightmodule');
@@ -473,7 +473,7 @@ $(document).ready(function () {
       // $(this).find('a').removeAttribute("href");
       sessionStorage.setItem("pageName", navTitle);
     }
-    window.changeParentBackground(`${navTitle}module-bg`);
+    // window.changeParentBackground(`${navTitle}module-bg`);
   });
 
   // $(".default-page-load").click(function () {
@@ -1095,42 +1095,54 @@ $(".confirm").click(function (e) {
   $(this).closest(".CountPassenger").fadeOut();
 });
 $(".plus-minus").on("click", function () {
-  var button = $(this);
+  var button = $(this).find("span"); 
   var oldVal = parseInt(
     button.closest(".item-CountPassenger").find("input").val()
   );
-  var newVal =
-    button.text().indexOf("+") > -1 ? oldVal + 1 : oldVal > 0 ? oldVal - 1 : 0;
+
+  
+  var newVal = button.hasClass("plus-btn") ? oldVal + 1 : oldVal > 0 ? oldVal - 1 : 0;
+
+  
   if (newVal >= 2) {
     button
       .closest(".item-CountPassenger")
       .find(".minus-btn")
       .addClass("minus-btn-active");
-  }
-  if (newVal < 2) {
+  } else {
     button
       .closest(".item-CountPassenger")
       .find(".minus-btn")
       .removeClass("minus-btn-active");
   }
+
+ 
   if (newVal >= 10) return;
   if (newVal < 1) return;
+
+  
   button.closest(".item-CountPassenger").find("input").val(newVal);
+
+  
   var passengers_count =
     parseInt(button.closest("form").find(".child-count").val()) +
     parseInt(newVal);
+  
+
   button
     .closest("form")
     .find(".count-passengers .count")
     .text(passengers_count);
 });
 $(".plus-minus-ch").on("click", function () {
-  var button = $(this);
+  var button = $(this).find("span");
   var oldVal = parseInt(
     button.closest(".item-CountPassenger").find("input").val()
   );
-  var newVal =
-    button.text().indexOf("+") > -1 ? oldVal + 1 : oldVal > 0 ? oldVal - 1 : 0;
+
+ 
+  var newVal = button.hasClass("plus-btn") ? oldVal + 1 : oldVal > 0 ? oldVal - 1 : 0; 
+
   if (newVal >= 1) {
     button
       .closest(".item-CountPassenger")
@@ -1145,6 +1157,7 @@ $(".plus-minus-ch").on("click", function () {
   }
   if (newVal >= 5) return;
   button.closest(".item-CountPassenger").find("input").val(newVal);
+  
   if (newVal == 0) {
     button.closest(".item-CountPassenger").find(".child").val(newVal);
   } else {
@@ -1153,12 +1166,14 @@ $(".plus-minus-ch").on("click", function () {
       .find(".child")
       .val(newVal + ",");
   }
+  
   var passengers_count =
     parseInt(button.closest("form").find(".adult").val()) + parseInt(newVal);
   button
     .closest("form")
     .find(".count-passengers .count")
     .text(passengers_count);
+  
   if (oldVal < newVal) {
     button
       .closest(".item-CountPassenger")
@@ -1173,14 +1188,14 @@ $(".plus-minus-ch").on("click", function () {
 });
 var createChildDropdown = function (i) {
   var $childDropdown = $("<div />", {
-    class: "createChildDropdown flex justify-between",
+    class: "createChildDropdown mt-4 pt-4 flex flex-col gap-2 justify-between",
   });
   $childDropdown.append(
     $("<label />", {
       for: "childDropdown-" + i,
     }).text("سن کودک " + i)
   );
-  $childDropdown.append($("<select class='w-8/12' />"));
+  $childDropdown.append($("<select class='border border-solid border-primary-900 rounded-lg h-12 outline-none' />"));
   var options = [
     "تا 1 سال",
     "1 تا 2  ",
@@ -1314,147 +1329,131 @@ $("#Insurance-form").submit(function (i) {
 ////////<!----- JS  HOTEL/TOUR ---->////////
 
 $(".plus-minus-room").on("click", function () {
-  var button = $(this);
+  var button = $(this).find("span");
   var ad = 0;
-  var oldVal = parseInt(
-    button.closest(".item-CountPassenger").find("input").val()
-  );
-  var newVal =
-    button.text().indexOf("+") > -1 ? oldVal + 1 : oldVal > 0 ? oldVal - 1 : 0;
+  var oldVal = parseInt(button.closest(".item-CountPassenger").find("input.room").val());
+  var newVal = button.hasClass("plus-btn") ? oldVal + 1 : oldVal > 0 ? oldVal - 1 : 0;
+
   if (newVal >= 2) {
-    button
-      .closest(".item-CountPassenger")
-      .find(".minus-btn")
-      .addClass("minus-btn-active");
+      button.closest(".item-CountPassenger").find(".minus-btn").addClass("minus-btn-active");
+  } else {
+      button.closest(".item-CountPassenger").find(".minus-btn").removeClass("minus-btn-active");
   }
-  if (newVal < 2) {
-    button
-      .closest(".item-CountPassenger")
-      .find(".minus-btn")
-      .removeClass("minus-btn-active");
-  }
+
   if (newVal >= 5) return;
   if (newVal < 1) return;
-  button.closest(".item-CountPassenger").find("input").val(newVal);
+
+  button.closest(".item-CountPassenger").find("input.room").val(newVal);
   button.closest("form").find(".count-passengers .count-room").text(newVal);
   button.closest("form").find(".ShowRow").empty();
-  for (i = 1; i <= newVal; i++) {
-    button
-      .closest("form")
-      .find(".ShowRow")
-      .append(
-        '<div class="contentRoom"><div class="RoomRow mb-3">اتاق ' +
-          i +
-          ' </div><div class="item-CountPassenger mb-4"><div class="first-part-CountPassenger text-secondary mb-3">بزرگسال (+12)</div><div class="second-part-CountPassenger flex justify-between"><div class="passenger-button plus-minus"><span class="plus-btn w-7 h-7 leading-36px bg-white border-neutralcolor-300 border hover:border-primary-600 rounded-2xl text-center cursor-pointer inline-block text-4xl font-danaregular">+</span></div><div class="passenger-button text-base"><input type="text" name="_root.rooms__' +
-          i +
-          '.adultcount" class="adult adult-count text-center w-full leading-6"  readonly="" value="2"></div><div class="passenger-button plus-minus"><span class="minus-btn w-7 h-7 leading-36px bg-white border-neutralcolor-300 border hover:border-primary-600 rounded-2xl text-center cursor-pointer inline-block text-4xl font-danaregular">-</span></div></div><div class="clr"></div></div><div class="item-CountPassenger mb-4"><div class="first-part-CountPassenger text-secondary mb-3">کودک (-12)</div><div class="second-part-CountPassenger flex justify-between"><div class="passenger-button plus-minus-ch"><span class="plus-btn w-7 h-7 leading-36px bg-white border-neutralcolor-300 border hover:border-primary-600 rounded-2xl text-center cursor-pointer inline-block text-4xl font-danaregular">+</span></div><div class="passenger-button text-base"><input type="text" class="child-count text-center w-full leading-6"  readonly="" value="0"></div><div class="passenger-button plus-minus-ch"><span class="minus-btn w-7 h-7 leading-36px bg-white border-neutralcolor-300 border hover:border-primary-600 rounded-2xl text-center cursor-pointer inline-block text-4xl font-danaregular">-</span></div></div><input type="hidden" value="0" class="childcountandage" name="_root.rooms__' +
-          i +
-          '.childcountandage"><div class="clr"></div><div class="section-select-age leading-38px divide-y w-full flex-col justify-items-stretch"></div><div class="clr"></div></div></div>'
-      );
-  }
-  button
-    .closest("form")
-    .find(".contentRoom")
-    .each(function () {
+
+  for (var i = 1; i <= newVal; i++) {
+    button.closest("form").find(".ShowRow").append(
+        '<div class="contentRoom border-b border-primary-100 mb-2">' +
+            '<div class="RoomRow mb-3">اتاق ' + i + '</div>' +
+            '<div class="item-CountPassenger mb-4 gap-2 flex flex-col justify-between">' +
+                '<div class="first-part-CountPassenger w-1/2">بزرگسال<span class="mr-1">(+12)</span></div>' +
+                '<div class="second-part-CountPassenger flex justify-between items-center">' +
+                    '<div class="passenger-button plus-minus">' +
+                        '<span class="plus-btn flex items-center justify-center w-12 h-12 p-2 font-medium text-center cursor-pointer rounded-xl bg-primary-900 hover:scale-105">' +
+                            '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+                                '<path fill-rule="evenodd" clip-rule="evenodd" d="M12 19C11.4477 19 11 18.5523 11 18L11 13L6 13C5.4477 13 5 12.5523 5 12C5 11.4477 5.4477 11 6 11L11 11L11 6C11 5.4477 11.4477 5 12 5C12.5523 5 13 5.4477 13 6L13 11L18 11C18.5523 11 19 11.4477 19 12C19 12.5523 18.5523 13 18 13L13 13L13 18C13 18.5523 12.5523 19 12 19Z" fill="white"></path>' +
+                            '</svg>' +
+                        '</span>' +
+                    '</div>' +
+                    '<div class="passenger-button text-base">' +
+                        '<input type="text" name="_root.rooms__' + i + '.adultcount" class="adult adult-count text-center w-full leading-6" readonly value="2">' +
+                    '</div>' +
+                    '<div class="passenger-button plus-minus">' +
+                        '<span class="minus-btn flex items-center justify-center w-12 h-12 p-2 font-medium text-center cursor-pointer rounded-xl bg-primary-900 hover:scale-105">' +
+                            '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+                                '<path fill-rule="evenodd" clip-rule="evenodd" d="M12 11.0001C12.5523 11.0001 12.5 11 13 11H18C18.5523 11 19 11.4477 19 12C19 12.5523 18.5523 13 18 13H13C12.5 13 12.5523 13 12 13C11.4477 13 11.5 13 11 13L6 13C5.44772 13 5 12.5523 5 12C5 11.4477 5.44772 11 6 11H11C11.5 11 11.4477 11.0001 12 11.0001Z" fill="white"></path>' +
+                            '</svg>' +
+                        '</span>' +
+                    '</div>' +
+                '</div>' +
+                '<div class="clr"></div>' +
+            '</div>' +
+            '<div class="item-CountPassenger mb-4">' +
+                '<div class="flex justify-between flex-col gap-2">' +
+                    '<div class="first-part-CountPassenger w-1/2">کودک<span class="mr-1">(-12)</span></div>' +
+                    '<div class="second-part-CountPassenger flex justify-between items-center">' +
+                        '<div class="passenger-button plus-minus-ch">' +
+                            '<span class="plus-btn flex items-center justify-center w-12 h-12 p-2 font-medium text-center cursor-pointer rounded-xl bg-primary-900 hover:scale-105">' +
+                                '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+                                    '<path fill-rule="evenodd" clip-rule="evenodd" d="M12 19C11.4477 19 11 18.5523 11 18L11 13L6 13C5.4477 13 5 12.5523 5 12C5 11.4477 5.4477 11 6 11L11 11L11 6C11 5.4477 11.4477 5 12 5C12.5523 5 13 5.4477 13 6L13 11L18 11C18.5523 11 19 11.4477 19 12C19 12.5523 18.5523 13 18 13L13 13L13 18C13 18.5523 12.5523 19 12 19Z" fill="white"></path>' +
+                                '</svg>' +
+                            '</span>' +
+                        '</div>' +
+                        '<div class="passenger-button text-base">' +
+                            '<input type="text" class="child-count text-center w-full leading-6" readonly value="0">' +
+                        '</div>' +
+                        '<div class="passenger-button plus-minus-ch">' +
+                            '<span class="minus-btn flex items-center justify-center w-12 h-12 p-2 font-medium text-center cursor-pointer rounded-xl bg-primary-900 hover:scale-105">' +
+                                '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+                                    '<path fill-rule="evenodd" clip-rule="evenodd" d="M12 11.0001C12.5523 11.0001 12.5 11 13 11H18C18.5523 11 19 11.4477 19 12C19 12.5523 18.5523 13 18 13H13C12.5 13 12.5523 13 12 13C11.4477 13 11.5 13 11 13L6 13C5.44772 13 5 12.5523 5 12C5 11.4477 5.44772 11 6 11H11C11.5 11 11.4477 11.0001 12 11.0001Z" fill="white"></path>' +
+                                '</svg>' +
+                            '</span>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>' +
+                '<input type="hidden" value="0" class="childcountandage" name="_root.rooms__' + i + '.childcountandage">' +
+                '<div class="clr"></div>' +
+                '<div class="section-select-age leading-38px divide-y w-full flex-col justify-items-stretch"></div>' +
+                '<div class="clr"></div>' +
+            '</div>' +
+        '</div>'
+    );
+}
+  button.closest("form").find(".contentRoom").each(function () {
       var adult = parseInt($(this).find(".adult").val());
       ad += adult;
-      $(this)
-        .find(".plus-minus")
-        .on("click", function () {
+
+      $(this).find(".plus-minus").on("click", function () {
           var sumAdult = 0;
           var sumChild = 0;
-          var button = $(this);
-          var oldVal = parseInt(
-            button.closest(".item-CountPassenger").find("input").val()
-          );
-          var newVal =
-            button.text().indexOf("+") > -1
-              ? oldVal + 1
-              : oldVal > 0
-              ? oldVal - 1
-              : 0;
+          var button = $(this).find("span");
+          var oldVal = parseInt(button.closest(".item-CountPassenger").find("input").val());
+          var newVal = button.hasClass("plus-btn") ? oldVal + 1 : oldVal > 0 ? oldVal - 1 : 0;
+
           if (newVal >= 2) {
-            button
-              .closest(".item-CountPassenger")
-              .find(".minus-btn")
-              .addClass("minus-btn-active");
-          }
-          if (newVal < 2) {
-            button
-              .closest(".item-CountPassenger")
-              .find(".minus-btn")
-              .removeClass("minus-btn-active");
+              button.closest(".item-CountPassenger").find(".minus-btn").addClass("minus-btn-active");
+          } else {
+              button.closest(".item-CountPassenger").find(".minus-btn").removeClass("minus-btn-active");
           }
           if (newVal >= 10) return;
           if (newVal < 1) return;
+
           button.closest(".item-CountPassenger").find("input").val(newVal);
-          button
-            .closest(".CountPassenger")
-            .find(".contentRoom")
-            .each(function () {
+          button.closest(".CountPassenger").find(".contentRoom").each(function () {
               sumAdult += parseInt($(this).find(".adult").val());
               sumChild += parseInt($(this).find(".child-count").val());
-            });
-          button
-            .closest("form")
-            .find(".count-passengers .count")
-            .text(sumAdult + sumChild);
-        });
-      $(this)
-        .find(".plus-minus-ch")
-        .on("click", function () {
+          });
+          button.closest("form").find(".count-passengers .count").text(sumAdult + sumChild);
+      });
+
+      $(this).find(".plus-minus-ch").on("click", function () {
           var sumAdult = 0;
           var sumChild = 0;
-          var button = $(this);
-          var oldVal = parseInt(
-            button.closest(".item-CountPassenger").find("input").val()
-          );
-          var newVal =
-            button.text().indexOf("+") > -1
-              ? oldVal + 1
-              : oldVal > 0
-              ? oldVal - 1
-              : 0;
+          var button = $(this).find("span");
+          var oldVal = parseInt(button.closest(".item-CountPassenger").find("input").val());
+          var newVal = button.hasClass("plus-btn") ? oldVal + 1 : oldVal > 0 ? oldVal - 1 : 0;
+
           if (newVal >= 1) {
-            button
-              .closest(".item-CountPassenger")
-              .find(".minus-btn")
-              .addClass("minus-btn-active");
-          }
-          if (newVal < 1) {
-            button
-              .closest(".item-CountPassenger")
-              .find(".minus-btn")
-              .removeClass("minus-btn-active");
+              button.closest(".item-CountPassenger").find(".minus-btn").addClass("minus-btn-active");
+          } else {
+              button.closest(".item-CountPassenger").find(".minus-btn").removeClass("minus-btn-active");
           }
           if (newVal >= 5) return;
           button.closest(".item-CountPassenger").find("input").val(newVal);
-          button
-            .closest(".CountPassenger")
-            .find(".contentRoom")
-            .each(function () {
+          button.closest(".CountPassenger").find(".contentRoom").each(function () {
               sumAdult += parseInt($(this).find(".adult").val());
               sumChild += parseInt($(this).find(".child-count").val());
-            });
-          button
-            .closest("form")
-            .find(".count-passengers .count")
-            .text(sumAdult + sumChild);
-          if (oldVal < newVal) {
-            button
-              .closest(".item-CountPassenger")
-              .find(".section-select-age")
-              .append(createChildDropdown(newVal));
-          } else if (oldVal > newVal) {
-            destroyChildDropdown(
-              button
-                .closest(".item-CountPassenger")
-                .find(".section-select-age"),
-              newVal
-            );
-          }
-        });
-    });
+          });
+          button.closest("form").find(".count-passengers .count").text(sumAdult + sumChild);
+      });
+  });
+
   button.closest("form").find(".count-passengers .count").text(parseInt(ad));
 });
 ////////<!----- JS  FLIGHT/HOTEL ---->////////
@@ -1591,9 +1590,9 @@ function addMulticityRoute(element) {
     child.innerHTML = appended_element;
 
     if ($(window).width() >= 1024) {
-      child.className = "route-content w-full border-t border-neutral-200 pb-4";
+      child.className = "route-content w-full border-t border-primary-100 pb-4";
     } else {
-      child.className = "route-content w-full border-t border-neutral-200";
+      child.className = "route-content w-full border-t border-primary-100 pb-2";
     }
     child.querySelector(".multi-route-tlt").innerText =
       destination_nth_txt[
@@ -1609,8 +1608,11 @@ function addMulticityRoute(element) {
     child
       .querySelector(".multi-route-tlt")
       .insertAdjacentHTML(
-        "afterend",
-        `<span class="text-white bg-error-400 cursor-pointer hover:bg-error-500 font-danamedium px-1 rounded-md" onclick="deleteMulticityRoute(this)" > حذف مسیر  </span>`
+        "beforeend",
+        `<span class="text-white cursor-pointer hover:bg-error-500 font-danamedium px-1 rounded-md" onclick="deleteMulticityRoute(this)" >  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M24.8129 23.5001L29.7277 18.5853C30.0908 18.2222 30.0908 17.6354 29.7277 17.2723C29.3646 16.9092 28.7778 16.9092 28.4148 17.2723L23.5 22.1871L18.5852 17.2723C18.2222 16.9092 17.6354 16.9092 17.2723 17.2723C16.9092 17.6354 16.9092 18.2222 17.2723 18.5853L22.187 23.5001L17.2723 28.415C16.9092 28.778 16.9092 29.3649 17.2723 29.7279C17.4534 29.909 17.6911 30 17.9288 30C18.1665 30 18.4042 29.909 18.5852 29.7279L23.5 24.8132L28.4148 29.7279C28.5958 29.909 28.8335 30 29.0712 30C29.3089 30 29.5466 29.909 29.7277 29.7279C30.0908 29.3649 30.0908 28.778 29.7277 28.415L24.8129 23.5001Z" fill="#F87171"/>
+</svg>
+  </span>`
       );
 
     if (child.querySelector(".gregorian_date")) {
