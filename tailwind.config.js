@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       content:{
         menuIcon: "var(--menu-icon)",
-        exchangeIcon: "var(--exchange-icon)"
+        exchangeIcon: "var(--exchange-icon)",
       },
       colors: {
         primary: {

@@ -1590,9 +1590,9 @@ function addMulticityRoute(element) {
     child.innerHTML = appended_element;
 
     if ($(window).width() >= 1024) {
-      child.className = "route-content w-full border-t border-primary-100 pb-4";
+      child.className = "w-full pb-4 border-t route-content border-primary-100";
     } else {
-      child.className = "route-content w-full border-t border-primary-100 pb-2";
+      child.className = "w-full pb-2 border-t route-content border-primary-100";
     }
     child.querySelector(".multi-route-tlt").innerText =
       destination_nth_txt[
@@ -1600,6 +1600,9 @@ function addMulticityRoute(element) {
           .querySelector(".route-container")
           .querySelectorAll(".route-content").length
       ];
+console.log( document
+  .querySelector(".route-container")
+  .querySelectorAll(".route-content").length)
 
     child.querySelectorAll("input").forEach((e) => {
       e.value = "";
@@ -1608,7 +1611,7 @@ function addMulticityRoute(element) {
     child
       .querySelector(".multi-route-tlt")
       .insertAdjacentHTML(
-        "beforeend",
+        "afterend",
         `<span class="text-white cursor-pointer hover:bg-error-500 font-danamedium px-1 rounded-md" onclick="deleteMulticityRoute(this)" >  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M24.8129 23.5001L29.7277 18.5853C30.0908 18.2222 30.0908 17.6354 29.7277 17.2723C29.3646 16.9092 28.7778 16.9092 28.4148 17.2723L23.5 22.1871L18.5852 17.2723C18.2222 16.9092 17.6354 16.9092 17.2723 17.2723C16.9092 17.6354 16.9092 18.2222 17.2723 18.5853L22.187 23.5001L17.2723 28.415C16.9092 28.778 16.9092 29.3649 17.2723 29.7279C17.4534 29.909 17.6911 30 17.9288 30C18.1665 30 18.4042 29.909 18.5852 29.7279L23.5 24.8132L28.4148 29.7279C28.5958 29.909 28.8335 30 29.0712 30C29.3089 30 29.5466 29.909 29.7277 29.7279C30.0908 29.3649 30.0908 28.778 29.7277 28.415L24.8129 23.5001Z" fill="#F87171"/>
 </svg>
@@ -1653,6 +1656,7 @@ function deleteMulticityRoute(element) {
     .querySelector("#multi-flight-form")
     .querySelector(".route-container")
     .querySelectorAll(".route-content")
+
     .forEach((e) => {
       e.querySelector(".multi-route-tlt").innerText =
         destination_nth_txt[index];

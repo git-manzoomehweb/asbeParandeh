@@ -11,9 +11,9 @@
 
 <body>
   <header>
-    <section class="bg-white ">
+    <section class="relative z-30 bg-white rounded-b-3xl">
       <div
-        class="flex items-center  justify-between rounded-b-3xl lg:rounded-none mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl">
+        class="flex items-center  justify-between mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl">
         <div class="flex items-center w-full justify-between gap-1 h-[72px] lg:h-24">
           <svg width="48" height="48" class="flex-shrink-0 cursor-pointer bars3 lg:hidden" viewBox="0 0 48 48"
             fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,7 +33,7 @@
             <nav class="hidden h-full lg:flex">
               <ul class="flex items-center gap-8">
                 <li class="relative flex h-full group">
-                  <a href="Hotels" class="flex items-center gap-2 group text-zinc-900 transition-all duration-300 hover:text-secondary-200">تور ها
+                  <a href="Hotels" class="flex items-center gap-2 transition-all duration-300 group text-zinc-900 hover:text-secondary-200">تور ها
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                       class="transition-all duration-300 group-hover:rotate-180">
                       <path fill-rule="evenodd" clip-rule="evenodd"
@@ -44,14 +44,14 @@
                   <!-- submenu -->
                   <ul
                     class="absolute z-30 flex flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-300 bg-white shadow-md opacity-0 rounded-xl top-full group-hover:visible group-hover:opacity-100">
-                    <li class="py-1 rounded-sm"><a href="" class="text-zinc-900 transition-all duration-300 hover:bg-secondary-200">تور شینگن</a></li>
+                    <li class="py-1 rounded-sm"><a href="" class="transition-all duration-300 text-zinc-900 hover:bg-secondary-200">تور شینگن</a></li>
                     <li class="py-1"><a href="">ویزای شینگن</a></li>
                     <li class="py-1"><a href="">ویزای شینگن</a></li>
                   </ul>
                   <!-- submenu end -->
                 </li>
                 <li class="relative flex h-full group">
-                  <a href="" class="flex items-center gap-2 group text-zinc-900 transition-all duration-300 hover:text-secondary-200">ویزا
+                  <a href="" class="flex items-center gap-2 transition-all duration-300 group text-zinc-900 hover:text-secondary-200">ویزا
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                       class="transition-all duration-300 group-hover:rotate-180">
                       <path fill-rule="evenodd" clip-rule="evenodd"
@@ -62,17 +62,17 @@
                   <!-- submenu -->
                   <ul
                     class="absolute z-30 flex flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-300 bg-white shadow-md opacity-0 rounded-xl top-full group-hover:visible group-hover:opacity-100">
-                    <li class="py-1 rounded-md transition-all duration-300 hover:bg-primary-800 group/leveltwo"><a href="" class="text-zinc-900 transition-all duration-300 group-hover/leveltwo:text-white">ویزای شینگن</a></li>
+                    <li class="py-1 transition-all duration-300 rounded-md hover:bg-primary-800 group/leveltwo"><a href="" class="transition-all duration-300 text-zinc-900 group-hover/leveltwo:text-white">ویزای شینگن</a></li>
                     <li class="py-1"><a href="">ویزای شینگن</a></li>
                     <li class="py-1"><a href="">ویزای شینگن</a></li>
                   </ul>
                   <!-- submenu end -->
                 </li>
                 <li class="">
-                  <a href="" class="text-zinc-900 transition-all duration-300 hover:text-secondary-200">مطالب گردشگری</a>
+                  <a href="" class="transition-all duration-300 text-zinc-900 hover:text-secondary-200">مطالب گردشگری</a>
                 </li>
                 <li>
-                  <a href="/Articles" class="text-zinc-900 transition-all duration-300 hover:text-secondary-200">درباره ی ما</a>
+                  <a href="/Articles" class="transition-all duration-300 text-zinc-900 hover:text-secondary-200">درباره ی ما</a>
                 </li>
               </ul>
             </nav>
@@ -220,7 +220,7 @@
         </div>
 
         <a href=""
-          class="flex items-center mt-5 text-sm text-white group transition-all duration-300 hover:text-secondary-200  ">بیشتر
+          class="flex items-center mt-5 text-sm text-white transition-all duration-300 group hover:text-secondary-200 ">بیشتر
           بخوانید
           <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M16.25 24.2739L31.25 24.2739" class="transition-all duration-300 group-hover:stroke-secondary-200"
@@ -235,7 +235,7 @@
           <img src="../images/airplane-footer.png" alt="airplane-footer"
             class="absolute left-0 right-0 mx-auto lg:hidden">
           <img src="../images/airplane-footer-desktop.png" alt="airplane"
-            class="hidden lg:block absolute left-0 right-0 mx-auto">
+            class="absolute left-0 right-0 hidden mx-auto lg:block">
         </div>
 
 
@@ -255,31 +255,31 @@
         <!-- Slider main container -->
         <div class="swiper footer-swiper mb-7 ">
           <!-- Additional required wrapper -->
-          <div class="swiper-wrapper flex justify-between">
+          <div class="flex justify-between swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide flex  items-center justify-center"><img src="../images/airline11 1.png" alt="">
+            <div class="flex items-center justify-center swiper-slide"><img src="../images/airline11 1.png" alt="">
               <span class="flex items-center justify-center mt-4">امارات</span>
             </div>
-            <div class="swiper-slide flex  items-center justify-center">
+            <div class="flex items-center justify-center swiper-slide">
               <img src="../images/airline14 1.png" alt="">
               <span class="flex items-center justify-center mt-4">امارات</span>
             </div>
-            <div class="flex items-center  justify-center swiper-slide"><img src="../images/airline15 1.png" alt="">
+            <div class="flex items-center justify-center swiper-slide"><img src="../images/airline15 1.png" alt="">
               <span class="flex items-center justify-center mt-4">امارات</span>
             </div>
-            <div class="flex items-center  justify-center swiper-slide"><img src="../images/airline16 1.png" alt="">
+            <div class="flex items-center justify-center swiper-slide"><img src="../images/airline16 1.png" alt="">
               <span class="flex items-center justify-center mt-4">امارات</span>
             </div>
-            <div class="flex items-center  justify-center swiper-slide"><img src="../images/airline18 1.png" alt="">
+            <div class="flex items-center justify-center swiper-slide"><img src="../images/airline18 1.png" alt="">
               <span class="flex items-center justify-center mt-4">امارات</span>
             </div>
-            <div class="flex items-center  justify-center swiper-slide"><img src="../images/airline19 1.png" alt="">
+            <div class="flex items-center justify-center swiper-slide"><img src="../images/airline19 1.png" alt="">
               <span class="flex items-center justify-center mt-4">امارات</span>
             </div>
-            <div class="flex items-center  justify-center swiper-slide"><img src="../images/airline28 1.png" alt="">
+            <div class="flex items-center justify-center swiper-slide"><img src="../images/airline28 1.png" alt="">
               <span class="flex items-center justify-center mt-4">امارات</span>
             </div>
-            <div class="flex items-center  justify-center swiper-slide"><img src="../images/airline9 1.png" alt="">
+            <div class="flex items-center justify-center swiper-slide"><img src="../images/airline9 1.png" alt="">
               <span class="flex items-center justify-center mt-4">امارات</span>
             </div>
           </div>
@@ -291,9 +291,9 @@
       <div class="flex flex-col gap-6 pb-6">
         <div class="py-7">
           <div
-            class="flex flex-col gap-6 lg:justify-between  lg:gap-0 lg:flex-row lg:divide-x-2 lg:divide-x-reverse divide-primary-200 ">
+            class="flex flex-col gap-6 lg:justify-between lg:gap-0 lg:flex-row lg:divide-x-2 lg:divide-x-reverse divide-primary-200 ">
             <section class="mt-7 flex flex-col gap-3 lg:mt-0 lg:pl-14 lg:self-center lg:flex-[1.2]">
-              <div class="text-zinc-900 text-sm flex items-center gap-1 border border-primary-200 rounded-xl">
+              <div class="flex items-center gap-1 text-sm border text-zinc-900 border-primary-200 rounded-xl">
                 <svg class="shrink-0" width="48" height="48" viewBox="0 0 48 48" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
@@ -305,7 +305,7 @@
                 </svg>
                 تهران خیابان بهار شمالی کوچه طیبا تهران خیابان بهار شمالی کوچه طیبا
               </div>
-              <div class="text-zinc-900 text-sm flex items-center gap-1 border border-primary-200 rounded-xl">
+              <div class="flex items-center gap-1 text-sm border text-zinc-900 border-primary-200 rounded-xl">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M21.4062 12.8125H27.5937C30.1373 12.8125 32.2062 14.8814 32.2062 17.4239V29.575C32.2062 32.1186 30.1373 34.1875 27.5937 34.1875H21.4062C18.8626 34.1875 16.7937 32.1186 16.7937 29.575V17.4239C16.7937 14.8814 18.8626 12.8125 21.4062 12.8125ZM22.9249 18.3812H26.0749C26.5407 18.3812 26.9187 18.0032 26.9187 17.5375C26.9187 17.0717 26.5407 16.6937 26.0749 16.6937H22.9249C22.4592 16.6937 22.0812 17.0717 22.0812 17.5375C22.0812 18.0032 22.4592 18.3812 22.9249 18.3812ZM23.4312 29.35C23.4312 29.9496 23.9003 30.4187 24.4999 30.4187C25.0051 30.4187 25.5687 29.962 25.5687 29.35C25.5687 28.738 25.0051 28.2812 24.4999 28.2812C23.9959 28.2812 23.4312 28.738 23.4312 29.35Z"
@@ -313,7 +313,7 @@
                 </svg>
                 <a href="" class="transition-all duration-300 hover:text-secondary-200">021-55332244 - 021-55332244</a>
               </div>
-              <div class="text-zinc-900 text-sm flex items-center gap-1 border border-primary-200 rounded-xl">
+              <div class="flex items-center gap-1 text-sm border text-zinc-900 border-primary-200 rounded-xl">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M30.0603 13.375C31.5689 13.375 33.0202 13.9712 34.0878 15.0411C35.1565 16.1087 35.7539 17.5488 35.7539 19.0563V27.9437C35.7539 31.0825 33.2002 33.625 30.0603 33.625H18.9464C15.8065 33.625 13.2539 31.0825 13.2539 27.9437V19.0563C13.2539 15.9175 15.7953 13.375 18.9464 13.375H30.0603ZM31.3327 19.225C31.0964 19.2126 30.8714 19.2925 30.7015 19.45L25.6289 23.5C24.9764 24.0411 24.0415 24.0411 23.3789 23.5L18.3164 19.45C17.9665 19.1913 17.4828 19.225 17.1914 19.5287C16.8877 19.8325 16.8539 20.3162 17.1115 20.6537L17.2589 20.8L22.3777 24.7937C23.0077 25.2887 23.7715 25.5588 24.5714 25.5588C25.369 25.5588 26.1464 25.2887 26.7753 24.7937L31.8502 20.7325L31.9402 20.6425C32.209 20.3162 32.209 19.8438 31.9278 19.5175C31.7714 19.3499 31.5565 19.2475 31.3327 19.225Z"
@@ -325,8 +325,8 @@
 
             <section class="flex items-center justify-between lg:flex-1 lg:px-14">
               <div>
-                <h2 class="text-zinc-900 font-bold mb-4">دسته بندی</h2>
-                <ul class="flex flex-col gap-3 text-zinc-700 text-sm">
+                <h2 class="mb-4 font-bold text-zinc-900">دسته بندی</h2>
+                <ul class="flex flex-col gap-3 text-sm text-zinc-700">
                   <li class="transition-all duration-300 hover:text-secondary-200">پرواز</li>
                   <li class="transition-all duration-300 hover:text-secondary-200">هتل</li>
                   <li class="transition-all duration-300 hover:text-secondary-200">تور</li>
@@ -335,8 +335,8 @@
               </div>
 
               <div>
-                <h2 class="text-zinc-900 font-bold mb-4">مـیـانـبـر</h2>
-                <ul class="flex flex-col gap-3 text-zinc-700 text-sm">
+                <h2 class="mb-4 font-bold text-zinc-900">مـیـانـبـر</h2>
+                <ul class="flex flex-col gap-3 text-sm text-zinc-700">
                   <li class="transition-all duration-300 hover:text-secondary-200"><a href="">وبلاگ</a></li>
                   <li class="transition-all duration-300 hover:text-secondary-200">پیشنهاد ویژه</li>
                   <li class="transition-all duration-300 hover:text-secondary-200">درباره اسب پرنده</li>
@@ -345,8 +345,8 @@
               </div>
 
               <div>
-                <h2 class="text-zinc-900 font-bold mb-4">مـیـانـبـر</h2>
-                <ul class="flex flex-col gap-3 text-zinc-700 text-sm">
+                <h2 class="mb-4 font-bold text-zinc-900">مـیـانـبـر</h2>
+                <ul class="flex flex-col gap-3 text-sm text-zinc-700">
                   <li class="transition-all duration-300 hover:text-secondary-200">مقالات</li>
                   <li class="transition-all duration-300 hover:text-secondary-200">بیمه مسافرتی</li>
                   <li class="transition-all duration-300 hover:text-secondary-200">اقامت ها</li>
@@ -356,28 +356,28 @@
             </section>
 
 
-            <section class="flex flex-wrap gap-4 justify-center mt-3 lg:pr-14 lg:mt-0 lg:justify-normal lg:gap-4">
+            <section class="flex flex-wrap justify-center gap-4 mt-3 lg:pr-14 lg:mt-0 lg:justify-normal lg:gap-4">
               <div>
                 <a href="https://www.cao.ir/paxrights"
-                  class="flex items-center w-28 h-28 p-1 bg-white rounded-xl transition-all duration-300 hover:scale-90"
+                  class="flex items-center p-1 transition-all duration-300 bg-white w-28 h-28 rounded-xl hover:scale-90"
                   rel="noopener">
                   <img src="../images/pax.png" alt="pax" loading="lazy" />
                 </a>
 
                 <a href=""
-                  class="flex items-center w-28 h-28 p-1 overflow-hidden bg-white rounded-xl transition-all duration-300 hover:scale-90"
+                  class="flex items-center p-1 overflow-hidden transition-all duration-300 bg-white w-28 h-28 rounded-xl hover:scale-90"
                   rel="noopener">
                   <img src="../images/eNamad.jpg" alt="eNamad" loading="lazy" decoding="async" />
                 </a>
               </div>
               <div>
                 <a href="https://www.cao.ir/"
-                  class="flex items-center w-28 h-28 p-1 bg-white rounded-xl transition-all duration-300 hover:scale-90"
+                  class="flex items-center p-1 transition-all duration-300 bg-white w-28 h-28 rounded-xl hover:scale-90"
                   rel="noopener">
                   <img src="../images/airplaneComponey.jpg" alt="airplaneComponey" loading="lazy" />
                 </a>
                 <a href="https://www.iata.org/"
-                  class="flex items-center w-28 h-28 p-1 bg-white rounded-xl transition-all duration-300 hover:scale-90"
+                  class="flex items-center p-1 transition-all duration-300 bg-white w-28 h-28 rounded-xl hover:scale-90"
                   rel="noopener">
                   <img src="../images/lata.jpg" alt="lata" loading="lazy" />
                 </a>
@@ -458,7 +458,7 @@
               </a>
               <img src="../images/basisfly.png" alt="basisfly" width="68px" height="17px" loading="lazy">
             </div>
-            <div class="mt-2 flex justify-center lg:mt-0"><img src="../images/Trust-logo.png" alt="Trust-logo"
+            <div class="flex justify-center mt-2 lg:mt-0"><img src="../images/Trust-logo.png" alt="Trust-logo"
                 loading="lazy" width="90px" height="15px"></div>
           </div>
         </section>
