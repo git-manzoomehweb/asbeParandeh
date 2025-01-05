@@ -1,52 +1,4 @@
-body {
-  font-family: "DanaFaNum";
-}
-
-.container {
-  width: 100%;
-}
-
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
-
-.visible {
-  visibility: visible;
-}
-
-.invisible {
-  visibility: hidden;
-}
-
-.absolute {
-  position: absolute;
-}
+@import url(./customized.ui.min.css);
 
 .relative {
   position: relative;
@@ -73,24 +25,12 @@ body {
   bottom: -7%;
 }
 
-.left-0 {
-  left: 0px;
-}
-
 .left-2 {
   left: 0.5rem;
 }
 
 .left-\[-10\%\] {
   left: -10%;
-}
-
-.right-0 {
-  right: 0px;
-}
-
-.top-0 {
-  top: 0px;
 }
 
 .top-20 {
@@ -113,17 +53,12 @@ body {
   z-index: -10;
 }
 
-.z-10 {
-  z-index: 10;
-}
+
 
 .z-20 {
   z-index: 20;
 }
 
-.z-30 {
-  z-index: 30;
-}
 
 .z-\[1\] {
   z-index: 1;
@@ -139,11 +74,6 @@ body {
 
 .m-auto {
   margin: auto;
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .my-10 {
@@ -266,10 +196,6 @@ body {
   margin-top: 1.5rem;
 }
 
-.mt-7 {
-  margin-top: 1.75rem;
-}
-
 .mt-\[32rem\] {
   margin-top: 32rem;
 }
@@ -294,9 +220,6 @@ body {
   display: grid;
 }
 
-.hidden {
-  display: none;
-}
 
 .h-0 {
   height: 0px;
@@ -336,10 +259,6 @@ body {
 
 .h-\[624px\] {
   height: 624px;
-}
-
-.h-\[72px\] {
-  height: 72px;
 }
 
 .h-\[809px\] {
@@ -482,9 +401,6 @@ body {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.flex-col {
-  flex-direction: column;
-}
 
 .items-center {
   align-items: center;
@@ -504,10 +420,6 @@ body {
 
 .justify-center {
   justify-content: center;
-}
-
-.justify-between {
-  justify-content: space-between;
 }
 
 .justify-items-stretch {
@@ -982,16 +894,6 @@ body {
   line-height: 1.5rem;
 }
 
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
-.text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -1270,12 +1172,6 @@ body {
   outline-offset: 2px;
 }
 
-.group:hover .group-hover\:rotate-180 {
-  --tw-rotate: 180deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
 
 .group:hover .group-hover\:fill-secondary-400 {
   fill: var(--secondary-400);
@@ -1358,4 +1254,8 @@ body {
   .\32xl\:right-\[24\%\] {
     right: 24%;
   }
+}
+
+.direction-ltr{
+  direction: ltr;
 }
