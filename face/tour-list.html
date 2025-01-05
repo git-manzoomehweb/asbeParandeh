@@ -1,4 +1,14 @@
-
+<basis core="dbsource" source="basiscore" lid="1" mid="20" name="db" catid="[##cms.query.catid##]">
+    <member name="tour-list" type="list" link="tour.bc" propertyid="8181,8077,8076,10000504" perpage="12" size="311x219"
+        pageno="[##cms.query.pagenum|(1)##]" order="ord" />
+    <member name="paging" type="list" request="paging" count="3" parentname="tour-list" />
+</basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="18" name="db" usedforid="[##cms.query.catid##]">
+    <member name="scalar" type="scalar" typeid="150" />
+</basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="20" name="db" catid="[##cms.query.catid##]">
+    <member name="navigation" type="tree" request="navcatid" parentid="[##cms.query.catid##]" />
+</basis>
 
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
@@ -7,8 +17,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover">
     <!-- Title & Description -->
-    <title>[##cms.seo.title|(آژانس مسافرتی گردشگری اسب پرنده | خرید بلیط هواپیما | تیکت پروازهای داخلی و خارجی)##]</title>
-    <meta name="description" content="[##cms.seo.description|(آژانس مسافرتی گردشگری اسب پرنده | خرید بلیط هواپیما | تیکت پروازهای داخلی و خارجی |انواع ویزا)##]">
+    <title>[##cms.seo.title|(آژانس مسافرتی گردشگری اسب پرنده ، خرید بلیط هواپیما ، تیکت پروازهای داخلی و خارجی)##]</title>
+    <meta name="description" content="[##cms.seo.description|(آژانس مسافرتی گردشگری اسب پرنده ، خرید بلیط هواپیما ، تیکت پروازهای داخلی و خارجی ،انواع ویزا)##]">
     <!-- Title & Description -->
     <basis core="dbsource" source="hosting" name="tag" urlid="[##cms.seo.urlid##]">
         <member type="list" name="list" request="taglist" preview=""></member>
@@ -36,7 +46,11 @@
                 <div class="absolute flex gap-16 z-10 items-center justify-between text-white left-0 right-0 mx-auto max-xl:w-[97%] xl:max-w-7xl bottom-[-7%] top-[20%]">
                     <div>
                       <h2 class="text-lg font-bold">تور های</h2>
-                      <h1 class="font-bold text-[150px] leading-[170px]">Istanbul</h1>
+                      <basis core="print" datamembername="db.scalar">
+                        <face>
+                            <h1 class="font-bold text-[150px] leading-[170px]">@column1</h1>
+                        </face>
+                      </basis>
                       <h3 class="text-lg">بــا اسب پــرنــده بــه دوردنیــا پــرواز کــن</h3>
                     </div>
                     <img src="[##cms.cms.cdn##]/images/man-with-backpack-road 1.png" alt="man-with-backpack-road" class="" width="369" height="483" loading="lazy">
@@ -49,220 +63,223 @@
             </div>
         </section>
         <section class="max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mx-auto mt-[40rem]">
-            <div class="text-sm text-zinc-500">صفحه اصلی > تور ها > لیست تور ها</div>
-            <div class="grid grid-cols-4 gap-3 mt-6">
-                <!-- ایتم های تور های در حال اجرا -->
-                <a href="" class="relative overflow-hidden transition-all duration-300 border border-solid rounded-xl border-zinc-300 hover:scale-95 hover:shadow-lg">
-                    <img src="[##cms.cms.cdn##]/images/large-pool-with-hammocks.jpg" alt="pool" width="100%" height="219"
-                        loading="lazy">
-                    <div
-                        class="relative z-10 w-[95%] bg-white border-2 border-dashed border-primary-100 rounded-xl -mt-9  mx-auto flex items-center justify-between py-2 px-3">
-                        <div>
-                            <h2 class="text-sm text-zinc-600">شروع قیمت:</h2>
-                            <div class="text-sm text-zinc-900">15/000/000 تومان+ 2500 دلار</div>
+            <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="flex items-center gap-1 mt-2">
+                <li class="inline-block font-normal" itemprop="itemListElement" itemscope
+                    itemtype="https://schema.org/ListItem">
+                    <a class="text-zinc-500 hover:text-secondary-700" itemprop="item" href="/"
+                        aria-label="home"><span itemprop="name">صفحه اصلی</span>
+                        <meta itemprop="position" content="1" />
+                    </a>
+                </li>
+                <span class="text-zinc-500"> > </span>
+                <basis core="print" datamembername="db.navigation">
+                    <face filter="RowNumber=max(RowNumber) and parentcatid<>210236">
+                        <li class="inline-block font-normal" itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                            <span itemprop="name">@title</span>
+                            <meta itemprop="position" content="@rownumber" />
+                        </li>
+                    </face>
+                    <face filter="link is null and parentcatid<>210236">
+                        <li class="flex gap-1 font-normal " itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                            <a class="text-zinc-500 hover:text-secondary-700" itemprop="item"
+                                href="/article-list.bc?catid=@parentcatid" aria-label="@title"><span
+                                    itemprop="name">@title</span>
+                                <meta itemprop="position" content="@rownumber" />
+                            </a>
+                            <span class="text-zinc-500"> > </span>
+                        </li>
+                    </face>
+                    <face filter="parentcatid<>210236">
+                        <li class="flex gap-1 font-normal " itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                            <a class="text-zinc-500 hover:text-secondary-700" itemprop="item" href="@link"
+                                aria-label="@title"><span class="text-zinc-500 hover:text-secondary-700" itemprop="name">@title</span>
+                                <meta itemprop="position" content="@rownumber" />
+                            </a>
+                            <span class="text-zinc-500 "> > </span>
+                        </li>
+                    </face>
+                </basis>
+            </ul>
+            <basis core="list" datamembername="db.tour-list">
+                <layout>
+                    <div class="grid grid-cols-4 gap-3 mt-6">
+                        <!-- ایتم های تور های در حال اجرا -->
+                        @child
+                    </div>
+                </layout>
+                <face filter="link is null">
+                    <a href="/tour.bc?id=@id" class="relative overflow-hidden transition-all duration-300 border border-solid rounded-xl border-zinc-300 hover:scale-95 hover:shadow-lg">
+                        <img src="@00311X00219prp" alt="pool" width="100%" height="219"
+                            loading="lazy">
+                        <div
+                            class="relative z-10 w-[95%] bg-white border-2 border-dashed border-primary-100 rounded-xl -mt-9  mx-auto flex items-center justify-between py-2 px-3">
+                            <div>
+                                <h2 class="text-sm text-zinc-600">شروع قیمت:</h2>
+                                <div class="text-sm text-zinc-900">@prp_8181</div>
+                            </div>
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.25 24.2743L31.25 24.2743" stroke="#445E87" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M22.3008 30.2987L16.2508 24.2747L22.3008 18.2497" stroke="#445E87"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                         </div>
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.25 24.2743L31.25 24.2743" stroke="#445E87" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M22.3008 30.2987L16.2508 24.2747L22.3008 18.2497" stroke="#445E87"
-                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                    <div class="px-2 py-4">
-                        <h2 class="mb-3 text-lg font-bold">تور استانبول</h2>
-                        <ul class="flex justify-between">
-                            <li class="flex flex-col gap-4 pl-4 ">
-                                <span class="text-sm text-zinc-600">مدت سفر</span>
-                                <span class="text-sm text-zinc-900">3 شب 4 روز</span>
-                            </li>
-                            <div class="max-h-screen border border-solid border-primary-100"></div>
-                            <li class="flex flex-col gap-4 px-4 ">
-                                <span class="text-sm text-zinc-600">مدت سفر</span>
-                                <span class="text-sm text-zinc-900">1403/5/2</span>
-                            </li>
-                            <div class="max-h-screen border border-solid border-primary-100"></div>
-                            <li class="flex flex-col gap-4 pr-4 ">
-                                <span class="text-sm text-zinc-600">ایرلاین</span>
-                                <span class="text-sm text-zinc-900">سلام ایر</span>
-                            </li>
-                        </ul>
-                    </div>
-                </a>
-
-                <a href="" class="relative overflow-hidden transition-all duration-300 border border-solid rounded-xl border-zinc-300 hover:scale-95 hover:shadow-lg">
-                    <img src="[##cms.cms.cdn##]/images/large-pool-with-hammocks.jpg" alt="pool" width="100%" height="219"
-                        loading="lazy">
-                    <div
-                        class="relative z-10 w-[95%] bg-white border-2 border-dashed border-primary-100 rounded-xl -mt-9  mx-auto flex items-center justify-between py-2 px-3">
-                        <div>
-                            <h2 class="text-sm text-zinc-600">شروع قیمت:</h2>
-                            <div class="text-sm text-zinc-900">15/000/000 تومان+ 2500 دلار</div>
+                        <div class="px-2 py-4">
+                            <h2 class="mb-3 text-lg font-bold">@title</h2>
+                            <ul class="flex justify-between">
+                                <li class="flex flex-col gap-4 pl-4 ">
+                                    <span class="text-sm text-zinc-600">مدت سفر</span>
+                                    <span class="text-sm text-zinc-900">@prp_8076</span>
+                                </li>
+                                <div class="max-h-screen border border-solid border-primary-100"></div>
+                                <li class="flex flex-col gap-4 px-4 ">
+                                    <span class="text-sm text-zinc-600">مدت سفر</span>
+                                    <span class="text-sm text-zinc-900">@prp_8077</span>
+                                </li>
+                                <div class="max-h-screen border border-solid border-primary-100"></div>
+                                <li class="flex flex-col gap-4 pr-4 ">
+                                    <span class="text-sm text-zinc-600">ایرلاین</span>
+                                    <span class="text-sm text-zinc-900">@prp_10000504</span>
+                                </li>
+                            </ul>
                         </div>
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.25 24.2743L31.25 24.2743" stroke="#445E87" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M22.3008 30.2987L16.2508 24.2747L22.3008 18.2497" stroke="#445E87"
-                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                    <div class="px-2 py-4">
-                        <h2 class="mb-3 text-lg font-bold">تور استانبول</h2>
-                        <ul class="flex justify-between">
-                            <li class="flex flex-col gap-4 pl-4 ">
-                                <span class="text-sm text-zinc-600">مدت سفر</span>
-                                <span class="text-sm text-zinc-900">3 شب 4 روز</span>
-                            </li>
-                            <div class="max-h-screen border border-solid border-primary-100"></div>
-                            <li class="flex flex-col gap-4 px-4 ">
-                                <span class="text-sm text-zinc-600">مدت سفر</span>
-                                <span class="text-sm text-zinc-900">1403/5/2</span>
-                            </li>
-                            <div class="max-h-screen border border-solid border-primary-100"></div>
-                            <li class="flex flex-col gap-4 pr-4 ">
-                                <span class="text-sm text-zinc-600">ایرلاین</span>
-                                <span class="text-sm text-zinc-900">سلام ایر</span>
-                            </li>
-                        </ul>
-                    </div>
-                </a>
-
-                <a href="" class="relative overflow-hidden transition-all duration-300 border border-solid rounded-xl border-zinc-300 hover:scale-95 hover:shadow-lg">
-                    <img src="[##cms.cms.cdn##]/images/large-pool-with-hammocks.jpg" alt="pool" width="100%" height="219"
-                        loading="lazy">
-                    <div
-                        class="relative z-10 w-[95%] bg-white border-2 border-dashed border-primary-100 rounded-xl -mt-9  mx-auto flex items-center justify-between py-2 px-3">
-                        <div>
-                            <h2 class="text-sm text-zinc-600">شروع قیمت:</h2>
-                            <div class="text-sm text-zinc-900">15/000/000 تومان+ 2500 دلار</div>
+                    </a>
+                </face>
+                <face>
+                    <a href="@link" class="relative overflow-hidden transition-all duration-300 border border-solid rounded-xl border-zinc-300 hover:scale-95 hover:shadow-lg">
+                        <img src="@00311X00219prp" alt="pool" width="100%" height="219"
+                            loading="lazy">
+                        <div
+                            class="relative z-10 w-[95%] bg-white border-2 border-dashed border-primary-100 rounded-xl -mt-9  mx-auto flex items-center justify-between py-2 px-3">
+                            <div>
+                                <h2 class="text-sm text-zinc-600">شروع قیمت:</h2>
+                                <div class="text-sm text-zinc-900">@prp_8181</div>
+                            </div>
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.25 24.2743L31.25 24.2743" stroke="#445E87" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M22.3008 30.2987L16.2508 24.2747L22.3008 18.2497" stroke="#445E87"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                         </div>
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.25 24.2743L31.25 24.2743" stroke="#445E87" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M22.3008 30.2987L16.2508 24.2747L22.3008 18.2497" stroke="#445E87"
-                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                    <div class="px-2 py-4">
-                        <h2 class="mb-3 text-lg font-bold">تور استانبول</h2>
-                        <ul class="flex justify-between">
-                            <li class="flex flex-col gap-4 pl-4 ">
-                                <span class="text-sm text-zinc-600">مدت سفر</span>
-                                <span class="text-sm text-zinc-900">3 شب 4 روز</span>
-                            </li>
-                            <div class="max-h-screen border border-solid border-primary-100"></div>
-                            <li class="flex flex-col gap-4 px-4 ">
-                                <span class="text-sm text-zinc-600">مدت سفر</span>
-                                <span class="text-sm text-zinc-900">1403/5/2</span>
-                            </li>
-                            <div class="max-h-screen border border-solid border-primary-100"></div>
-                            <li class="flex flex-col gap-4 pr-4 ">
-                                <span class="text-sm text-zinc-600">ایرلاین</span>
-                                <span class="text-sm text-zinc-900">سلام ایر</span>
-                            </li>
-                        </ul>
-                    </div>
-                </a>
-
-                <a href="" class="relative overflow-hidden transition-all duration-300 border border-solid rounded-xl border-zinc-300 hover:scale-95 hover:shadow-lg">
-                    <img src="vlarge-pool-with-hammocks.jpg" alt="pool" width="100%" height="219"
-                        loading="lazy">
-                    <div
-                        class="relative z-10 w-[95%] bg-white border-2 border-dashed border-primary-100 rounded-xl -mt-9  mx-auto flex items-center justify-between py-2 px-3">
-                        <div>
-                            <h2 class="text-sm text-zinc-600">شروع قیمت:</h2>
-                            <div class="text-sm text-zinc-900">15/000/000 تومان+ 2500 دلار</div>
+                        <div class="px-2 py-4">
+                            <h2 class="mb-3 text-lg font-bold">@title</h2>
+                            <ul class="flex justify-between">
+                                <li class="flex flex-col gap-4 pl-4 ">
+                                    <span class="text-sm text-zinc-600">مدت سفر</span>
+                                    <span class="text-sm text-zinc-900">@prp_8076</span>
+                                </li>
+                                <div class="max-h-screen border border-solid border-primary-100"></div>
+                                <li class="flex flex-col gap-4 px-4 ">
+                                    <span class="text-sm text-zinc-600">مدت سفر</span>
+                                    <span class="text-sm text-zinc-900">@prp_8077</span>
+                                </li>
+                                <div class="max-h-screen border border-solid border-primary-100"></div>
+                                <li class="flex flex-col gap-4 pr-4 ">
+                                    <span class="text-sm text-zinc-600">ایرلاین</span>
+                                    <span class="text-sm text-zinc-900">@prp_10000504</span>
+                                </li>
+                            </ul>
                         </div>
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.25 24.2743L31.25 24.2743" stroke="#445E87" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M22.3008 30.2987L16.2508 24.2747L22.3008 18.2497" stroke="#445E87"
-                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                    <div class="px-2 py-4">
-                        <h2 class="mb-3 text-lg font-bold">تور استانبول</h2>
-                        <ul class="flex justify-between">
-                            <li class="flex flex-col gap-4 pl-4 ">
-                                <span class="text-sm text-zinc-600">مدت سفر</span>
-                                <span class="text-sm text-zinc-900">3 شب 4 روز</span>
-                            </li>
-                            <div class="max-h-screen border border-solid border-primary-100"></div>
-                            <li class="flex flex-col gap-4 px-4 ">
-                                <span class="text-sm text-zinc-600">مدت سفر</span>
-                                <span class="text-sm text-zinc-900">1403/5/2</span>
-                            </li>
-                            <div class="max-h-screen border border-solid border-primary-100"></div>
-                            <li class="flex flex-col gap-4 pr-4 ">
-                                <span class="text-sm text-zinc-600">ایرلاین</span>
-                                <span class="text-sm text-zinc-900">سلام ایر</span>
-                            </li>
-                        </ul>
-                    </div>
-                </a>
-                <a href="" class="relative overflow-hidden transition-all duration-300 border border-solid rounded-xl border-zinc-300 hover:scale-95 hover:shadow-lg">
-                    <img src="[##cms.cms.cdn##]/images/large-pool-with-hammocks.jpg" alt="pool" width="100%" height="219"
-                        loading="lazy">
-                    <div
-                        class="relative z-10 w-[95%] bg-white border-2 border-dashed border-primary-100 rounded-xl -mt-9  mx-auto flex items-center justify-between py-2 px-3">
-                        <div>
-                            <h2 class="text-sm text-zinc-600">شروع قیمت:</h2>
-                            <div class="text-sm text-zinc-900">15/000/000 تومان+ 2500 دلار</div>
-                        </div>
-                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.25 24.2743L31.25 24.2743" stroke="#445E87" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M22.3008 30.2987L16.2508 24.2747L22.3008 18.2497" stroke="#445E87"
-                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                    <div class="px-2 py-4">
-                        <h2 class="mb-3 text-lg font-bold">تور استانبول</h2>
-                        <ul class="flex justify-between">
-                            <li class="flex flex-col gap-4 pl-4 ">
-                                <span class="text-sm text-zinc-600">مدت سفر</span>
-                                <span class="text-sm text-zinc-900">3 شب 4 روز</span>
-                            </li>
-                            <div class="max-h-screen border border-solid border-primary-100"></div>
-                            <li class="flex flex-col gap-4 px-4 ">
-                                <span class="text-sm text-zinc-600">مدت سفر</span>
-                                <span class="text-sm text-zinc-900">1403/5/2</span>
-                            </li>
-                            <div class="max-h-screen border border-solid border-primary-100"></div>
-                            <li class="flex flex-col gap-4 pr-4 ">
-                                <span class="text-sm text-zinc-600">ایرلاین</span>
-                                <span class="text-sm text-zinc-900">سلام ایر</span>
-                            </li>
-                        </ul>
-                    </div>
-                </a>
-            </div>
-            <div class="flex items-center justify-center gap-2 mt-16">
-                <button class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-primary-50">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M19.8398 16C19.8398 16.1211 19.8148 16.2422 19.7648 16.3633C19.7148 16.4844 19.6498 16.5752 19.5698 16.6357L15.0998 21.1768C14.9198 21.3584 14.6898 21.4492 14.4098 21.4492C14.1298 21.4492 13.8898 21.3584 13.6898 21.1768C13.5098 20.9749 13.4198 20.7328 13.4198 20.4502C13.4198 20.1676 13.5098 19.9356 13.6898 19.7539L17.5298 15.8789L13.6898 12.0039C13.5098 11.8021 13.4198 11.5599 13.4198 11.2773C13.4198 10.9948 13.5098 10.7627 13.6898 10.5811C13.8898 10.3792 14.1298 10.2783 14.4098 10.2783C14.6898 10.2783 14.9198 10.3792 15.0998 10.5811L19.5698 15.0918C19.6498 15.2936 19.7148 15.4652 19.7648 15.6064C19.8148 15.7477 19.8398 15.8789 19.8398 16Z"
-                            fill="#516E8C" />
-                    </svg>
+                    </a>
+                </face>
+            </basis>
 
-
-                </button>
-                <div class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-primary-50">
-                    1
-                </div>
-                <div class="flex items-center justify-center w-12 h-12 p-2 text-white rounded-xl bg-primary-900">
-                    1
-                </div>
-                <div class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-primary-50">
-                    1
-                </div>
-                <button class="flex items-center justify-center w-12 h-12 p-2 rounded-xl bg-primary-50">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12.1602 16C12.1602 15.8789 12.1852 15.7578 12.2352 15.6367C12.2852 15.5156 12.3502 15.4248 12.4302 15.3643L16.9002 10.8232C17.0802 10.6416 17.3102 10.5508 17.5902 10.5508C17.8702 10.5508 18.1102 10.6416 18.3102 10.8232C18.4902 11.0251 18.5802 11.2673 18.5802 11.5498C18.5802 11.8324 18.4902 12.0645 18.3102 12.2461L14.4702 16.1211L18.3102 19.9961C18.4902 20.1979 18.5802 20.4401 18.5802 20.7227C18.5802 21.0052 18.4902 21.2373 18.3102 21.4189C18.1102 21.6208 17.8702 21.7217 17.5902 21.7217C17.3102 21.7217 17.0802 21.6208 16.9002 21.4189L12.4302 16.9082C12.3502 16.7064 12.2852 16.5348 12.2352 16.3936C12.1852 16.2523 12.1602 16.1211 12.1602 16Z"
-                            fill="#516E8C" />
-                    </svg>
-
-                </button>
+            <div id="paging" class="flex justify-center mt-10">
+                <ul class="flex items-center gap-3 cd-pagination no-space direction-ltr" id="wibpaging">
+                    <basis core="print" datamembername="db.paging">
+                        <face filter="(@sta='pre')and('[##cms.cms.pageurl##]'='')">
+                            <li
+                                class="flex items-center justify-center w-12 h-12 mr-4 transition-all duration-300 rounded-xl page-no prev-page group bg-primary-50 hover:bg-primary-900">
+                                <a class="flex items-center justify-center w-full cursor-pointer text-zinc-900"
+                                    aria-label="angle-left" href="/[##cms.cms.link_page##]&pagenum=@page">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path class="transition-all duration-300 group-hover:fill-white"
+                                            d="M12.1602 16C12.1602 15.8789 12.1852 15.7578 12.2352 15.6367C12.2852 15.5156 12.3502 15.4248 12.4302 15.3643L16.9002 10.8232C17.0802 10.6416 17.3102 10.5508 17.5902 10.5508C17.8702 10.5508 18.1102 10.6416 18.3102 10.8232C18.4902 11.0251 18.5802 11.2673 18.5802 11.5498C18.5802 11.8324 18.4902 12.0645 18.3102 12.2461L14.4702 16.1211L18.3102 19.9961C18.4902 20.1979 18.5802 20.4401 18.5802 20.7227C18.5802 21.0052 18.4902 21.2373 18.3102 21.4189C18.1102 21.6208 17.8702 21.7217 17.5902 21.7217C17.3102 21.7217 17.0802 21.6208 16.9002 21.4189L12.4302 16.9082C12.3502 16.7064 12.2852 16.5348 12.2352 16.3936C12.1852 16.2523 12.1602 16.1211 12.1602 16Z"
+                                            fill="#516E8C" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </face>
+                        <face filter="(@sta='pre')and('[##cms.cms.pageurl##]'<>'')">
+                            <li
+                                class="flex items-center justify-center w-12 h-12 mr-4 transition-all duration-300 rounded-xl page-no prev-page group bg-primary-50 hover:bg-primary-900">
+                                <a class="flex items-center justify-center w-full cursor-pointer text-zinc-900"
+                                    aria-label="angle-left" href="/[##cms.cms.pageurl##]?pagenum=@page"> <svg width="32"
+                                        height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="transition-all duration-300 group-hover:fill-white"
+                                            d="M12.1602 16C12.1602 15.8789 12.1852 15.7578 12.2352 15.6367C12.2852 15.5156 12.3502 15.4248 12.4302 15.3643L16.9002 10.8232C17.0802 10.6416 17.3102 10.5508 17.5902 10.5508C17.8702 10.5508 18.1102 10.6416 18.3102 10.8232C18.4902 11.0251 18.5802 11.2673 18.5802 11.5498C18.5802 11.8324 18.4902 12.0645 18.3102 12.2461L14.4702 16.1211L18.3102 19.9961C18.4902 20.1979 18.5802 20.4401 18.5802 20.7227C18.5802 21.0052 18.4902 21.2373 18.3102 21.4189C18.1102 21.6208 17.8702 21.7217 17.5902 21.7217C17.3102 21.7217 17.0802 21.6208 16.9002 21.4189L12.4302 16.9082C12.3502 16.7064 12.2852 16.5348 12.2352 16.3936C12.1852 16.2523 12.1602 16.1211 12.1602 16Z"
+                                            fill="#516E8C" />
+                                    </svg></a>
+                            </li>
+                        </face>
+                    </basis>
+                    <basis core="print" datamembername="db.paging">
+                        <face filter="(@page=[##cms.query.pagenum|(1)##])and('[##cms.cms.pageurl##]'='')">
+                            <li
+                                class="flex items-center justify-center w-12 h-12 overflow-hidden transition-all duration-300 rounded-xl page-no">
+                                <a class="flex items-center justify-center w-full h-full text-white cursor-pointer page-number bg-primary-900"
+                                    href="/[##cms.cms.link_page##]&pagenum=@page">@page</a>
+                            </li>
+                        </face>
+                        <face filter="(@page=[##cms.query.pagenum|(1)##])and('[##cms.cms.pageurl##]'<>'')">
+                            <li
+                                class="flex items-center justify-center w-12 h-12 overflow-hidden transition-all duration-300 rounded-xl page-no">
+                                <a class="flex items-center justify-center w-full h-full text-white cursor-pointer page-number bg-primary-900"
+                                    href="/[##cms.cms.pageurl##]?pagenum=@page">@page</a>
+                            </li>
+                        </face>
+                        <face
+                            filter="(@page<>[##cms.query.pagenum|(1)##]) and (@page>0) and (@sta='no') and ('[##cms.cms.pageurl##]'='') ">
+                            <li
+                                class="flex items-center justify-center w-12 h-12 overflow-hidden transition-all duration-300 rounded-xl bg-primary-50 hover:bg-primary-900 hover:text-white page-no">
+                                <a class="flex items-center justify-center w-full h-full cursor-pointer page-number"
+                                    href="/[##cms.cms.link_page##]&pagenum=@page">@page</a>
+                            </li>
+                        </face>
+                        <face
+                            filter="(@page<>[##cms.query.pagenum|(1)##]) and (@page>0) and (@sta='no') and ('[##cms.cms.pageurl##]'<>'') ">
+                            <li
+                                class="flex items-center justify-center w-12 h-12 overflow-hidden transition-all duration-300 rounded-xl bg-primary-50 hover:bg-primary-900 hover:text-white page-no">
+                                <a class="flex items-center justify-center w-full h-full cursor-pointer page-number"
+                                    href="/[##cms.cms.pageurl##]?pagenum=@page">@page</a>
+                            </li>
+                        </face>
+                    </basis>
+                    <basis core="print" datamembername="db.paging">
+                        <face filter="(@sta='nex') and ('[##cms.cms.pageurl##]'='')">
+                            <li
+                                class="flex items-center justify-center w-12 h-12 ml-4 transition-all duration-300 rounded-xl page-no next-page group bg-primary-50 hover:bg-primary-900">
+                                <a class="flex items-center justify-center w-full h-full cursor-pointer text-zinc-900"
+                                    aria-label="angle-right" href="/[##cms.cms.link_page##]&pagenum=@page">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path class="transition-all duration-300 group-hover:fill-white"
+                                            d="M19.8398 16C19.8398 16.1211 19.8148 16.2422 19.7648 16.3633C19.7148 16.4844 19.6498 16.5752 19.5698 16.6357L15.0998 21.1768C14.9198 21.3584 14.6898 21.4492 14.4098 21.4492C14.1298 21.4492 13.8898 21.3584 13.6898 21.1768C13.5098 20.9749 13.4198 20.7328 13.4198 20.4502C13.4198 20.1676 13.5098 19.9356 13.6898 19.7539L17.5298 15.8789L13.6898 12.0039C13.5098 11.8021 13.4198 11.5599 13.4198 11.2773C13.4198 10.9948 13.5098 10.7627 13.6898 10.5811C13.8898 10.3792 14.1298 10.2783 14.4098 10.2783C14.6898 10.2783 14.9198 10.3792 15.0998 10.5811L19.5698 15.0918C19.6498 15.2936 19.7148 15.4652 19.7648 15.6064C19.8148 15.7477 19.8398 15.8789 19.8398 16Z"
+                                            fill="#516E8C" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </face>
+                        <face filter="(@sta='nex') and ('[##cms.cms.pageurl##]'<>'')">
+                            <li
+                                class="flex items-center justify-center w-12 h-12 ml-4 transition-all duration-300 rounded-xl page-no next-page group bg-primary-50 hover:bg-primary-900">
+                                <a class="flex items-center justify-center w-full h-full cursor-pointer text-zinc-900"
+                                    aria-label="angle-right" href="/[##cms.cms.pageurl##]?pagenum=@page"> <svg
+                                        width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path class="transition-all duration-300 group-hover:fill-white"
+                                            d="M19.8398 16C19.8398 16.1211 19.8148 16.2422 19.7648 16.3633C19.7148 16.4844 19.6498 16.5752 19.5698 16.6357L15.0998 21.1768C14.9198 21.3584 14.6898 21.4492 14.4098 21.4492C14.1298 21.4492 13.8898 21.3584 13.6898 21.1768C13.5098 20.9749 13.4198 20.7328 13.4198 20.4502C13.4198 20.1676 13.5098 19.9356 13.6898 19.7539L17.5298 15.8789L13.6898 12.0039C13.5098 11.8021 13.4198 11.5599 13.4198 11.2773C13.4198 10.9948 13.5098 10.7627 13.6898 10.5811C13.8898 10.3792 14.1298 10.2783 14.4098 10.2783C14.6898 10.2783 14.9198 10.3792 15.0998 10.5811L19.5698 15.0918C19.6498 15.2936 19.7148 15.4652 19.7648 15.6064C19.8148 15.7477 19.8398 15.8789 19.8398 16Z"
+                                            fill="#516E8C" />
+                                    </svg></a>
+                            </li>
+                        </face>
+                    </basis>
+                </ul>
             </div>
         </section>
         <section class="max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mx-auto mt-5">
@@ -281,6 +298,61 @@
               <div>
                 <h2 class="mb-2 text-2xl font-bold text-zinc-900">با مشاورین ما در ارتباط باشید</h2>
                 <div class="text-zinc-900">رزرو تور های و ارائه خدمات تلفنی و آنلاین را با اسب پرنده تجربه کنید</div>
+              </div>
+              <div class="flex flex-col form-moshavereh" id="contact-form-resize">
+
+                <basis core="schema" run="atclient"
+                  schemaurl="/schema/domainform/7C744024-8AA5-4BFA-9362-3044DF708D58/EEE2F41E-E85D-4C25-954A-71F22A6A0BE4/fa/با-مشاورین-ما-در-ارتباط-باشید"
+                  displaymode="new" button="[data-btn-uploadfooter]" resultsourceid="upload.datafooter"
+                  OnRendered="RenderFormFooter"></basis>
+                <basis core="api" if="{##cms.uploadFooter.run|(false)##}" run="atclient"
+                  url="/schema/domainform/7C744024-8AA5-4BFA-9362-3044DF708D58/fa/editobject" method="post"
+                  body="object_edit={##cms.uploadFooter.value##}&captcha={##cms.uploadFooter.captcha##}&captchaid={##cms.uploadFooter.captchaid##}"
+                  content-type="application/x-www-form-urlencoded" triggers='cms.uploadFooter'
+                  OnProcessed="OnProcessedEditObjectFooter"></basis>
+                <basis core="callback" run="atclient" method="uploadDocumentFooter" triggers="upload.datafooter">
+                </basis>
+    
+                <div class="captcha-button">
+                  <div id="captchaContainer"
+                    class="captchaContainerclass captcha-sefaresh ml-2.5 max-xl:ml-0 max-xl:mb-[20px]"
+                    data-bc-answer-container data-bc-schema-info-multi="0" data-bc-schema-info-word="58"
+                    data-bc-schema-info-part="1" data-bc-schema-info-part-0-type="text">
+                    <basis core="dbsource" source="trust_login" name="captcha" run="atclient"
+                      triggers="captcha.refreshFooter">
+                      <member name="code" type="scalar" request="captcha"></member>
+                    </basis>
+                    <basis datamembername="captcha.code" core="print" run="atclient">
+                      <face>
+                        <script type="text/template"><div class="d-inline-block"><div class="flex gap-4">
+              
+                                  <div class="float-right w-full"><input type="text" class="contactUsInput codeinputm" name="captcha" maxlength="4" placeholder="کد امنیتی"/><input type="hidden" name="captchaid" value="@captcha@" /></div>
+                                  <div class="flex items-center w-1/3 gap-4">
+                                      <img src="/@captcha@" loading="lazy" width="120" height="60" alt="captcha" class="w-16" />
+                                      <svg class="inline-block align-middle cursor-pointer w-9 h-9" onclick="refreshCaptchaFooter()" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.1247 8.56165H18.1238C18.0007 8.56175 17.8788 8.5861 17.7651 8.63331C17.6514 8.68052 17.5481 8.74967 17.4611 8.8368C17.3741 8.92393 17.3052 9.02734 17.2581 9.14113C17.2111 9.25492 17.187 9.37685 17.1871 9.49997C17.1859 10.8143 16.8245 12.1032 16.1421 13.2265C15.4597 14.3498 14.4824 15.2646 13.3166 15.8714C12.1507 16.4782 10.8408 16.7538 9.52921 16.6683C8.21765 16.5827 6.95463 16.1393 5.87744 15.3862C2.63134 13.1132 1.83959 8.62309 4.11255 5.37696C6.38552 2.13083 10.8757 1.33899 14.1218 3.61204C14.6129 3.95501 15.0592 4.358 15.4504 4.81165H12.8121C12.5635 4.81165 12.325 4.91042 12.1492 5.08623C11.9734 5.26205 11.8746 5.5005 11.8746 5.74915C11.8746 5.99779 11.9734 6.23624 12.1492 6.41206C12.325 6.58787 12.5635 6.68665 12.8121 6.68665H17.1871C17.4358 6.68665 17.6742 6.58787 17.85 6.41206C18.0259 6.23624 18.1246 5.99779 18.1246 5.74915V1.37415C18.1246 1.12551 18.0259 0.887048 17.85 0.711233C17.6742 0.535418 17.4358 0.436646 17.1871 0.436646C16.9385 0.436646 16.7 0.535418 16.5242 0.711233C16.3484 0.887048 16.2496 1.12551 16.2496 1.37415V2.93536C15.9206 2.62321 15.5689 2.33596 15.1973 2.07598C14.2225 1.39342 13.1228 0.909542 11.9609 0.651979C10.7991 0.394417 9.59797 0.368213 8.42603 0.574863C7.25409 0.781513 6.13433 1.21697 5.13067 1.85637C4.12702 2.49578 3.25914 3.3266 2.57658 4.30141C1.19808 6.27013 0.658111 8.70582 1.07546 11.0727C1.49281 13.4395 2.83329 15.5436 4.80201 16.9221C6.31776 17.9898 8.12639 18.563 9.98041 18.5633C10.5144 18.5631 11.0474 18.5162 11.5732 18.4233C13.6714 18.0531 15.5722 16.9556 16.9417 15.3235C18.3112 13.6914 19.062 11.6289 19.0621 9.49833C19.0619 9.24983 18.963 9.01159 18.7873 8.83596C18.6115 8.66032 18.3732 8.56166 18.1247 8.56165Z" fill="#71717A"/></svg>
+                                  </div>
+                                  
+                              </div></div></script>
+                      </face>
+                    </basis>
+                  </div>
+                  <button class="w-full mt-3 text-white y-2 wpx-4 data-body-btn h-14 bg-Primery-700 rounded-xl" type="button"
+                    data-btn-uploadfooter><span class="">ارسال</span></button>
+                  <div
+                    class="Loading_Form hidden data-body-btn w-[126px] h-12 px-4 py-2 bg-secondary-800 rounded-2xl justify-center items-center gap-2.5">
+                    <div id="ballsWaveG" class="text-base font-normal leading-normal ext-zinc-50">
+                      <div id="ballsWaveG_1" class="ballsWaveG"></div>
+                      <div id="ballsWaveG_2" class="ballsWaveG"></div>
+                      <div id="ballsWaveG_3" class="ballsWaveG"></div>
+                      <div id="ballsWaveG_4" class="ballsWaveG"></div>
+                      <div id="ballsWaveG_5" class="ballsWaveG"></div>
+                      <div id="ballsWaveG_6" class="ballsWaveG"></div>
+                      <div id="ballsWaveG_7" class="ballsWaveG"></div>
+                      <div id="ballsWaveG_8" class="ballsWaveG"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-4 text-center text-white message-api"></div>
               </div>
               <img src="[##cms.cms.cdn##]/images/person-contact.png" class="absolute left-[-10%] bottom-0" alt="person-contact" width="350"
                 height="350">
