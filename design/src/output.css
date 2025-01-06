@@ -689,14 +689,6 @@ body {
   grid-column: span 2 / span 2;
 }
 
-.col-span-1 {
-  grid-column: span 1 / span 1;
-}
-
-.col-start-2 {
-  grid-column-start: 2;
-}
-
 .col-start-1 {
   grid-column-start: 1;
 }
@@ -705,20 +697,16 @@ body {
   grid-column-start: 3;
 }
 
-.row-span-1 {
-  grid-row: span 1 / span 1;
-}
-
 .row-span-2 {
   grid-row: span 2 / span 2;
 }
 
-.row-start-2 {
-  grid-row-start: 2;
-}
-
 .row-start-1 {
   grid-row-start: 1;
+}
+
+.row-start-2 {
+  grid-row-start: 2;
 }
 
 .float-right {
@@ -741,6 +729,11 @@ body {
 .my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
+}
+
+.my-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .my-16 {
@@ -870,6 +863,10 @@ body {
   margin-top: 40rem;
 }
 
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
 .block {
   display: block;
 }
@@ -930,6 +927,10 @@ body {
   height: 624px;
 }
 
+.h-\[714px\] {
+  height: 714px;
+}
+
 .h-\[72px\] {
   height: 72px;
 }
@@ -944,10 +945,6 @@ body {
 
 .h-full {
   height: 100%;
-}
-
-.h-48 {
-  height: 12rem;
 }
 
 .max-h-64 {
@@ -1050,6 +1047,10 @@ body {
   flex: 5;
 }
 
+.shrink-0 {
+  flex-shrink: 0;
+}
+
 .rotate-180 {
   --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1068,12 +1069,12 @@ body {
   cursor: pointer;
 }
 
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .grid-rows-2 {
@@ -1313,6 +1314,10 @@ body {
   border-color: var(--secondary-300);
 }
 
+.border-secondary-400 {
+  border-color: var(--secondary-400);
+}
+
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
@@ -1352,6 +1357,10 @@ body {
   background-color: var(--special-3);
 }
 
+.bg-specialcolor-4 {
+  background-color: var(--special-4);
+}
+
 .bg-transparent {
   background-color: transparent;
 }
@@ -1359,6 +1368,11 @@ body {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.bg-zinc-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 250 250 / var(--tw-bg-opacity, 1));
 }
 
 .bg-gradient-to-b {
@@ -1408,6 +1422,16 @@ body {
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.px-16 {
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 .px-2 {
@@ -1481,6 +1505,10 @@ body {
   padding-bottom: 0.625rem;
 }
 
+.pb-20 {
+  padding-bottom: 5rem;
+}
+
 .pb-3 {
   padding-bottom: 0.75rem;
 }
@@ -1547,6 +1575,10 @@ body {
 
 .pt-6 {
   padding-top: 1.5rem;
+}
+
+.pt-\[357px\] {
+  padding-top: 357px;
 }
 
 .text-center {
@@ -1648,6 +1680,10 @@ body {
 
 .text-secondary {
   color: var(--secondary);
+}
+
+.text-secondary-400 {
+  color: var(--secondary-400);
 }
 
 .text-white {
@@ -1761,6 +1797,7 @@ body {
   --special-1: #00000080;
   --special-2: #ffffff33;
   --special-3: #ffffff80;
+  --special-4: #1A253580;
   ---icon: url("");
   --menu-icon: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M32 32H16C15.448 32 15 31.553 15 31C15 30.447 15.448 30 16 30H32C32.552 30 33 30.447 33 31C33 31.553 32.552 32 32 32Z' fill='%23284E65'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M32 18H16C15.448 18 15 17.553 15 17C15 16.447 15.448 16 16 16H32C32.552 16 33 16.447 33 17C33 17.553 32.552 18 32 18Z' fill='%23284E65'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M32 25H16C15.448 25 15 24.553 15 24C15 23.447 15.448 23 16 23H32C32.552 23 33 23.447 33 24C33 24.553 32.552 25 32 25Z' fill='%23284E65'/%3E%3C/svg%3E");
   --exchange-icon: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='47' height='47' rx='11.5' fill='%23EBE6DB'/%3E%3Crect x='0.5' y='0.5' width='47' height='47' rx='11.5' stroke='%237C6D56'/%3E%3Cpath d='M32.5 17.5C32.7761 17.5 33 17.2761 33 17C33 16.7239 32.7761 16.5 32.5 16.5L32.5 17.5ZM14.1464 16.6464C13.9512 16.8417 13.9512 17.1583 14.1464 17.3536L17.3284 20.5355C17.5237 20.7308 17.8403 20.7308 18.0355 20.5355C18.2308 20.3403 18.2308 20.0237 18.0355 19.8284L15.2071 17L18.0355 14.1716C18.2308 13.9763 18.2308 13.6597 18.0355 13.4645C17.8403 13.2692 17.5237 13.2692 17.3284 13.4645L14.1464 16.6464ZM32.5 16.5L14.5 16.5L14.5 17.5L32.5 17.5L32.5 16.5Z' fill='%23445E87'/%3E%3Cpath d='M14.5 30.5C14.2239 30.5 14 30.7239 14 31C14 31.2761 14.2239 31.5 14.5 31.5V30.5ZM32.8536 31.3536C33.0488 31.1583 33.0488 30.8417 32.8536 30.6464L29.6716 27.4645C29.4763 27.2692 29.1597 27.2692 28.9645 27.4645C28.7692 27.6597 28.7692 27.9763 28.9645 28.1716L31.7929 31L28.9645 33.8284C28.7692 34.0237 28.7692 34.3403 28.9645 34.5355C29.1597 34.7308 29.4763 34.7308 29.6716 34.5355L32.8536 31.3536ZM14.5 31.5H32.5V30.5H14.5V31.5Z' fill='%23445E87'/%3E%3C/svg%3E");
@@ -1843,6 +1880,12 @@ body {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.hover\:scale-150:hover {
+  --tw-scale-x: 1.5;
+  --tw-scale-y: 1.5;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .hover\:scale-95:hover {
   --tw-scale-x: .95;
   --tw-scale-y: .95;
@@ -1910,8 +1953,18 @@ body {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.group:hover .group-hover\:scale-150 {
+  --tw-scale-x: 1.5;
+  --tw-scale-y: 1.5;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .group:hover .group-hover\:fill-secondary-400 {
   fill: var(--secondary-400);
+}
+
+.group:hover .group-hover\:fill-secondary-500 {
+  fill: var(--secondary-500);
 }
 
 .group:hover .group-hover\:fill-white {
