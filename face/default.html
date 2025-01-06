@@ -1,48 +1,73 @@
+<basis core="dbsource" source="media" name="db" lid="1" usedforid="2371632" sourcemid="article">
+  <member name="audio" type="list" format="audio" link="article.bc" order="ord" />
+</basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="20" name="db" catid="[##cms.query.catid##]">
+  <member name="visa-list" type="list" link="visa.bc" propertyid="3087433" perpage="7" size="88x88" order="ord" />
+</basis>
+
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.catid##]">
+  <member name="travel-list" type="list" link="article.bc" propertyid="7244" perpage="3" size="620x370" order="ord" />
+</basis>
+
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.catid##]">
+  <member name="article-list" type="list" link="article.bc" propertyid="7244,7231" perpage="3" size="443x245"
+    order="ord" />
+</basis>
+
+<basis core="dbsource" source="basiscore" lid="1" mid="20" name="ongoing-tour">
+  <member name="cat" type="tree" request="cat" parentid="212712" order="ord">
+  </member>
+</basis>
+
+
+
 <!DOCTYPE html>
 <html lang="en" dir="rtl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover">
-    <!-- Title & Description -->
-    <title>آژانس مسافرتی گردشگری اسب پرنده | خرید بلیط هواپیما | تیکت پروازهای داخلی و خارجی</title>
-    <meta name="description" content="آژانس مسافرتی گردشگری اسب پرنده | خرید بلیط هواپیما | تیکت پروازهای داخلی و خارجی |انواع ویزا">
-    <!-- canonical for Homepage -->
-    <link rel="canonical" href="[##cms.request.:scheme##]://[##cms.request.full-url##]" />
-    <!-- fill items with Agancy Info -->
-    <meta name="og:locale" content="fa_IR">
-    <meta property="og:title" content="آژانس مسافرتی گردشگری اسب پرنده">
-    <meta property="og:url" content="[##cms.request.:scheme##]://[##cms.request.full-url##]">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="گردشگری اسب پرنده">
-    <meta property="og:image" content="[##cms.cms.cdn##]/images/logo.png">
-    <meta property="og:image:alt" content="لوگو آژانس گردشگری اسب پرنده">
-    <meta property="og:description"
-        content="آژانس مسافرتی گردشگری اسب پرند مجری تورهای آفری و ارزان قیمت داخلی و خارجی ، هتل های ویژه و لوکس ، پروازهای ارزان و افری ، انواع ویزاهای تحصیلی توریستی و ... می باشد">
-    <meta property="og:image:height" content="512">
-    <meta property="og:image:width" content="512">
-    <meta property="og:image:type" content="image/png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content=" ">
-    <meta name="twitter:creator" content="Gardeshgari Asb Parandeh">
-    <meta name="twitter:image" content="[##cms.cms.cdn##]/images/logo.png">
-    <meta name="twitter:title" content=" ">
-    <meta name="twitter:description" content=" ">
-    <meta property="seo:robots" content="index, follow" />
-    <!-- samandehi-enamad optional -->
-    <meta name="enamad" content="" />
-    <meta name="samandehi" content="" />
-    <!-- pwa metatags -->
-    <basis core="call" file="pwa.inc" />
-    <!-- define -->
-    <link rel="preload" as="image" imageSrcSet="image address" fetchpriority="high" />
-    <!-- common styles for all page -->
-    <link href="https://cdn.basiscore.net/basisfly.com/css/reservation_multiLang_css_calendar.css" type="text/css" rel="stylesheet" />
-    <basis core="call" file="style.inc" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover">
+  <!-- Title & Description -->
+  <title>آژانس مسافرتی گردشگری اسب پرنده | خرید بلیط هواپیما | تیکت پروازهای داخلی و خارجی</title>
+  <meta name="description"
+    content="آژانس مسافرتی گردشگری اسب پرنده | خرید بلیط هواپیما | تیکت پروازهای داخلی و خارجی |انواع ویزا">
+  <!-- canonical for Homepage -->
+  <link rel="canonical" href="[##cms.request.:scheme##]://[##cms.request.full-url##]" />
+  <!-- fill items with Agancy Info -->
+  <meta name="og:locale" content="fa_IR">
+  <meta property="og:title" content="آژانس مسافرتی گردشگری اسب پرنده">
+  <meta property="og:url" content="[##cms.request.:scheme##]://[##cms.request.full-url##]">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="گردشگری اسب پرنده">
+  <meta property="og:image" content="[##cms.cms.cdn##]/images/logo.png">
+  <meta property="og:image:alt" content="لوگو آژانس گردشگری اسب پرنده">
+  <meta property="og:description"
+    content="آژانس مسافرتی گردشگری اسب پرند مجری تورهای آفری و ارزان قیمت داخلی و خارجی ، هتل های ویژه و لوکس ، پروازهای ارزان و افری ، انواع ویزاهای تحصیلی توریستی و ... می باشد">
+  <meta property="og:image:height" content="512">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:type" content="image/png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content=" ">
+  <meta name="twitter:creator" content="Gardeshgari Asb Parandeh">
+  <meta name="twitter:image" content="[##cms.cms.cdn##]/images/logo.png">
+  <meta name="twitter:title" content=" ">
+  <meta name="twitter:description" content=" ">
+  <meta property="seo:robots" content="index, follow" />
+  <!-- samandehi-enamad optional -->
+  <meta name="enamad" content="" />
+  <meta name="samandehi" content="" />
+  <!-- pwa metatags -->
+  <basis core="call" file="pwa.inc" />
+  <!-- define -->
+  <link rel="preload" as="image" imageSrcSet="image address" fetchpriority="high" />
+  <!-- common styles for all page -->
+  <link href="https://cdn.basiscore.net/basisfly.com/css/reservation_multiLang_css_calendar.css" type="text/css"
+    rel="stylesheet" />
+  <basis core="call" file="style.inc" />
 </head>
 
 <body onload="loadContentHomePage()">
-    <basis core="call" file="header.inc" />
+  <basis core="call" file="header.inc" />
 
   <main>
     <section>
@@ -53,22 +78,23 @@
             <h2 class="text-3xl font-bold">بــا اسب پــرنــده بــه دوردنیــا پــرواز کــن</h2>
             <h1 class="font-bold text-[150px]">Antalya</h1>
           </div>
-          <img src="[##cms.cms.cdn##]/images/man-with-backpack-road 1.png" alt="man-with-backpack-road" class="object-cover w-[397px] h-[606px]"
-            width="397" height="606" loading="lazy" />
+          <img src="[##cms.cms.cdn##]/images/man-with-backpack-road 1.png" alt="man-with-backpack-road"
+            class="object-cover w-[397px] h-[606px]" width="397" height="606" loading="lazy" />
         </div>
         <div class="flex">
-          <img src="[##cms.cms.cdn##]/images/Universities-approved-by-the-Ministry-of-Science-in-Italy.jpg" alt="view-ancient-greek"
-            class="w-1/2 object-cover h-[809px]" width="1920" height="809" loading="lazy" />
-          <img src="[##cms.cms.cdn##]/images/Universities-approved-by-the-Ministry-of-Science-in-Italy-1.jpg" alt="view-ancient-greek"
-            class="w-1/2 object-cover h-[809px]" width="1920" height="809" loading="lazy" />
-          <img src="[##cms.cms.cdn##]/images/view-ancient-greek-architecture-with-temple-structure (1).jpg" alt="view-ancient-greek"
+          <img src="[##cms.cms.cdn##]/images/Universities-approved-by-the-Ministry-of-Science-in-Italy.jpg"
+            alt="view-ancient-greek" class="w-1/2 object-cover h-[809px]" width="1920" height="809" loading="lazy" />
+          <img src="[##cms.cms.cdn##]/images/Universities-approved-by-the-Ministry-of-Science-in-Italy-1.jpg"
+            alt="view-ancient-greek" class="w-1/2 object-cover h-[809px]" width="1920" height="809" loading="lazy" />
+          <img src="[##cms.cms.cdn##]/images/view-ancient-greek-architecture-with-temple-structure (1).jpg"
+            alt="view-ancient-greek"
             class="absolute inset-0 mx-auto object-cover rounded-b-[80px] max-xl:w-[97%] xl:max-w-7xl" width="1920"
             height="809" loading="lazy" />
         </div>
 
       </div>
-       <!-- searchbox -->
-    <section id="searchbox" class="mt-[32rem] max-xl:w-[97%] xl:max-w-7xl mx-auto">
+      <!-- searchbox -->
+      <section id="searchbox" class="mt-[32rem] max-xl:w-[97%] xl:max-w-7xl mx-auto">
         <div class="relative z-10 flex justify-center w-full mt-24 mb-24 text-center loading"><svg aria-hidden="true"
             class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-primary" viewBox="0 0 100 101" fill="none"
             xmlns="http://www.w3.org/2000/svg">
@@ -82,285 +108,98 @@
       </section>
       <!-- searchbox -->
     </section>
-    <section class="max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mx-auto mt-24">
-      <div class="flex items-center justify-between mb-6">
-        <h2 class="text-2xl font-bold text-zinc-900">ویزا ها</h2>
-        <a href="" class="text-lg transition-all duration-300 text-primary-800 hover:text-secondary-800">مشاهده بیشتر</a>
-      </div>
-      <div class="flex items-center justify-between">
-        <a href="" class="flex flex-col items-center transition-all duration-300 group hover:scale-95">
-          <img src="[##cms.cms.cdn##]/images/chaina.svg" alt="" />
+    <basis core="list" datamembername="db.visa-list">
+      <layout>
+        <section class="max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mx-auto mt-24">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-2xl font-bold text-zinc-900">ویزا ها</h2>
+            <a href="/visa" class="text-lg transition-all duration-300 text-primary-800 hover:text-secondary-800">مشاهده
+              بیشتر</a>
+          </div>
+          <div class="flex items-center justify-between">
+            @child
+          </div>
+        </section>
+      </layout>
+      <face filter="link is null">
+        <a href="/visa.bc?id=@id" class="flex flex-col items-center transition-all duration-300 group hover:scale-95">
+          <img src="@00088X00088prp" alt="@title" />
           <div class="mt-2 divide-y divide-zinc-100">
-            <h3 class="pb-1 text-lg font-bold transition-all duration-300 text-zinc-900 group-hover:text-primary-600">ویزای چین</h3>
-            <div class="pt-1 text-center transition-all duration-300 text-zinc-900 group-hover:text-primary-600">350 دلار</div>
+            <h3 class="pb-1 text-lg font-bold transition-all duration-300 text-zinc-900 group-hover:text-primary-600">
+              @title</h3>
+            <div class="pt-1 text-center transition-all duration-300 text-zinc-900 group-hover:text-primary-600">
+              @prp_3087433
+            </div>
           </div>
         </a>
+      </face>
+      <face>
+        <a href="@link" class="flex flex-col items-center transition-all duration-300 group hover:scale-95">
+          <img src="@00088X00088prp" alt="@title" class="rounded-full" />
+          <div class="mt-2 divide-y divide-zinc-100">
+            <h3 class="pb-1 text-lg font-bold transition-all duration-300 text-zinc-900 group-hover:text-primary-600">
+              @title</h3>
+            <div class="pt-1 text-center transition-all duration-300 text-zinc-900 group-hover:text-primary-600">
+              @prp_3087433
+            </div>
+          </div>
+        </a>
+      </face>
+    </basis>
 
-        <div class="flex flex-col items-center">
-          <img src="[##cms.cms.cdn##]/images/chaina.svg" alt="" />
-          <div class="mt-2 divide-y divide-zinc-100">
-            <h3 class="pb-1 text-lg font-bold text-zinc-900">ویزای چین</h3>
-            <div class="pt-1 text-center">350 دلار</div>
-          </div>
-        </div>
-        <div class="flex flex-col items-center">
-          <img src="[##cms.cms.cdn##]/images/chaina.svg" alt="" />
-          <div class="mt-2 divide-y divide-zinc-100">
-            <h3 class="pb-1 text-lg font-bold text-zinc-900">ویزای چین</h3>
-            <div class="pt-1 text-center">350 دلار</div>
-          </div>
-        </div>
-        <div class="flex flex-col items-center">
-          <img src="[##cms.cms.cdn##]/images/chaina.svg" alt="" />
-          <div class="mt-2 divide-y divide-zinc-100">
-            <h3 class="pb-1 text-lg font-bold text-zinc-900">ویزای چین</h3>
-            <div class="pt-1 text-center">350 دلار</div>
-          </div>
-        </div>
-        <div class="flex flex-col items-center">
-          <img src="[##cms.cms.cdn##]/images/chaina.svg" alt="" />
-          <div class="mt-2 divide-y divide-zinc-100">
-            <h3 class="pb-1 text-lg font-bold text-zinc-900">ویزای چین</h3>
-            <div class="pt-1 text-center">350 دلار</div>
-          </div>
-        </div>
-        <div class="flex flex-col items-center">
-          <img src="[##cms.cms.cdn##]/images/chaina.svg" alt="" />
-          <div class="mt-2 divide-y divide-zinc-100">
-            <h3 class="pb-1 text-lg font-bold text-zinc-900">ویزای چین</h3>
-            <div class="pt-1 text-center">350 دلار</div>
-          </div>
-        </div>
-      </div>
-    </section>
+
 
     <section class="max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mx-auto mt-24">
       <div class="flex items-center justify-between mb-6">
-        <h2 class="text-2xl font-bold text-zinc-900">تور های در حال اجرا</h2>
-        <a href="" class="text-lg transition-all duration-300 text-primary-800 hover:text-secondary-800">مشاهده بیشتر</a>
+        <basis core="tree" datamembername="ongoing-tour.cat" idcol="catid" parentidcol="parentid" nullvalue="212712">
+          <face filter="RowNumber in(1)">
+            <h2 class="text-2xl font-bold text-zinc-900">@title</h2>
+          </face>
+        </basis>
+
+        <a href="/tours" class="text-lg transition-all duration-300 text-primary-800 hover:text-secondary-800">مشاهده
+          بیشتر</a>
       </div>
       <div class="space-y-4 divide-y-4 divide-secondary-100">
 
         <!-- Slider main container -->
         <div class="pt-24 swiper tour-swiper">
           <!-- Additional required wrapper -->
-          <div class="flex items-center swiper-wrapper">
-            <!-- ایتم های تور های در حال اجرا -->
-            <a href="" class="swiper-slide">
-              <div class="relative overflow-hidden transition-all duration-300 border border-solid rounded-xl border-zinc-300 hover:scale-95 hover:shadow-lg">
-                <img src="[##cms.cms.cdn##]/images/large-pool-with-hammocks.jpg" alt="pool" width="100%" height="219" loading="lazy">
-                <div
-                  class="relative z-10 w-[95%] bg-white border-2 border-dashed border-primary-100 rounded-xl -mt-9  mx-auto flex items-center justify-between py-2 px-3">
-                  <div>
-                    <h2 class="text-sm text-zinc-600">شروع قیمت:</h2>
-                    <div class="text-sm text-zinc-900">15/000/000 تومان+ 2500 دلار</div>
-                  </div>
-                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.25 24.2743L31.25 24.2743" stroke="#445E87" stroke-width="1.5" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M22.3008 30.2987L16.2508 24.2747L22.3008 18.2497" stroke="#445E87" stroke-width="1.5"
-                      stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </div>
-                <div class="px-2 py-4">
-                  <h2 class="mb-3 text-lg font-bold">تور استانبول</h2>
-                  <ul class="flex justify-between">
-                    <li class="flex flex-col gap-4 pl-4 ">
-                      <span class="text-sm text-zinc-600">مدت سفر</span>
-                      <span class="text-sm text-zinc-900">3 شب 4 روز</span>
-                    </li>
-                    <div class="max-h-screen border border-solid border-primary-100"></div>
-                    <li class="flex flex-col gap-4 px-4 ">
-                      <span class="text-sm text-zinc-600">مدت سفر</span>
-                      <span class="text-sm text-zinc-900">1403/5/2</span>
-                    </li>
-                    <div class="max-h-screen border border-solid border-primary-100"></div>
-                    <li class="flex flex-col gap-4 pr-4 ">
-                      <span class="text-sm text-zinc-600">ایرلاین</span>
-                      <span class="text-sm text-zinc-900">سلام ایر</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </a>
-            <a href="" class="swiper-slide">
-              <div class="relative overflow-hidden transition-all duration-300 border border-solid rounded-xl border-zinc-300 hover:scale-95 hover:shadow-lg">
-                <img src="[##cms.cms.cdn##]/images/large-pool-with-hammocks.jpg" alt="pool" width="100%" height="219" loading="lazy">
-                <div
-                  class="relative z-10 w-[95%] bg-white border-2 border-dashed border-primary-100 rounded-xl -mt-9  mx-auto flex items-center justify-between py-2 px-3">
-                  <div>
-                    <h2 class="text-sm text-zinc-600">شروع قیمت:</h2>
-                    <div class="text-sm text-zinc-900">15/000/000 تومان+ 2500 دلار</div>
-                  </div>
-                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.25 24.2743L31.25 24.2743" stroke="#445E87" stroke-width="1.5" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M22.3008 30.2987L16.2508 24.2747L22.3008 18.2497" stroke="#445E87" stroke-width="1.5"
-                      stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </div>
-                <div class="px-2 py-4">
-                  <h2 class="mb-3 text-lg font-bold">تور استانبول</h2>
-                  <ul class="flex justify-between">
-                    <li class="flex flex-col gap-4 pl-4 ">
-                      <span class="text-sm text-zinc-600">مدت سفر</span>
-                      <span class="text-sm text-zinc-900">3 شب 4 روز</span>
-                    </li>
-                    <div class="max-h-screen border border-solid border-primary-100"></div>
-                    <li class="flex flex-col gap-4 px-4 ">
-                      <span class="text-sm text-zinc-600">مدت سفر</span>
-                      <span class="text-sm text-zinc-900">1403/5/2</span>
-                    </li>
-                    <div class="max-h-screen border border-solid border-primary-100"></div>
-                    <li class="flex flex-col gap-4 pr-4 ">
-                      <span class="text-sm text-zinc-600">ایرلاین</span>
-                      <span class="text-sm text-zinc-900">سلام ایر</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </a>
-            <a href="" class="swiper-slide">
-              <div class="relative overflow-hidden transition-all duration-300 border border-solid rounded-xl border-zinc-300 hover:scale-95 hover:shadow-lg">
-                <img src="[##cms.cms.cdn##]/images/large-pool-with-hammocks.jpg" alt="pool" width="100%" height="219" loading="lazy">
-                <div
-                  class="relative z-10 w-[95%] bg-white border-2 border-dashed border-primary-100 rounded-xl -mt-9  mx-auto flex items-center justify-between py-2 px-3">
-                  <div>
-                    <h2 class="text-sm text-zinc-600">شروع قیمت:</h2>
-                    <div class="text-sm text-zinc-900">15/000/000 تومان+ 2500 دلار</div>
-                  </div>
-                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.25 24.2743L31.25 24.2743" stroke="#445E87" stroke-width="1.5" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M22.3008 30.2987L16.2508 24.2747L22.3008 18.2497" stroke="#445E87" stroke-width="1.5"
-                      stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </div>
-                <div class="px-2 py-4">
-                  <h2 class="mb-3 text-lg font-bold">تور استانبول</h2>
-                  <ul class="flex justify-between">
-                    <li class="flex flex-col gap-4 pl-4 ">
-                      <span class="text-sm text-zinc-600">مدت سفر</span>
-                      <span class="text-sm text-zinc-900">3 شب 4 روز</span>
-                    </li>
-                    <div class="max-h-screen border border-solid border-primary-100"></div>
-                    <li class="flex flex-col gap-4 px-4 ">
-                      <span class="text-sm text-zinc-600">مدت سفر</span>
-                      <span class="text-sm text-zinc-900">1403/5/2</span>
-                    </li>
-                    <div class="max-h-screen border border-solid border-primary-100"></div>
-                    <li class="flex flex-col gap-4 pr-4 ">
-                      <span class="text-sm text-zinc-600">ایرلاین</span>
-                      <span class="text-sm text-zinc-900">سلام ایر</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </a>
-            <a href="" class="swiper-slide">
-              <div class="relative overflow-hidden transition-all duration-300 border border-solid rounded-xl border-zinc-300 hover:scale-95 hover:shadow-lg">
-                <img src="[##cms.cms.cdn##]/images/large-pool-with-hammocks.jpg" alt="pool" width="100%" height="219" loading="lazy">
-                <div
-                  class="relative z-10 w-[95%] bg-white border-2 border-dashed border-primary-100 rounded-xl -mt-9  mx-auto flex items-center justify-between py-2 px-3">
-                  <div>
-                    <h2 class="text-sm text-zinc-600">شروع قیمت:</h2>
-                    <div class="text-sm text-zinc-900">15/000/000 تومان+ 2500 دلار</div>
-                  </div>
-                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.25 24.2743L31.25 24.2743" stroke="#445E87" stroke-width="1.5" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M22.3008 30.2987L16.2508 24.2747L22.3008 18.2497" stroke="#445E87" stroke-width="1.5"
-                      stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </div>
-                <div class="px-2 py-4">
-                  <h2 class="mb-3 text-lg font-bold">تور استانبول</h2>
-                  <ul class="flex justify-between">
-                    <li class="flex flex-col gap-4 pl-4 ">
-                      <span class="text-sm text-zinc-600">مدت سفر</span>
-                      <span class="text-sm text-zinc-900">3 شب 4 روز</span>
-                    </li>
-                    <div class="max-h-screen border border-solid border-primary-100"></div>
-                    <li class="flex flex-col gap-4 px-4 ">
-                      <span class="text-sm text-zinc-600">مدت سفر</span>
-                      <span class="text-sm text-zinc-900">1403/5/2</span>
-                    </li>
-                    <div class="max-h-screen border border-solid border-primary-100"></div>
-                    <li class="flex flex-col gap-4 pr-4 ">
-                      <span class="text-sm text-zinc-600">ایرلاین</span>
-                      <span class="text-sm text-zinc-900">سلام ایر</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </a>
-            <a href="" class="swiper-slide">
-              <div class="relative overflow-hidden transition-all duration-300 border border-solid rounded-xl border-zinc-300 hover:scale-95 hover:shadow-lg">
-                <img src="[##cms.cms.cdn##]/images/large-pool-with-hammocks.jpg" alt="pool" width="100%" height="219" loading="lazy">
-                <div
-                  class="relative z-10 w-[95%] bg-white border-2 border-dashed border-primary-100 rounded-xl -mt-9  mx-auto flex items-center justify-between py-2 px-3">
-                  <div>
-                    <h2 class="text-sm text-zinc-600">شروع قیمت:</h2>
-                    <div class="text-sm text-zinc-900">15/000/000 تومان+ 2500 دلار</div>
-                  </div>
-                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.25 24.2743L31.25 24.2743" stroke="#445E87" stroke-width="1.5" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path d="M22.3008 30.2987L16.2508 24.2747L22.3008 18.2497" stroke="#445E87" stroke-width="1.5"
-                      stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </div>
-                <div class="px-2 py-4">
-                  <h2 class="mb-3 text-lg font-bold">تور استانبول</h2>
-                  <ul class="flex justify-between">
-                    <li class="flex flex-col gap-4 pl-4 ">
-                      <span class="text-sm text-zinc-600">مدت سفر</span>
-                      <span class="text-sm text-zinc-900">3 شب 4 روز</span>
-                    </li>
-                    <div class="max-h-screen border border-solid border-primary-100"></div>
-                    <li class="flex flex-col gap-4 px-4 ">
-                      <span class="text-sm text-zinc-600">مدت سفر</span>
-                      <span class="text-sm text-zinc-900">1403/5/2</span>
-                    </li>
-                    <div class="max-h-screen border border-solid border-primary-100"></div>
-                    <li class="flex flex-col gap-4 pr-4 ">
-                      <span class="text-sm text-zinc-600">ایرلاین</span>
-                      <span class="text-sm text-zinc-900">سلام ایر</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </a>
-
-
+          <div class="fetch-content-article swiper-wrapper">
 
           </div>
+
 
           <!-- If we need navigation buttons -->
           <div
             class="absolute top-0 left-0 flex items-center justify-between w-full pb-4 border-b-4 border-secondary-100">
-            <ul class="flex">
-              <li class="py-2 text-primary-900 px-7 rounded-xl">
-                خارجی
-              </li>
-              <li class="py-2 text-primary-900 px-7 rounded-xl">
-                خارجی
-              </li>
-              <li class="py-2 text-primary-900 px-7 rounded-xl">
-                خارجی
-              </li>
-            </ul>
+            <basis core="tree" datamembername="ongoing-tour.cat" idcol="catid" parentidcol="parentid"
+              nullvalue="212712">
+              <layout>
+                <ul class="flex">
+                  @child
+                </ul>
+              </layout>
+              <face filter="RowNumber not in(1)">
+                <li class="py-4 cursor-pointer tour-li text-primary-900 px-7 rounded-xl" data-id="@catid">
+                  @title
+                </li>
+              </face>
+            </basis>
+
             <div class="flex items-center">
               <div class="swiper-button-prev-custom group">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" class="transition-all duration-300 group-hover:fill-secondary-400" 
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    class="transition-all duration-300 group-hover:fill-secondary-400"
                     d="M7 24C7 14.6262 14.6262 7 24 7C33.3738 7 41 14.6262 41 24C41 33.3738 33.3738 41 24 41C14.6262 41 7 33.3738 7 24ZM9.55 24C9.55 31.9679 16.0321 38.45 24 38.45C31.9679 38.45 38.45 31.9679 38.45 24C38.45 16.0321 31.9679 9.55 24 9.55C16.0321 9.55 9.55 16.0321 9.55 24ZM20.644 17.1983C21.1404 16.7002 21.9479 16.6985 22.4477 17.1949L28.3739 23.0973C28.5671 23.2877 28.6916 23.5347 28.7337 23.7991L28.7496 24C28.7496 24.3383 28.6153 24.6647 28.3739 24.9027L22.4477 30.8034C21.9479 31.3015 21.1404 31.2981 20.644 30.8C20.1476 30.3002 20.1476 29.4927 20.6474 28.9963L25.6692 24L20.6474 19.002C20.1476 18.5056 20.1476 17.6981 20.644 17.1983Z"
                     fill="#A1C2E2" />
                 </svg>
               </div>
               <div class="swiper-button-next-custom group">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" class="transition-all duration-300 group-hover:fill-secondary-400"
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    class="transition-all duration-300 group-hover:fill-secondary-400"
                     d="M41 24C41 33.3738 33.3738 41 24 41C14.6262 41 7 33.3738 7 24C7 14.6262 14.6262 7 24 7C33.3738 7 41 14.6262 41 24ZM38.45 24C38.45 16.0321 31.9679 9.55 24 9.55C16.0321 9.55 9.55 16.0321 9.55 24C9.55 31.9679 16.0321 38.45 24 38.45C31.9679 38.45 38.45 31.9679 38.45 24ZM27.356 30.8017C26.8596 31.2998 26.0521 31.3015 25.5523 30.8051L19.6261 24.9027C19.4329 24.7123 19.3084 24.4653 19.2663 24.2009L19.2504 24C19.2504 23.6617 19.3847 23.3353 19.6261 23.0973L25.5523 17.1966C26.0521 16.6985 26.8596 16.7019 27.356 17.2C27.8524 17.6998 27.8524 18.5073 27.3526 19.0037L22.3308 24L27.3526 28.998C27.8524 29.4944 27.8524 30.3019 27.356 30.8017Z"
                     fill="#A1C2E2" />
                 </svg>
@@ -373,34 +212,101 @@
       </div>
     </section>
     <section class="max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mx-auto mt-24">
-      <h2 class="mb-6 text-xl font-bold">تجربه مسافران</h2>
-      <div>
-        <audio src="" controls class="p-3 audio-play bg-secondary-50 rounded-xl">
-          <div>
-            <h2 class="font-bold text-zinc-900">پادکست یک</h2>
-            <div class="text-sm text-zinc-700">تجریه سفر به کشور های خاورمیانه</div>
+      <h2 class="mb-6 text-2xl font-bold">تجربه مسافران</h2>
+      <basis core="list" datamembername="db.audio">
+        <layout>
+          <div class="flex justify-between">
+            @child
           </div>
-        </audio>
-      </div>
+        </layout>
+        <face>
+          <audio controls>
+            <source src="@largeIMG" type="audio/mp3">
+          </audio>
+        </face>
+      </basis>
+
     </section>
     <section class="flex gap-8 max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mx-auto mt-24">
-      <div class="relative flex flex-1 p-3 bg-primary-50 rounded-xl">
+      <div class="relative flex flex-col flex-1 px-6 py-16 bg-primary-50 rounded-xl">
         <div>
           <h2 class="mb-2 text-2xl font-bold text-zinc-900">با مشاورین ما در ارتباط باشید</h2>
-          <div class="text-zinc-900">رزرو تور های و ارائه خدمات تلفنی و آنلاین را با اسب پرنده تجربه کنید</div>
+          <div class="text-zinc-900">رزرو تور های و ارائه خدمات تلفنی و آنلاین را با اسب پرنده تجربه کنید
+          </div>
         </div>
-        <img src="[##cms.cms.cdn##]/images/person-contact.png" class="absolute left-[-10%] bottom-0" alt="person-contact" width="350"
-          height="350">
+        <div class="flex flex-col form-moshavereh w-[75%] mt-6" id="contact-form-resize">
+
+          <basis core="schema" run="atclient"
+            schemaurl="/schema/domainform/7C744024-8AA5-4BFA-9362-3044DF708D58/EEE2F41E-E85D-4C25-954A-71F22A6A0BE4/fa/با-مشاورین-ما-در-ارتباط-باشید"
+            displaymode="new" button="[data-btn-uploadfooter]" resultsourceid="upload.datafooter"
+            OnRendered="RenderFormFooter"></basis>
+          <basis core="api" if="{##cms.uploadFooter.run|(false)##}" run="atclient"
+            url="/schema/domainform/7C744024-8AA5-4BFA-9362-3044DF708D58/fa/editobject" method="post"
+            body="object_edit={##cms.uploadFooter.value##}&captcha={##cms.uploadFooter.captcha##}&captchaid={##cms.uploadFooter.captchaid##}"
+            content-type="application/x-www-form-urlencoded" triggers='cms.uploadFooter'
+            OnProcessed="OnProcessedEditObjectFooter"></basis>
+          <basis core="callback" run="atclient" method="uploadDocumentFooter" triggers="upload.datafooter">
+          </basis>
+
+          <div class="flex items-center captcha-button">
+            <div id="captchaContainer"
+              class="captchaContainerclass flex-[3] captcha-sefaresh ml-2.5 max-xl:ml-0 max-xl:mb-[20px]"
+              data-bc-answer-container data-bc-schema-info-multi="0" data-bc-schema-info-word="58"
+              data-bc-schema-info-part="1" data-bc-schema-info-part-0-type="text">
+              <basis core="dbsource" source="trust_login" name="captcha" run="atclient"
+                triggers="captcha.refreshFooter">
+                <member name="code" type="scalar" request="captcha"></member>
+              </basis>
+              <basis datamembername="captcha.code" core="print" run="atclient">
+                <face>
+                  <script type="text/template"><div class="d-inline-block"><div class="flex gap-4">
+      
+                          <div class="float-right w-[60%]"><input type="text" class="contactUsInput codeinputm" name="captcha" maxlength="4" placeholder="کد امنیتی"/><input type="hidden" name="captchaid" value="@captcha@" /></div>
+                          <div class="flex items-center w-1/3 gap-4">
+                              <img src="/@captcha@" loading="lazy" width="120" height="60" alt="captcha" class="w-16" />
+                              <svg class="inline-block align-middle cursor-pointer w-9 h-9" onclick="refreshCaptchaFooter()" width="24" height="24" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.1247 8.56165H18.1238C18.0007 8.56175 17.8788 8.5861 17.7651 8.63331C17.6514 8.68052 17.5481 8.74967 17.4611 8.8368C17.3741 8.92393 17.3052 9.02734 17.2581 9.14113C17.2111 9.25492 17.187 9.37685 17.1871 9.49997C17.1859 10.8143 16.8245 12.1032 16.1421 13.2265C15.4597 14.3498 14.4824 15.2646 13.3166 15.8714C12.1507 16.4782 10.8408 16.7538 9.52921 16.6683C8.21765 16.5827 6.95463 16.1393 5.87744 15.3862C2.63134 13.1132 1.83959 8.62309 4.11255 5.37696C6.38552 2.13083 10.8757 1.33899 14.1218 3.61204C14.6129 3.95501 15.0592 4.358 15.4504 4.81165H12.8121C12.5635 4.81165 12.325 4.91042 12.1492 5.08623C11.9734 5.26205 11.8746 5.5005 11.8746 5.74915C11.8746 5.99779 11.9734 6.23624 12.1492 6.41206C12.325 6.58787 12.5635 6.68665 12.8121 6.68665H17.1871C17.4358 6.68665 17.6742 6.58787 17.85 6.41206C18.0259 6.23624 18.1246 5.99779 18.1246 5.74915V1.37415C18.1246 1.12551 18.0259 0.887048 17.85 0.711233C17.6742 0.535418 17.4358 0.436646 17.1871 0.436646C16.9385 0.436646 16.7 0.535418 16.5242 0.711233C16.3484 0.887048 16.2496 1.12551 16.2496 1.37415V2.93536C15.9206 2.62321 15.5689 2.33596 15.1973 2.07598C14.2225 1.39342 13.1228 0.909542 11.9609 0.651979C10.7991 0.394417 9.59797 0.368213 8.42603 0.574863C7.25409 0.781513 6.13433 1.21697 5.13067 1.85637C4.12702 2.49578 3.25914 3.3266 2.57658 4.30141C1.19808 6.27013 0.658111 8.70582 1.07546 11.0727C1.49281 13.4395 2.83329 15.5436 4.80201 16.9221C6.31776 17.9898 8.12639 18.563 9.98041 18.5633C10.5144 18.5631 11.0474 18.5162 11.5732 18.4233C13.6714 18.0531 15.5722 16.9556 16.9417 15.3235C18.3112 13.6914 19.062 11.6289 19.0621 9.49833C19.0619 9.24983 18.963 9.01159 18.7873 8.83596C18.6115 8.66032 18.3732 8.56166 18.1247 8.56165Z" fill="#71717A"/></svg>
+                          </div>
+                          
+                      </div></div></script>
+                </face>
+              </basis>
+            </div>
+            <button
+              class="flex items-center justify-center flex-1 w-40 h-16 text-white transition-all duration-300 bg-primary-900 rounded-xl hover:bg-secondary-500 y-2 wpx-4 data-body-btn"
+              type="button" data-btn-uploadfooter><span class="">ارسال</span></button>
+            <div
+              class="Loading_Form hidden data-body-btn w-[126px] h-12 px-4 py-2 bg-secondary-800 rounded-2xl justify-center items-center gap-2.5">
+              <div id="ballsWaveG" class="text-base font-normal leading-normal ext-zinc-50">
+                <div id="ballsWaveG_1" class="ballsWaveG"></div>
+                <div id="ballsWaveG_2" class="ballsWaveG"></div>
+                <div id="ballsWaveG_3" class="ballsWaveG"></div>
+                <div id="ballsWaveG_4" class="ballsWaveG"></div>
+                <div id="ballsWaveG_5" class="ballsWaveG"></div>
+                <div id="ballsWaveG_6" class="ballsWaveG"></div>
+                <div id="ballsWaveG_7" class="ballsWaveG"></div>
+                <div id="ballsWaveG_8" class="ballsWaveG"></div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 text-center message-api"></div>
+        </div>
+        <img src="[##cms.cms.cdn##]/images/person-contact.png" class="absolute left-[-10%] bottom-0"
+          alt="person-contact" width="350" height="350">
       </div>
-      <a href=""
-        class="flex items-center self-start py-1 px-6 text-sm transition-all duration-300 border border-solid border-secondary-100 rounded-[30px] hover:bg-secondary-100 hover:border-primary-900">
-        <span>021-88997766</span>
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd"
-            d="M23.5317 24.4724C27.5208 28.4604 28.4258 23.8467 30.9656 26.3848C33.4143 28.8328 34.8216 29.3232 31.7192 32.4247C31.3306 32.737 28.8616 36.4943 20.1846 27.8197C11.5065 19.144 15.2616 16.6724 15.574 16.2839C18.6839 13.1738 19.1659 14.5894 21.6145 17.0373C24.1544 19.5765 19.5427 20.4844 23.5317 24.4724Z"
-            fill="#516E8C"></path>
-        </svg>
-      </a>
+      <basis core="print" datamembername="db.info">
+        <face filter="TypeID in(240)">
+          <a href="tel:@text"
+            class="flex items-center self-start py-1 px-6 text-sm transition-all duration-300 border border-solid border-secondary-100 rounded-[30px] hover:bg-secondary-100 hover:border-primary-900">
+            <span>021-88997766</span>
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M23.5317 24.4724C27.5208 28.4604 28.4258 23.8467 30.9656 26.3848C33.4143 28.8328 34.8216 29.3232 31.7192 32.4247C31.3306 32.737 28.8616 36.4943 20.1846 27.8197C11.5065 19.144 15.2616 16.6724 15.574 16.2839C18.6839 13.1738 19.1659 14.5894 21.6145 17.0373C24.1544 19.5765 19.5427 20.4844 23.5317 24.4724Z"
+                fill="#516E8C"></path>
+            </svg>
+          </a>
+        </face>
+      </basis>
+
     </section>
     <section class="mt-24 bg-primary-50">
 
@@ -431,135 +337,77 @@
           </div>
         </div>
         <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="pt-6 pb-10 swiper-slide bg-primary-50">
-            <div class="max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mx-auto flex gap-10">
-              <div class="mt-10">
-                <h2 class="mb-2 text-2xl font-bold text-zinc-900">سفر های ویژه با آفر</h2>
-                <div class="text-sm text-justify">متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته
-                  می‌شود. طراح گرافیک از این متن به
-                  عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده
-                  می
-                  نماید متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این
-                  متن به
-                  عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده
-                  می
-                  نمایدمتنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن
-                  به
-                  عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده
-                  می
-                  نماید</div>
-                <a href=""
-                  class="flex items-center justify-center w-40 h-16 mt-6 text-white transition-all duration-300 bg-primary-900 rounded-xl hover:bg-secondary-500">مشاهده
-                  افر</a>
-              </div>
-              <img src="[##cms.cms.cdn##]/images/Frame 1261157392.jpg"
-                class="rounded-full object-cover h-[370px] border-8 border-solid border-primary-100" alt="villa"
-                width="100%" height="370">
-
+        <basis core="list" datamembername="db.travel-list">
+          <layout>
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              @child
             </div>
-          </div>
-          <div class="pt-6 pb-10 swiper-slide bg-primary-50">
-            <div class="max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mx-auto flex gap-10">
-              <div class="mt-10">
-                <h2 class="mb-2 text-2xl font-bold text-zinc-900">سفر های ویژه با آفر</h2>
-                <div class="text-sm text-justify">متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته
-                  می‌شود. طراح گرافیک از این متن به
-                  عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده
-                  می
-                  نماید متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این
-                  متن به
-                  عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده
-                  می
-                  نمایدمتنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن
-                  به
-                  عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده
-                  می
-                  نماید</div>
-                <a href=""
-                  class="flex items-center justify-center w-40 h-16 mt-6 text-white bg-primary-900 rounded-xl">مشاهده
-                  افر</a>
-              </div>
-              <img src="[##cms.cms.cdn##]/images/Frame 1261157392.jpg"
-                class="rounded-full object-cover h-[370px] border-8 border-solid border-primary-100" alt="villa"
-                width="100%" height="370">
+          </layout>
+          <face filter="link is null">
+            <div class="pt-6 pb-10 swiper-slide bg-primary-50">
+              <div class="max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mx-auto flex gap-10">
+                <div class="mt-10">
+                  <h2 class="mb-2 text-2xl font-bold text-zinc-900">@title</h2>
+                  <div class="text-sm text-justify line-clamp-6">@prp_7244</div>
+                  <a href="/article.bc?id=@id"
+                    class="flex items-center justify-center w-40 h-16 mt-6 text-white transition-all duration-300 bg-primary-900 rounded-xl hover:bg-secondary-500">مشاهده
+                    افر</a>
+                </div>
+                <img src="@00620X00370prp"
+                  class="rounded-full object-cover h-[370px] border-8 border-solid border-primary-100" alt="villa"
+                  width="100%" height="370">
 
+              </div>
             </div>
-          </div>
-        </div>
+          </face>
+          <face>
+            <div class="pt-6 pb-10 swiper-slide bg-primary-50">
+              <div class="max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mx-auto flex gap-10">
+                <div class="mt-10">
+                  <h2 class="mb-2 text-2xl font-bold text-zinc-900">@title</h2>
+                  <div class="text-sm text-justify line-clamp-6">@prp_7244</div>
+                  <a href="@link"
+                    class="flex items-center justify-center w-40 h-16 mt-6 text-white transition-all duration-300 bg-primary-900 rounded-xl hover:bg-secondary-500">مشاهده
+                    افر</a>
+                </div>
+                <img src="@00620X00370prp"
+                  class="rounded-full object-cover h-[370px] border-8 border-solid border-primary-100" alt="villa"
+                  width="100%" height="370">
+
+              </div>
+            </div>
+          </face>
+        </basis>
+
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
       </div>
     </section>
-    <section class="max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mx-auto my-24 ">
-      <div class="flex items-center justify-between mb-6">
-        <h2 class="text-2xl font-bold text-zinc-900">مقاله های جدید</h2>
-        <a href="" class="text-lg transition-all duration-300 text-primary-800 hover:text-secondary-800">مشاهده بیشتر</a>
-      </div>
-      <div class="flex gap-2">
-        <!-- ایتم های مقاله های جدید -->
-        <div class="flex-[2] flex flex-col gap-2 ">
-          <div class="flex overflow-hidden border border-solid border-primary-200 rounded-xl group">
-            <img src="[##cms.cms.cdn##]/images/خرید-ملک-در-آلمان.jpg" class="object-cover transition-all duration-300 group-hover:grayscale" alt="germany" width="100%" height="230">
-            <div class="px-6 pt-4 pb-6">
-              <h2 class="mb-2 text-lg font-bold text-zinc-900">کار در آلمان</h2>
-              <div class="text-sm text-justify text-zinc-900">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ،
-                و
-                با استفاده از طراحان گرافیک لورم ایپسوم لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-                استفاده از طراحان گرافیک لورم ایپسوم</div>
-              <div class="flex items-center justify-between mt-6">
-                <a href=""
-                  class="flex items-center text-sm transition-all duration-300 text-primary-900 group/leveltwo hover:text-secondary-200 ">بیشتر
-                  بخوانید
-                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.25 24.2739L31.25 24.2739"
-                      class="transition-all duration-300 group-hover/leveltwo:stroke-secondary-200" stroke="#445E87"
-                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M22.3008 30.2985L16.2508 24.2745L22.3008 18.2495"
-                      class="transition-all duration-300 group-hover/leveltwo:stroke-secondary-200" stroke="#445E87"
-                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </a>
-                <span class="text-sm text-zinc-600">1403/2/2</span>
-              </div>
-            </div>
+    <basis core="list" datamembername="db.article-list">
+      <layout>
+        <section class="max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mx-auto my-24 ">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-2xl font-bold text-zinc-900">مقاله های جدید</h2>
+            <a href="/article-list.bc?catid=212052"
+              class="text-lg transition-all duration-300 text-primary-800 hover:text-secondary-800">مشاهده
+              بیشتر</a>
           </div>
-          <div class="flex overflow-hidden border border-solid border-primary-200 rounded-xl group">
-            <div class="px-6 pt-4 pb-6">
-              <h2 class="mb-2 text-lg font-bold text-zinc-900">کار در آلمان</h2>
-              <div class="text-sm text-justify text-zinc-900">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ،
-                و
-                با استفاده از طراحان گرافیک لورم ایپسوم لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-                استفاده از طراحان گرافیک لورم ایپسوم</div>
-              <div class="flex items-center justify-between mt-6">
-                <a href=""
-                  class="flex items-center text-sm transition-all duration-300 text-primary-900 group/leveltwo hover:text-secondary-200 ">بیشتر
-                  بخوانید
-                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.25 24.2739L31.25 24.2739"
-                      class="transition-all duration-300 group-hover/leveltwo:stroke-secondary-200" stroke="#445E87"
-                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M22.3008 30.2985L16.2508 24.2745L22.3008 18.2495"
-                      class="transition-all duration-300 group-hover/leveltwo:stroke-secondary-200" stroke="#445E87"
-                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </a>
-                <span class="text-sm text-zinc-600">1403/2/2</span>
-              </div>
-            </div>
-            <img src="[##cms.cms.cdn##]/images/خرید-ملک-در-آلمان.jpg" class="object-cover transition-all duration-300 group-hover:grayscale" alt="germany" width="100%" height="230">
+          <div class="grid grid-cols-3 grid-rows-2 gap-2">
+            <!-- ایتم های مقاله های جدید -->
+            @child
           </div>
-        </div>
-        <div class="flex-1 overflow-hidden border border-solid border-primary-200 rounded-xl group">
-          <img src="[##cms.cms.cdn##]/images/Rectangle 23881.jpg" class="object-cover transition-all duration-300 group-hover:grayscale" alt="germany" width="100%" height="245">
+        </section>
+      </layout>
+      <face filter="link is null and RowNumber in(1)">
+        <div class="flex col-span-2 overflow-hidden border border-solid border-primary-200 rounded-xl group">
+          <img src="@00443X00245prp" class="object-cover transition-all duration-300 group-hover:grayscale"
+            alt="germany" width="100%" height="230">
           <div class="px-6 pt-4 pb-6">
-            <h2 class="mb-2 text-lg font-bold text-zinc-900">کار در آلمان</h2>
-            <div class="text-sm text-justify text-zinc-900">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
-              با استفاده از طراحان گرافیک لورم ایپسوم لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-              استفاده از طراحان گرافیک لورم ایپسوم</div>
-            <div class="flex items-center justify-between mt-7">
-              <a href=""
+            <h2 class="mb-2 text-lg font-bold text-zinc-900">@title</h2>
+            <div class="text-sm text-justify text-zinc-900 line-clamp-4">@prp_7244</div>
+            <div class="flex items-center justify-between mt-6">
+              <a href="/article.bc?id=@id"
                 class="flex items-center text-sm transition-all duration-300 text-primary-900 group/leveltwo hover:text-secondary-200 ">بیشتر
                 بخوانید
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -571,18 +419,152 @@
                     stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </a>
-              <span class="text-sm text-zinc-600">1403/2/2</span>
+              <span class="text-sm text-zinc-600">@prp_7231</span>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </face>
+      <face filter="RowNumber in(1)">
+        <div class="flex col-span-2 overflow-hidden border border-solid border-primary-200 rounded-xl group">
+          <img src="@00443X00245prp" class="object-cover transition-all duration-300 group-hover:grayscale"
+            alt="germany" width="100%" height="230">
+          <div class="px-6 pt-4 pb-6">
+            <h2 class="mb-2 text-lg font-bold text-zinc-900">@title</h2>
+            <div class="text-sm text-justify text-zinc-900 line-clamp-4">@prp_7244</div>
+            <div class="flex items-center justify-between mt-6">
+              <a href="@link"
+                class="flex items-center text-sm transition-all duration-300 text-primary-900 group/leveltwo hover:text-secondary-200 ">بیشتر
+                بخوانید
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.25 24.2739L31.25 24.2739"
+                    class="transition-all duration-300 group-hover/leveltwo:stroke-secondary-200" stroke="#445E87"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M22.3008 30.2985L16.2508 24.2745L22.3008 18.2495"
+                    class="transition-all duration-300 group-hover/leveltwo:stroke-secondary-200" stroke="#445E87"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+              <span class="text-sm text-zinc-600">@prp_7231</span>
+            </div>
+          </div>
+        </div>
+      </face>
+
+      <face filter="link is null and RowNumber in(2)">
+        <div
+          class="flex col-span-2 col-start-1 row-start-2 overflow-hidden border border-solid border-primary-200 rounded-xl group">
+          <div class="px-6 pt-4 pb-6">
+            <h2 class="mb-2 text-lg font-bold text-zinc-900">@title</h2>
+            <div class="text-sm text-justify text-zinc-900 line-clamp-4">@prp_7244</div>
+            <div class="flex items-center justify-between mt-6">
+              <a href="/article.bc?id=@id"
+                class="flex items-center text-sm transition-all duration-300 text-primary-900 group/leveltwo hover:text-secondary-200 ">بیشتر
+                بخوانید
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.25 24.2739L31.25 24.2739"
+                    class="transition-all duration-300 group-hover/leveltwo:stroke-secondary-200" stroke="#445E87"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M22.3008 30.2985L16.2508 24.2745L22.3008 18.2495"
+                    class="transition-all duration-300 group-hover/leveltwo:stroke-secondary-200" stroke="#445E87"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+              <span class="text-sm text-zinc-600">@prp_7231</span>
+            </div>
+          </div>
+          <img src="@00443X00245prp" class="object-cover transition-all duration-300 group-hover:grayscale"
+            alt="germany" width="100%" height="230">
+        </div>
+      </face>
+      <face filter="RowNumber in(2)">
+        <div
+          class="flex col-span-2 col-start-1 row-start-2 overflow-hidden border border-solid border-primary-200 rounded-xl group">
+          <div class="px-6 pt-4 pb-6">
+            <h2 class="mb-2 text-lg font-bold text-zinc-900">@title</h2>
+            <div class="text-sm text-justify text-zinc-900 line-clamp-4">@prp_7244</div>
+            <div class="flex items-center justify-between mt-6">
+              <a href="@link"
+                class="flex items-center text-sm transition-all duration-300 text-primary-900 group/leveltwo hover:text-secondary-200 ">بیشتر
+                بخوانید
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.25 24.2739L31.25 24.2739"
+                    class="transition-all duration-300 group-hover/leveltwo:stroke-secondary-200" stroke="#445E87"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M22.3008 30.2985L16.2508 24.2745L22.3008 18.2495"
+                    class="transition-all duration-300 group-hover/leveltwo:stroke-secondary-200" stroke="#445E87"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+              <span class="text-sm text-zinc-600">@prp_7231</span>
+            </div>
+          </div>
+          <img src="@00443X00245prp" class="object-cover transition-all duration-300 group-hover:grayscale"
+            alt="germany" width="100%" height="230">
+        </div>
+      </face>
+
+      <face filter="link is null and RowNumber in(3)">
+        <div
+          class="col-start-3 row-span-2 row-start-1 overflow-hidden border border-solid border-primary-200 rounded-xl group">
+          <img src="@00443X00245prp" class="object-cover transition-all duration-300 group-hover:grayscale"
+            alt="germany" width="100%" height="245">
+          <div class="px-6 pt-4 pb-6">
+            <h2 class="mb-2 text-lg font-bold text-zinc-900">@title</h2>
+            <div class="text-sm text-justify text-zinc-900 line-clamp-4">@prp_7244</div>
+            <div class="flex items-center justify-between mt-7">
+              <a href="/article.bc?id=@id"
+                class="flex items-center text-sm transition-all duration-300 text-primary-900 group/leveltwo hover:text-secondary-200 ">بیشتر
+                بخوانید
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.25 24.2739L31.25 24.2739"
+                    class="transition-all duration-300 group-hover/leveltwo:stroke-secondary-200" stroke="#445E87"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M22.3008 30.2985L16.2508 24.2745L22.3008 18.2495"
+                    class="transition-all duration-300 group-hover/leveltwo:stroke-secondary-200" stroke="#445E87"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+              <span class="text-sm text-zinc-600">@prp_7231</span>
+            </div>
+          </div>
+        </div>
+      </face>
+      <face filter="RowNumber in(3)">
+        <div
+          class="col-start-3 row-span-2 row-start-1 overflow-hidden border border-solid border-primary-200 rounded-xl group">
+          <img src="@00443X00245prp" class="object-cover transition-all duration-300 group-hover:grayscale"
+            alt="germany" width="100%" height="245">
+          <div class="px-6 pt-4 pb-6">
+            <h2 class="mb-2 text-lg font-bold text-zinc-900">@title</h2>
+            <div class="text-sm text-justify text-zinc-900 line-clamp-4">@prp_7244</div>
+            <div class="flex items-center justify-between mt-7">
+              <a href="@link"
+                class="flex items-center text-sm transition-all duration-300 text-primary-900 group/leveltwo hover:text-secondary-200 ">بیشتر
+                بخوانید
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.25 24.2739L31.25 24.2739"
+                    class="transition-all duration-300 group-hover/leveltwo:stroke-secondary-200" stroke="#445E87"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M22.3008 30.2985L16.2508 24.2745L22.3008 18.2495"
+                    class="transition-all duration-300 group-hover/leveltwo:stroke-secondary-200" stroke="#445E87"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+              <span class="text-sm text-zinc-600">@prp_7231</span>
+            </div>
+          </div>
+        </div>
+      </face>
+    </basis>
+
 
   </main>
 
 
-<script src="https://cdn.basiscore.net/lachinseir.com/_js/jquery/jquery-3.7.1.min.js" type="text/javascript"></script>
-<basis core="call" file="footer.inc" />
+
+
+  <script src="https://cdn.basiscore.net/lachinseir.com/_js/jquery/jquery-3.7.1.min.js" type="text/javascript"></script>
+  <basis core="call" file="footer.inc" />
 
 </body>
 

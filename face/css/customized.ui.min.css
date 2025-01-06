@@ -1449,3 +1449,8 @@ body {
     margin-top: -340px;
   }
 }
+
+.itemInput,
+.login-btn {
+  font-family: "DanaFaNum" !important;
+}

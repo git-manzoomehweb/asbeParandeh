@@ -44,6 +44,51 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const fetchContentArticle = document.querySelector(".fetch-content-article");
+  const tourLi = document.querySelectorAll(".tour-li");
+  if (fetchContentArticle) {
+    async function firstContent() {
+      const firstResponse = await fetch("/article-load-items.bc?catid=212712");
+      const firstData = await firstResponse.text();
+      fetchContentArticle.innerHTML = firstData;
+    }
+    firstContent();
+
+    tourLi.forEach((item) => {
+      item.addEventListener("click", function () {
+        tourLi.forEach((li) => {
+          li.style.backgroundColor = "";
+          li.style.color = "";
+        });
+
+        item.style.backgroundColor = "#445E87";
+        item.style.color = "#fff";
+
+        let cmsQuery = item.getAttribute("data-id");
+
+        async function secondContent() {
+          try {
+            const firstResponse = await fetch(
+              `/article-load-items.bc?catid=${cmsQuery}`
+            );
+            if (!firstResponse.ok) {
+              throw new Error(`HTTP error! Status: ${firstResponse.status}`);
+            }
+            const firstData = await firstResponse.text();
+            fetchContentArticle.innerHTML = firstData;
+          } catch (error) {
+            console.error("Fetch failed:", error);
+            fetchContentArticle.innerHTML =
+              "<p>مشکلی در دریافت اطلاعات رخ داد: " + error.message + "</p>";
+          }
+        }
+        secondContent();
+      });
+    });
+  }
+});
+
 function loadContentHomePage() {
   loadSearchEngine("search-engine.bc", "searchbox");
 }
@@ -171,33 +216,91 @@ async function loadSearchEngine(url, sectionload) {
   } catch (error) {}
 }
 
-var footerSwiper = new Swiper(".footer-swiper", {
-    slidesPerView: 3,
-    speed: 400,
-    centeredSlides: false,
-    spaceBetween: 30,
-    grabCursor: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-      1024: {
-        slidesPerView: 9,
-        spaceBetween: 50,
-      },
-    },
+function uploadDocumentFooter(args) {
+  document.querySelector("#contact-form-resize .Loading_Form").style.display =
+    "block";
+  const captcha = document
+    .querySelector("#contact-form-resize")
+    .querySelector("#captchaContainer input[name='captcha']").value;
+  const captchaid = document
+    .querySelector("#contact-form-resize")
+    .querySelector("#captchaContainer input[name='captchaid']").value;
+  const stringJson = JSON.stringify(args.source?.rows[0]);
+  $bc.setSource("cms.uploadFooter", {
+    value: stringJson,
+    captcha: captcha,
+    captchaid: captchaid,
+    run: true,
   });
-  
+}
+
+function refreshCaptchaFooter(e) {
+  $bc.setSource("captcha.refreshFooter", true);
+}
+
+async function OnProcessedEditObjectFooter(args) {
+  var response = args.response;
+  var json = await response.json();
+  var errorid = json.errorid;
+  if (errorid == "6") {
+    document.querySelector("#contact-form-resize .Loading_Form").style.display =
+      "none";
+    document.querySelector("#contact-form-resize .message-api").innerHTML =
+      "درخواست شما با موفقیت ثبت شد.";
+  } else {
+    refreshCaptchaFooter();
+    setTimeout(() => {
+      document.querySelector(
+        "#contact-form-resize .Loading_Form"
+      ).style.display = "none";
+      document.querySelector("#contact-form-resize .message-api").innerHTML =
+        "خطایی رخ داده, لطفا مجدد اقدام کنید.";
+    }, 2000);
+  }
+}
+
+async function RenderFormFooter() {
+  var inputElementVisa7 = document.querySelector(
+    ".username-form input[data-bc-text-input]"
+  );
+  inputElementVisa7.setAttribute("placeholder", "نام و نام خانوادگی");
+
+  var inputElementVisa7 = document.querySelector(
+    " .phone-form input[data-bc-text-input]"
+  );
+  inputElementVisa7.setAttribute("placeholder", "شماره تماس");
+}
+
+if(document.querySelector(".footer-swiper")){
+var footerSwiper = new Swiper(".footer-swiper", {
+  slidesPerView: 3,
+  speed: 400,
+  centeredSlides: false,
+  spaceBetween: 30,
+  grabCursor: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    1024: {
+      slidesPerView: 9,
+      spaceBetween: 50,
+    },
+  },
+});
+}
+
+if(document.querySelector(".travel-swiper")){
 var travelSwiper = new Swiper(".travel-swiper", {
   slidesPerView: 1,
   speed: 400,
@@ -224,7 +327,9 @@ var travelSwiper = new Swiper(".travel-swiper", {
     },
   },
 });
+}
 
+if(document.querySelector(".travel-swiper-mobile")){
 var travelSwiperMobile = new Swiper(".travel-swiper-mobile", {
   slidesPerView: 1,
   speed: 400,
@@ -251,7 +356,9 @@ var travelSwiperMobile = new Swiper(".travel-swiper-mobile", {
     },
   },
 });
+}
 
+if(document.querySelector(".tour-swiper")){
 var tourSwiper = new Swiper(".tour-swiper", {
   slidesPerView: 1,
   speed: 400,
@@ -274,3 +381,4 @@ var tourSwiper = new Swiper(".tour-swiper", {
     },
   },
 });
+}
