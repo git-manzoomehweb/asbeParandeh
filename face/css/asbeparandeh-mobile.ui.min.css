@@ -377,6 +377,10 @@ body {
   width: 3rem;
 }
 
+.w-16 {
+  width: 4rem;
+}
+
 .w-40 {
   width: 10rem;
 }
@@ -944,6 +948,19 @@ body {
 .leading-6 {
   line-height: 1.5rem;
 }
+.line-clamp-4 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.line-clamp-6 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+}
 
 .text-black {
   --tw-text-opacity: 1;
@@ -1206,4 +1223,164 @@ body {
   .xl\:max-w-7xl {
     max-width: 80rem;
   }
+}
+
+.direction-ltr {
+  direction: ltr;
+}
+
+.visa-form-mobile fieldset {
+  padding: 10px 0px !important;
+}
+
+.visa-form-mobile [data-bc-schema-column]{
+  display: flex;
+  flex-wrap: wrap;
+}
+.visa-form-mobile [data-bc-question]{
+  width: 100% !important;
+}
+
+.visa-form-mobile [data-bc-answer-container] input[type="text"] {
+  background-color: #fafafa !important;
+  color: #52525b !important;
+  height: 60px !important;
+  padding: 8px 12px !important;
+  font-weight: 400 !important;
+  outline: none !important;
+  border-radius: 12px !important;
+  border: 1px solid #e4e4e7 !important;
+  font-size: 16px;
+}
+.visa-form-mobile .codeinputm {
+  background-color: #fff !important;
+}
+.visa-form-mobile [data-bc-answer-container] textarea {
+  background-color: #fafafa !important;
+  color: #52525b !important;
+  height: 60px;
+  padding: 8px 12px !important;
+  font-weight: 400 !important;
+  outline: none !important;
+  border-radius: 12px !important;
+  border: 1px solid #e4e4e7 !important;
+  font-size: 16px;
+}
+.visa-form-mobile [data-bc-answer-container] textarea::placeholder {
+  color: #52525b !important;
+}
+.visa-form-mobile [data-bc-answer-container] input[type="text"]::placeholder {
+  color: #52525b !important;
+}
+
+.visa-form-mobile [data-bc-answer-container] {
+  width: 100% !important;
+}
+.visa-form-mobile [data-bc-schema-direction="rtl"] [data-bc-part-container] {
+  width: 100%;
+}
+.visa-form-mobile [data-bc-title-container] [data-bc-question-title] {
+  display: none !important;
+}
+
+.visa-form-mobile .visa-type [data-bc-title-container] [data-bc-question-title],
+.visa-form-mobile .gender [data-bc-title-container] [data-bc-question-title],
+.visa-form-mobile
+  .marital-status
+  [data-bc-title-container]
+  [data-bc-question-title],
+.visa-form-mobile
+  .travel-purpose
+  [data-bc-title-container]
+  [data-bc-question-title],
+.visa-form-mobile
+  .residence-documents
+  [data-bc-title-container]
+  [data-bc-question-title],
+.visa-form-mobile
+  .travel-expences
+  [data-bc-title-container]
+  [data-bc-question-title],
+.visa-form-mobile
+  .employment-status
+  [data-bc-title-container]
+  [data-bc-question-title] {
+  display: block !important;
+  font-weight: bold !important;
+  font-size: 16px !important;
+}
+
+.visa-form-mobile .visa-type [data-bc-answer-container],
+.visa-form-mobile .gender [data-bc-answer-container],
+.visa-form-mobile .marital-status [data-bc-answer-container],
+.visa-form-mobile .travel-purpose [data-bc-answer-container],
+.visa-form-mobile .residence-documents [data-bc-answer-container],
+.visa-form-mobile .travel-expences [data-bc-answer-container],
+.visa-form-mobile .employment-status [data-bc-answer-container] {
+  width: 100% !important;
+}
+
+.visa-form-mobile .previous-nationality,
+.visa-form-mobile .destination-country,
+.visa-form-mobile .visa-type,
+.visa-form-mobile .travel-purpose,
+.visa-form-mobile .travel-expences,
+.visa-form-mobile .sponsor-name,
+.visa-form-mobile .address,
+.visa-form-mobile .residence-documents,
+.visa-form-mobile .employment-status,
+.visa-form-mobile .completion-date {
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+}
+.visa-form-mobile .gender,
+.visa-form-mobile .marital-status,
+.visa-form-mobile .travel-purpose,
+.visa-form-mobile .visa-type {
+  display: flex;
+  flex-direction: column;
+  width: 50% !important;
+}
+
+.visa-form-mobile .residence-documents {
+  margin-bottom: 24px;
+}
+
+.visa-form-mobile [data-bc-schema-direction="rtl"] [data-bc-title-container] {
+  width: auto !important;
+  flex-shrink: 0;
+  margin-left: 0 !important;
+}
+.visa-form-mobile div [data-sys-text] {
+  display: flex;
+  gap: 0.75rem;
+}
+.visa-form-mobile input[type="radio"] {
+  appearance: none;
+  width: 21px;
+  height: 21px;
+  border: 2px solid #AECFEF;
+  border-radius: 100%;
+  padding: 5px;
+}
+.visa-form-mobile input[type="radio"]:checked{
+  background-color: #7C6D56;
+  border: 2px solid #7C6D56;
+}
+
+.visa-form-mobile div [data-bc-items] {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.visa-form-mobile [data-bc-part-related-cell] [data-bc-part-radio] {
+  padding: 0.5em 0.6em;
+  border: none !important;
+}
+
+.visa-form-mobile legend {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 24px;
 }

@@ -53,12 +53,9 @@
   z-index: -10;
 }
 
-
-
 .z-20 {
   z-index: 20;
 }
-
 
 .z-\[1\] {
   z-index: 1;
@@ -138,6 +135,10 @@
 
 .mb-4 {
   margin-bottom: 1rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
 }
 
 .mb-6 {
@@ -220,7 +221,6 @@
   display: grid;
 }
 
-
 .h-0 {
   height: 0px;
 }
@@ -259,6 +259,10 @@
 
 .h-\[624px\] {
   height: 624px;
+}
+
+.h-\[714px\] {
+  height: 714px;
 }
 
 .h-\[809px\] {
@@ -381,6 +385,10 @@
   flex: 5;
 }
 
+.shrink-0 {
+  flex-shrink: 0;
+}
+
 .rotate-180 {
   --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y))
@@ -433,7 +441,6 @@
 .grid-rows-2 {
   grid-template-rows: repeat(2, minmax(0, 1fr));
 }
-
 
 .items-center {
   align-items: center;
@@ -660,6 +667,10 @@
   border-color: var(--secondary-300);
 }
 
+.border-secondary-400 {
+  border-color: var(--secondary-400);
+}
+
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
@@ -668,6 +679,11 @@
 .border-zinc-300 {
   --tw-border-opacity: 1;
   border-color: rgb(212 212 216 / var(--tw-border-opacity, 1));
+}
+
+.bg-zinc-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 250 250 / var(--tw-bg-opacity, 1)) /* #fafafa */;
 }
 
 .bg-green-200 {
@@ -701,6 +717,9 @@
 
 .bg-specialcolor-3 {
   background-color: var(--special-3);
+}
+.bg-specialcolor-4 {
+  background-color: var(--special-4);
 }
 
 .bg-transparent {
@@ -751,6 +770,10 @@
   padding: 1.25rem;
 }
 
+.p-16 {
+  padding: 4rem /* 64px */;
+}
+
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
@@ -791,6 +814,16 @@
   padding-right: 1.75rem;
 }
 
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.px-16 {
+  padding-left: 4rem /* 64px */;
+  padding-right: 4rem /* 64px */;
+}
+
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -815,9 +848,15 @@
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
+
+.py-14 {
+  padding-top: 3.5rem /* 56px */;
+  padding-bottom: 3.5rem /* 56px */;
+}
+
 .py-16 {
-  padding-top: 4rem ;
-  padding-bottom: 4rem ;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 .pb-1 {
   padding-bottom: 0.25rem;
@@ -901,6 +940,9 @@
 
 .pt-6 {
   padding-top: 1.5rem;
+}
+.pt-\[357px\] {
+  padding-top: 357px;
 }
 
 .text-center {
@@ -992,6 +1034,9 @@
 
 .text-secondary {
   color: var(--secondary);
+}
+.text-secondary-400 {
+  color: var(--secondary-400);
 }
 
 .text-white {
@@ -1212,7 +1257,6 @@
   outline-offset: 2px;
 }
 
-
 .group:hover .group-hover\:fill-secondary-400 {
   fill: var(--secondary-400);
 }
@@ -1309,7 +1353,7 @@
   }
 }
 
-.direction-ltr{
+.direction-ltr {
   direction: ltr;
 }
 
@@ -1322,7 +1366,7 @@
 
 .form-moshavereh [data-bc-answer-container] input[type="text"] {
   background-color: #fff !important;
-  color: #52525B !important;
+  color: #52525b !important;
   height: 60px !important;
   padding: 8px 12px !important;
   font-weight: 400 !important;
@@ -1336,7 +1380,7 @@
 }
 
 .form-moshavereh [data-bc-answer-container] input[type="text"]::placeholder {
-  color: #52525B !important;
+  color: #52525b !important;
 }
 
 .form-moshavereh [data-bc-answer-container] {
@@ -1345,7 +1389,190 @@
 .form-moshavereh [data-bc-schema-info-part="1"] [data-bc-part-related-cell] {
   width: 100% !important;
 }
-.form-moshavereh [data-bc-schema-column]{
+.form-moshavereh [data-bc-schema-column] {
   display: flex;
   gap: 12px;
+}
+
+.form-moshavereh-contact
+  [data-bc-schema-direction="rtl"]
+  [data-bc-title-container]
+  [data-bc-question-title] {
+  display: none !important;
+}
+
+.form-moshavereh-contact [data-bc-answer-container] input[type="text"] {
+  background-color: #fff !important;
+  color: #52525b !important;
+  height: 60px !important;
+  padding: 8px 12px !important;
+  font-weight: 400 !important;
+  outline: none !important;
+  border-radius: 12px !important;
+  border: none !important;
+  font-size: 16px;
+}
+.form-moshavereh-contact
+  [data-bc-schema-direction="rtl"]
+  [data-bc-part-container] {
+  width: 100%;
+}
+
+.form-moshavereh-contact
+  [data-bc-answer-container]
+  input[type="text"]::placeholder {
+  color: #52525b !important;
+}
+
+.form-moshavereh-contact [data-bc-answer-container] {
+  width: 100% !important;
+}
+.form-moshavereh-contact
+  [data-bc-schema-info-part="1"]
+  [data-bc-part-related-cell] {
+  width: 100% !important;
+}
+
+
+
+
+.visa-form fieldset{
+  padding: 10px 0px !important;
+}
+.visa-form [data-bc-answer-container] input[type="text"] {
+  background-color: #FAFAFA !important;
+  color: #52525B !important;
+  height: 60px !important;
+  padding: 8px 12px !important;
+  font-weight: 400 !important;
+  outline: none !important;
+  border-radius: 12px !important;
+  border: 1px solid #E4E4E7 !important;
+  font-size: 16px;
+}
+.visa-form .contactUsInput [data-bc-answer-container] input[type="text"]{
+  background-color: #fff !important;
+  color: #52525B !important;
+  height: 60px;
+  padding: 8px 12px !important;
+  font-weight: 400 !important;
+  outline: none !important;
+  border-radius: 12px !important;
+  border: 1px solid #E4E4E7 !important;
+  font-size: 16px;
+}
+.visa-form [data-bc-answer-container] textarea {
+  background-color: #FAFAFA !important;
+  color: #52525B !important;
+  height: 60px;
+  padding: 8px 12px !important;
+  font-weight: 400 !important;
+  outline: none !important;
+  border-radius: 12px !important;
+  border: 1px solid #E4E4E7 !important;
+  font-size: 16px;
+}
+.visa-form [data-bc-answer-container] textarea::placeholder {
+  color: #52525b !important;
+}
+.visa-form [data-bc-answer-container] input[type="text"]::placeholder {
+  color: #52525b !important;
+}
+
+.visa-form [data-bc-schema-column]{
+  display: flex;
+  flex-wrap: wrap;
+}
+.visa-form [data-bc-question]{
+  width: 50% !important;
+}
+.visa-form [data-bc-answer-container] {
+  width: 100% !important;
+}
+.visa-form [data-bc-schema-direction="rtl"] [data-bc-part-container] {
+  width: 100%;
+}
+.visa-form [data-bc-title-container] [data-bc-question-title] {
+  display: none !important;
+}
+
+.visa-form .visa-type [data-bc-title-container] [data-bc-question-title],
+.visa-form .gender [data-bc-title-container] [data-bc-question-title],
+.visa-form .marital-status [data-bc-title-container] [data-bc-question-title],
+.visa-form .travel-purpose [data-bc-title-container] [data-bc-question-title],
+.visa-form
+  .residence-documents
+  [data-bc-title-container]
+  [data-bc-question-title],
+.visa-form .travel-expences [data-bc-title-container] [data-bc-question-title],
+.visa-form
+  .employment-status
+  [data-bc-title-container]
+  [data-bc-question-title] {
+  display: block !important;
+  font-weight: bold !important;
+  font-size: 16px !important;
+}
+
+.visa-form .visa-type [data-bc-answer-container],
+.visa-form .gender [data-bc-answer-container],
+.visa-form .marital-status [data-bc-answer-container],
+.visa-form .travel-purpose [data-bc-answer-container],
+.visa-form .residence-documents [data-bc-answer-container],
+.visa-form .travel-expences [data-bc-answer-container],
+.visa-form .employment-status [data-bc-answer-container] {
+  width: 100% !important;
+}
+
+.visa-form .previous-nationality,
+.visa-form .destination-country,
+.visa-form .visa-type,
+.visa-form .travel-purpose,
+.visa-form .travel-expences,
+.visa-form .sponsor-name,
+.visa-form .address,
+.visa-form .residence-documents,
+.visa-form .employment-status,
+.visa-form .completion-date{
+  width: 100% !important;
+  display: flex;
+  align-items: center;
+}
+.visa-form .gender,
+.visa-form .marital-status{
+  display: flex;
+  align-items: center;
+}
+
+.visa-form .residence-documents{
+  margin-bottom: 24px;
+}
+
+.visa-form [data-bc-schema-direction="rtl"] [data-bc-title-container] {
+  width: auto !important;
+  flex-shrink: 0;
+  margin-left: 0 !important;
+}
+.visa-form div [data-sys-text] {
+  display: flex;
+  gap: 0.75rem;
+}
+.visa-form input[type="radio"] {
+  width: 21px;
+  height: 21px;
+}
+
+.visa-form div [data-bc-items] {
+  display: flex;
+  gap: 16px;
+}
+.visa-form [data-bc-part-related-cell] [data-bc-part-radio] {
+  padding: 0.5em 0.6em;
+  border: none !important;
+}
+
+.visa-form legend {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 24px;
 }

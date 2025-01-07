@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover">
+    <!-- Title & Description -->
+    <title>[##cms.seo.title|(آژانس مسافرتی گردشگری اسب پرنده ، خرید بلیط هواپیما ، تیکت پروازهای داخلی و خارجی)##]
+    </title>
+    <meta name="description"
+        content="[##cms.seo.description|(آژانس مسافرتی گردشگری اسب پرنده ، خرید بلیط هواپیما ، تیکت پروازهای داخلی و خارجی ،انواع ویزا)##]">
+    <!-- Title & Description -->
+    <basis core="dbsource" source="hosting" name="tag" urlid="[##cms.seo.urlid##]">
+        <member type="list" name="list" request="taglist" preview=""></member>
+    </basis>
+    <basis core="print" datamembername="tag.list">
+        <face filter="key = 'canonical'">
+            <link rel="canonical" href="@value" />
+        </face>
+        <face>
+            <meta property="@key" content="@value" />
+        </face>
+    </basis>
+    <!-- pwa metatags -->
+    <basis core="call" file="pwa.inc" />
+    <!-- common styles for all page -->
+    <basis core="call" file="style.inc" />
+</head>
+
+<body>
+    <basis core="call" file="header.inc" />
+    <main>
+        <section class=" max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mx-auto my-24 rounded-xl overflow-hidden">
+            <div class="flex">
+                <div class="relative flex-1 ">
+                    <img src="[##cms.cms.cdn##]/images/contact-image.jpg" class="object-cover h-[714px]"
+                        alt="contact-image" width="100%" height="714">
+                    <div class="absolute inset-0 bg-specialcolor-4"></div>
+                    <div class="px-10 absolute top-0 pb-20 pt-[357px] text-justify">
+                        <h1 class="mb-5 text-3xl font-bold text-white">درباره ما</h1>
+                        <basis core="print" datamembername="db.info">
+                            <layout>
+                                <div class="text-justify text-white">
+                                    @child
+                                </div>
+                            </layout>
+                            <face filter="TypeID in(144)">
+                                @largetext
+                            </face>
+                        </basis>
+                    </div>
+                </div>
+
+                <div class="flex-1 px-16 py-14 bg-primary-50">
+                    <basis core="print" datamembername="db.info">
+                        <layout>
+                            <ul class="flex justify-between">
+                                @child
+                            </ul>
+                        </layout>
+                        <face filter="TypeID in('245') and text in('اینستاگرام')">
+                            <li>
+                                <a href="@largetext" aria-label="instagram" class="group" rel="noopener">
+                                    <svg width="48" height="49"
+                                        class="transition-all duration-300 group-hover:scale-150" viewBox="0 0 48 49"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M23.8115 21.1606C21.9899 21.1606 20.5078 22.6402 20.5078 24.4606C20.5078 26.281 21.9899 27.7606 23.8115 27.7606C25.6331 27.7606 27.1139 26.281 27.1139 24.4606C27.1139 22.6402 25.6331 21.1606 23.8115 21.1606Z"
+                                            fill="#82A0BF" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M29.8384 19.7573C29.1544 19.7573 28.5964 19.2029 28.5964 18.5225C28.5964 17.8397 29.1544 17.2853 29.8384 17.2853C30.5224 17.2853 31.0792 17.8397 31.0792 18.5225C31.0792 19.2029 30.5224 19.7573 29.8384 19.7573ZM23.8144 29.5625C21.0016 29.5625 18.712 27.2753 18.712 24.4625C18.712 21.6497 21.0016 19.3625 23.8144 19.3625C26.6284 19.3625 28.9168 21.6497 28.9168 24.4625C28.9168 27.2753 26.6284 29.5625 23.8144 29.5625ZM29.062 12.6665H18.94C15.1492 12.6665 12.6016 15.3329 12.6016 19.3025V28.8305C12.6016 32.7989 15.1492 35.4665 18.94 35.4665H29.0608C32.8528 35.4665 35.4016 32.7989 35.4016 28.8305V19.3025C35.4016 15.3329 32.854 12.6665 29.062 12.6665Z"
+                                            fill="#82A0BF" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </face>
+                        <face filter="TypeID in('245') and text in('توییتر')">
+                            <li>
+                                <a href="@largetext" aria-label="twitter" class="group" rel="noopener"> <svg width="48"
+                                        height="49" class="transition-all duration-300 group-hover:scale-150"
+                                        viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M35.308 15.8539C35.1808 15.6547 34.9504 15.5431 34.7128 15.5827L32.3092 15.9403C31.6312 15.1819 29.5552 13.2475 26.6908 14.1139C24.2104 14.8747 23.0296 17.5123 22.9588 19.5259C19.8832 18.9619 17.0128 17.4475 14.8144 15.2155C14.6572 15.0559 14.4232 14.9971 14.2072 15.0643C13.9912 15.1315 13.8328 15.3139 13.7956 15.5359C12.6976 22.0675 14.116 26.4271 18.256 29.1631C16.7188 30.0103 14.956 30.4459 13.2208 30.3835C12.9832 30.3823 12.766 30.5083 12.6628 30.7207C12.5584 30.9319 12.5896 31.1851 12.7408 31.3675C14.5192 33.5059 17.8696 34.2391 20.5396 34.2391C20.848 34.2391 21.1468 34.2295 21.4336 34.2115C25.3216 33.9691 28.5268 32.3635 30.7024 29.5663C32.7628 26.9179 33.76 23.2783 33.5092 19.2883L33.502 19.2295L35.302 16.5067C35.4328 16.3099 35.4352 16.0531 35.308 15.8539Z"
+                                            fill="#82A0BF" />
+                                    </svg></a>
+
+                            </li>
+                        </face>
+                        <face filter="TypeID in('245') and text in('لینکدین')">
+                            <li>
+                                <a href="@largetext" aria-label="linkdin" class="group" rel="noopener">
+                                    <svg width="48" height="49"
+                                        class="transition-all duration-300 group-hover:scale-150" viewBox="0 0 48 49"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M29.9728 28.0145C29.9728 28.5113 29.5696 28.9145 29.0728 28.9145C28.576 28.9145 28.1728 28.5113 28.1728 28.0145V23.9225C28.1728 22.7177 27.196 21.7385 25.9948 21.7385C24.7936 21.7385 23.8168 22.7177 23.8168 23.9225V28.0145C23.8168 28.5113 23.4136 28.9145 22.9168 28.9145C22.42 28.9145 22.0168 28.5113 22.0168 28.0145V23.9225C22.0168 21.7253 23.8012 19.9385 25.9948 19.9385C28.1884 19.9385 29.9728 21.7253 29.9728 23.9225V28.0145ZM18.9316 21.0665C18.4348 21.0665 17.9884 20.6153 17.9884 20.1185C17.9884 19.6217 18.4348 19.1705 18.9316 19.1705C19.4284 19.1705 19.8724 19.6217 19.8724 20.1185C19.8724 20.6153 19.4284 21.0665 18.9316 21.0665ZM19.8304 28.0145C19.8304 28.5113 19.4272 28.9145 18.9304 28.9145C18.4336 28.9145 18.0304 28.5113 18.0304 28.0145V23.4893C18.0304 22.9925 18.4336 22.5893 18.9304 22.5893C19.4272 22.5893 19.8304 22.9925 19.8304 23.4893V28.0145ZM29.062 12.6665H18.9412C15.1492 12.6665 12.6016 15.3341 12.6016 19.3025V28.8305C12.6016 32.7989 15.1492 35.4665 18.9412 35.4665H29.0608C32.8528 35.4665 35.4016 32.7989 35.4016 28.8305V19.3025C35.4016 15.3341 32.854 12.6665 29.062 12.6665Z"
+                                            fill="#82A0BF" />
+                                    </svg>
+                                </a>
+
+                            </li>
+                        </face>
+                        <face filter="TypeID in('245') and text in('تلگرام')">
+                            <li>
+                                <a href="@largetext" aria-label="Telegram" class="group" rel="noopener">
+                                    <svg width="48" height="49"
+                                        class="transition-all duration-300 group-hover:scale-150" viewBox="0 0 48 49"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M24.6607 29.79L21.8959 32.3592C21.5575 32.6748 21.0067 32.4156 21.0379 31.9536C21.1243 30.648 21.2587 28.6644 21.3487 27.5616C21.3631 27.3876 21.5095 27.1932 21.6487 27.0672C24.8779 24.1392 28.1143 21.2184 31.3495 18.2952C31.4695 18.1872 31.6111 17.9208 31.5367 17.7804C31.4527 17.622 31.0651 17.67 30.9043 17.7708C26.7955 20.358 22.6867 22.944 18.5839 25.5396C18.3319 25.698 18.0235 25.7364 17.7403 25.6452C16.0483 25.1016 14.3467 24.5868 12.6511 24.0516C12.2611 23.928 11.7979 23.8056 11.7535 23.322C11.7067 22.8168 12.1399 22.5768 12.5311 22.4196C14.1079 21.7836 15.6955 21.1752 17.2807 20.5632C22.9831 18.366 28.6855 16.17 34.3879 13.974C34.5787 13.9008 34.8331 13.8552 35.0323 13.8156C35.6299 13.6956 36.1675 13.9956 36.2263 14.6004C36.2707 15.0432 36.1927 15.5364 36.1003 15.9744C34.9123 21.6252 33.7087 27.2736 32.5063 32.9232C32.1823 34.4496 31.3975 34.7388 30.1339 33.8064C28.5055 32.604 24.6607 29.79 24.6607 29.79Z"
+                                            fill="#82A0BF" />
+                                    </svg>
+                                </a>
+
+                            </li>
+                        </face>
+
+                        <face filter="TypeID in('245') and text in('یوتیوب')">
+                            <li>
+                                <a href="@largetext" aria-label="youtube" rel="noopener"><img
+                                        src="[##cms.cms.cdn##]/images/aparat.svg" alt=""
+                                        class="transition-all duration-300 hover:scale-150"></a>
+                            </li>
+                        </face>
+                        <face filter="TypeID in('245') and text in('آپارات')">
+                            <li>
+                                <a href="@largetext" aria-label="aparat" class="group" rel="noopener">
+                                    <svg width="48" height="49"
+                                        class="transition-all duration-300 group-hover:scale-150" viewBox="0 0 48 49"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M27.3186 25.1012L22.9122 27.6092C22.7286 27.7088 22.5318 27.758 22.3374 27.758C22.1298 27.758 21.9246 27.7016 21.7398 27.5912C21.3845 27.38 21.1721 27.0092 21.1721 26.5964V21.5792C21.1721 21.1592 21.3905 20.78 21.7554 20.57C22.1178 20.36 22.5498 20.3576 22.9146 20.5676L27.3186 23.0756C27.681 23.2796 27.9066 23.6696 27.9066 24.0872C27.9066 24.5072 27.681 24.8948 27.3186 25.1012ZM34.8762 17.9228C34.5654 16.6388 33.5958 15.6116 32.3466 15.236C30.2262 14.5364 17.6009 14.576 15.6665 15.278C14.4125 15.6356 13.4369 16.6676 13.1357 17.918C12.4253 19.9952 12.4253 28.2068 13.1249 30.2612C13.4729 31.5152 14.4473 32.5076 15.6269 32.8352C16.6649 33.212 20.3717 33.398 24.057 33.398C27.7182 33.398 31.3602 33.2144 32.337 32.8472C33.591 32.4752 34.5642 31.4444 34.8606 30.2132C35.5686 28.1756 35.571 19.9856 34.8762 17.9228Z"
+                                            fill="#82A0BF" />
+                                    </svg>
+                                </a>
+
+                            </li>
+                        </face>
+                    </basis>
+
+                    <div class="mt-24">
+                        <div>
+                            <h2 class="mb-2 text-2xl font-bold text-zinc-900">با مشاورین ما در ارتباط باشید</h2>
+                            <div class="text-zinc-900">رزرو تور های و ارائه خدمات تلفنی و آنلاین را با اسب پرنده تجربه
+                                کنید
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col mt-6 form-moshavereh-contact" id="contact-form-resize">
+
+                            <basis core="schema" run="atclient"
+                                schemaurl="/schema/domainform/7C744024-8AA5-4BFA-9362-3044DF708D58/EEE2F41E-E85D-4C25-954A-71F22A6A0BE4/fa/با-مشاورین-ما-در-ارتباط-باشید"
+                                displaymode="new" button="[data-btn-uploadfooter]" resultsourceid="upload.datafooter"
+                                OnRendered="RenderFormFooter"></basis>
+                            <basis core="api" if="{##cms.uploadFooter.run|(false)##}" run="atclient"
+                                url="/schema/domainform/7C744024-8AA5-4BFA-9362-3044DF708D58/fa/editobject"
+                                method="post"
+                                body="object_edit={##cms.uploadFooter.value##}&captcha={##cms.uploadFooter.captcha##}&captchaid={##cms.uploadFooter.captchaid##}"
+                                content-type="application/x-www-form-urlencoded" triggers='cms.uploadFooter'
+                                OnProcessed="OnProcessedEditObjectFooter"></basis>
+                            <basis core="callback" run="atclient" method="uploadDocumentFooter"
+                                triggers="upload.datafooter">
+                            </basis>
+
+                            <div class="captcha-button">
+                                <div id="captchaContainer"
+                                    class="captchaContainerclass flex-[3] captcha-sefaresh ml-2.5 max-xl:ml-0 max-xl:mb-[20px]"
+                                    data-bc-answer-container data-bc-schema-info-multi="0" data-bc-schema-info-word="58"
+                                    data-bc-schema-info-part="1" data-bc-schema-info-part-0-type="text">
+                                    <basis core="dbsource" source="trust_login" name="captcha" run="atclient"
+                                        triggers="captcha.refreshFooter">
+                                        <member name="code" type="scalar" request="captcha"></member>
+                                    </basis>
+                                    <basis datamembername="captcha.code" core="print" run="atclient">
+                                        <face>
+                                            <script type="text/template"><div class="d-inline-block"><div class="flex gap-4">
+                        
+                                            <div class="float-right w-full"><input type="text" class="contactUsInput codeinputm" name="captcha" maxlength="4" placeholder="کد امنیتی"/><input type="hidden" name="captchaid" value="@captcha@" /></div>
+                                            <div class="flex items-center gap-4 shrink-0">
+                                                <img src="/@captcha@" loading="lazy" width="120" height="60" alt="captcha" class="w-16" />
+                                                <svg class="inline-block align-middle cursor-pointer w-9 h-9" onclick="refreshCaptchaFooter()" width="24" height="24" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.1247 8.56165H18.1238C18.0007 8.56175 17.8788 8.5861 17.7651 8.63331C17.6514 8.68052 17.5481 8.74967 17.4611 8.8368C17.3741 8.92393 17.3052 9.02734 17.2581 9.14113C17.2111 9.25492 17.187 9.37685 17.1871 9.49997C17.1859 10.8143 16.8245 12.1032 16.1421 13.2265C15.4597 14.3498 14.4824 15.2646 13.3166 15.8714C12.1507 16.4782 10.8408 16.7538 9.52921 16.6683C8.21765 16.5827 6.95463 16.1393 5.87744 15.3862C2.63134 13.1132 1.83959 8.62309 4.11255 5.37696C6.38552 2.13083 10.8757 1.33899 14.1218 3.61204C14.6129 3.95501 15.0592 4.358 15.4504 4.81165H12.8121C12.5635 4.81165 12.325 4.91042 12.1492 5.08623C11.9734 5.26205 11.8746 5.5005 11.8746 5.74915C11.8746 5.99779 11.9734 6.23624 12.1492 6.41206C12.325 6.58787 12.5635 6.68665 12.8121 6.68665H17.1871C17.4358 6.68665 17.6742 6.58787 17.85 6.41206C18.0259 6.23624 18.1246 5.99779 18.1246 5.74915V1.37415C18.1246 1.12551 18.0259 0.887048 17.85 0.711233C17.6742 0.535418 17.4358 0.436646 17.1871 0.436646C16.9385 0.436646 16.7 0.535418 16.5242 0.711233C16.3484 0.887048 16.2496 1.12551 16.2496 1.37415V2.93536C15.9206 2.62321 15.5689 2.33596 15.1973 2.07598C14.2225 1.39342 13.1228 0.909542 11.9609 0.651979C10.7991 0.394417 9.59797 0.368213 8.42603 0.574863C7.25409 0.781513 6.13433 1.21697 5.13067 1.85637C4.12702 2.49578 3.25914 3.3266 2.57658 4.30141C1.19808 6.27013 0.658111 8.70582 1.07546 11.0727C1.49281 13.4395 2.83329 15.5436 4.80201 16.9221C6.31776 17.9898 8.12639 18.563 9.98041 18.5633C10.5144 18.5631 11.0474 18.5162 11.5732 18.4233C13.6714 18.0531 15.5722 16.9556 16.9417 15.3235C18.3112 13.6914 19.062 11.6289 19.0621 9.49833C19.0619 9.24983 18.963 9.01159 18.7873 8.83596C18.6115 8.66032 18.3732 8.56166 18.1247 8.56165Z" fill="#71717A"/></svg>
+                                            </div>
+                                            
+                                        </div></div></script>
+                                        </face>
+                                    </basis>
+                                </div>
+                                <button
+                                    class="flex items-center justify-center flex-1 w-full h-16 mt-20 text-white transition-all duration-300 bg-primary-900 rounded-xl hover:bg-secondary-500 y-2 wpx-4 data-body-btn"
+                                    type="button" data-btn-uploadfooter><span class="">ارسال</span></button>
+                                <div
+                                    class="Loading_Form hidden data-body-btn w-[126px] h-12 px-4 py-2 bg-secondary-800 rounded-2xl justify-center items-center gap-2.5">
+                                    <div id="ballsWaveG" class="text-base font-normal leading-normal ext-zinc-50">
+                                        <div id="ballsWaveG_1" class="ballsWaveG"></div>
+                                        <div id="ballsWaveG_2" class="ballsWaveG"></div>
+                                        <div id="ballsWaveG_3" class="ballsWaveG"></div>
+                                        <div id="ballsWaveG_4" class="ballsWaveG"></div>
+                                        <div id="ballsWaveG_5" class="ballsWaveG"></div>
+                                        <div id="ballsWaveG_6" class="ballsWaveG"></div>
+                                        <div id="ballsWaveG_7" class="ballsWaveG"></div>
+                                        <div id="ballsWaveG_8" class="ballsWaveG"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4 text-center message-api"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="flex gap-3 px-10 py-6 bg-zinc-50">
+                <basis core="print" datamembername="db.info">
+                    <face filter="TypeID in(244)">
+                        <div
+                            class="flex items-center flex-1 gap-1 text-sm border text-secondary-400 border-secondary-400 rounded-xl">
+                            <svg class="shrink-0" width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M24.4989 21.9751C23.1714 21.9751 22.0914 20.8951 22.0914 19.5676C22.0914 18.2401 23.1714 17.1601 24.4989 17.1601C25.8264 17.1601 26.9064 18.2401 26.9064 19.5676C26.9064 20.8951 25.8264 21.9751 24.4989 21.9751ZM24.4989 12.6714C20.6626 12.6714 17.5464 15.7876 17.5464 19.6239C17.5464 24.3826 22.9801 29.0739 24.4989 29.0739C26.0064 29.0739 31.4401 24.3826 31.4401 19.6239C31.4401 15.7876 28.3239 12.6714 24.4989 12.6714Z"
+                                    fill="#625136" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M32.1639 26.6453C31.7578 26.4158 31.2425 26.5621 31.0153 26.9682C30.7869 27.3743 30.9309 27.8884 31.3381 28.1168C32.21 28.6062 32.6904 29.1529 32.6904 29.6581C32.6904 30.3364 31.8433 30.9136 31.3213 31.2072C30.9781 31.4097 30.5945 31.5874 30.1456 31.7517C27.0451 32.9003 21.9635 32.9026 18.8517 31.7494C18.4366 31.5987 18.035 31.4131 17.6559 31.1971C17.1496 30.9147 16.3025 30.3376 16.3025 29.6581C16.3025 28.9763 17.1496 28.4003 17.6559 28.1168C18.062 27.8884 18.206 27.3743 17.9787 26.9682C17.7504 26.5621 17.2374 26.4181 16.829 26.6453C14.9997 27.6713 14.615 28.8492 14.615 29.6581C14.615 30.4647 14.9997 31.6426 16.8256 32.6674C17.2835 32.9273 17.7717 33.1523 18.2701 33.3334C20.0037 33.9758 22.2166 34.3302 24.5004 34.3302C26.7864 34.3302 28.9993 33.9758 30.7284 33.3346C31.2718 33.1377 31.7465 32.9161 32.1639 32.6686C33.9931 31.6414 34.3779 30.4647 34.3779 29.6581C34.3779 28.8503 33.9931 27.6724 32.1639 26.6453Z"
+                                    fill="#625136" />
+                            </svg>
+                            @largetext
+                        </div>
+                    </face>
+
+
+
+                    <face filter="TypeID in(240)">
+                        <div
+                            class="flex items-center flex-1 gap-1 text-sm border text-secondary-400 border-secondary-400 rounded-xl">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M21.4062 12.8125H27.5937C30.1373 12.8125 32.2062 14.8814 32.2062 17.4239V29.575C32.2062 32.1186 30.1373 34.1875 27.5937 34.1875H21.4062C18.8626 34.1875 16.7937 32.1186 16.7937 29.575V17.4239C16.7937 14.8814 18.8626 12.8125 21.4062 12.8125ZM22.9249 18.3812H26.0749C26.5407 18.3812 26.9187 18.0032 26.9187 17.5375C26.9187 17.0717 26.5407 16.6937 26.0749 16.6937H22.9249C22.4592 16.6937 22.0812 17.0717 22.0812 17.5375C22.0812 18.0032 22.4592 18.3812 22.9249 18.3812ZM23.4312 29.35C23.4312 29.9496 23.9003 30.4187 24.4999 30.4187C25.0051 30.4187 25.5687 29.962 25.5687 29.35C25.5687 28.738 25.0051 28.2812 24.4999 28.2812C23.9959 28.2812 23.4312 28.738 23.4312 29.35Z"
+                                    fill="#625136" />
+                            </svg>
+                            <a href="tel:@text" class="transition-all duration-300 hover:text-secondary-200">
+                                @text</a>
+                        </div>
+                    </face>
+
+
+
+                    <face filter="TypeID in(242)">
+                        <div
+                            class="flex items-center flex-1 gap-1 text-sm border text-secondary-400 border-secondary-400 rounded-xl">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M30.0603 13.375C31.5689 13.375 33.0202 13.9712 34.0878 15.0411C35.1565 16.1087 35.7539 17.5488 35.7539 19.0563V27.9437C35.7539 31.0825 33.2002 33.625 30.0603 33.625H18.9464C15.8065 33.625 13.2539 31.0825 13.2539 27.9437V19.0563C13.2539 15.9175 15.7953 13.375 18.9464 13.375H30.0603ZM31.3327 19.225C31.0964 19.2126 30.8714 19.2925 30.7015 19.45L25.6289 23.5C24.9764 24.0411 24.0415 24.0411 23.3789 23.5L18.3164 19.45C17.9665 19.1913 17.4828 19.225 17.1914 19.5287C16.8877 19.8325 16.8539 20.3162 17.1115 20.6537L17.2589 20.8L22.3777 24.7937C23.0077 25.2887 23.7715 25.5588 24.5714 25.5588C25.369 25.5588 26.1464 25.2887 26.7753 24.7937L31.8502 20.7325L31.9402 20.6425C32.209 20.3162 32.209 19.8438 31.9278 19.5175C31.7714 19.3499 31.5565 19.2475 31.3327 19.225Z"
+                                    fill="#625136" />
+                            </svg>
+                            <a href="mailto:@text"
+                                class="transition-all duration-300 hover:text-secondary-200">@text</a>
+                        </div>
+                    </face>
+                </basis>
+
+            </div>
+        </section>
+    </main>
+
+    <basis core="call" file="footer.inc" />
+</body>
+
+</html>
