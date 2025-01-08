@@ -689,6 +689,10 @@ body {
   background-color: var(--primary-50);
 }
 
+.bg-primary {
+  background-color: var(--primary);
+}
+
 .bg-primary-600 {
   background-color: var(--primary-600);
 }

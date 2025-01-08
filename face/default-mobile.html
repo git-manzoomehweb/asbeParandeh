@@ -137,12 +137,12 @@
         <basis core="tree" datamembername="ongoing-tour.cat" idcol="catid" parentidcol="parentid"
         nullvalue="212712">
         <layout>
-          <ul class="flex flex-wrap justify-between mb-4">
+          <ul class="grid grid-cols-2 mb-4">
             @child
           </ul>
         </layout>
         <face filter="RowNumber not in(1)">
-          <li class="py-2 tour-li text-primary-900 px-7 rounded-xl" data-id="@catid">
+          <li class="py-2 tour-li text-primary-900 text-center rounded-xl" data-id="@catid">
             @title
           </li>
         </face>

@@ -199,10 +199,10 @@
                             </basis>
 
                             <basis core="tree" datamembername="tourism.cat" idcol="catid" parentidcol="parentid"
-                            nullvalue="210286  ">
+                            nullvalue="210286">
                             <layout>
                                 <li class="relative flex h-full group">
-                                    <a href="/Tourism-content "
+                                    <a href="/Tourism-content"
                                         class="flex items-center gap-2 transition-all duration-300 group text-zinc-900 hover:text-secondary-200">مطالب گردشگری
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg"
@@ -472,9 +472,76 @@
   
                             </basis>
 
-                        <li class="flex items-center py-3 ">
-                            <a href="" class="w-full text-zinc-900">مطالب گردشگری</a>
-                        </li>
+                            <basis core="tree" datamembername="tourism.cat" idcol="catid" parentidcol="parentid"
+                            nullvalue="210286">
+                                <layout>
+                                  <li class="">
+                                    <div class="flex items-center justify-between cursor-pointer toggle-dropdown">
+                                      <a href="/Tourism-content" class="text-zinc-900">مطالب گردشگری</a>
+                                      <svg width="48" height="48" class="transition-all duration-300 dropdown-icon" viewBox="0 0 48 48"
+                                           fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M31.25 20.5L24.25 27.5L17.25 20.5" stroke="#284E65" stroke-width="1.5"
+                                              stroke-linecap="square" />
+                                      </svg>
+                                    </div>
+                                    <!-- submenu -->
+                                    <ul class="flex flex-col overflow-hidden transition-all duration-300 bg-white divide-y opacity-0 submenu divide-primary-50 max-h-0">
+                                      @child
+                                    </ul>
+                                    <!-- submenu end -->
+                                  </li>
+                                </layout>
+    
+                                <face level="end" filter="link is null">
+                                    <li class="px-10 py-2">
+                                      <a href="/article-list.bc?catid=@catid" class="text-zinc-900">@title</a>
+                                    </li>
+                                  </face>
+                                
+                                  <face level="end">
+                                    <li class="px-10 py-2">
+                                      <a href="@link" class="text-zinc-900">@title</a>
+                                    </li>
+                                  </face>
+                              
+                                <face level="1" filter="link is null">
+                                  <li class="">
+                                    <div class="flex items-center justify-between cursor-pointer toggle-dropdown">
+                                      <a href="/article-list.bc?catid=@catid" class="text-zinc-900">@title</a>
+                                      <svg width="48" height="48" class="transition-all duration-300 dropdown-icon" viewBox="0 0 48 48"
+                                           fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M31.25 20.5L24.25 27.5L17.25 20.5" stroke="#284E65" stroke-width="1.5"
+                                              stroke-linecap="square" />
+                                      </svg>
+                                    </div>
+                                    <!-- nested submenu -->
+                                    <ul class="flex flex-col overflow-hidden transition-all duration-300 bg-white divide-y opacity-0 submenu divide-primary-50 max-h-0">
+                                      @child
+                                    </ul>
+                                    <!-- nested submenu end -->
+                                  </li>
+                                </face>
+                              
+                                <face level="1">
+                                  <li class="">
+                                    <div class="flex items-center justify-between cursor-pointer toggle-dropdown">
+                                      <a href="@link" class="text-zinc-900">@title</a>
+                                      <svg width="48" height="48" class="transition-all duration-300 dropdown-icon" viewBox="0 0 48 48"
+                                           fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M31.25 20.5L24.25 27.5L17.25 20.5" stroke="#284E65" stroke-width="1.5"
+                                              stroke-linecap="square" />
+                                      </svg>
+                                    </div>
+                                    <!-- nested submenu -->
+                                    <ul class="flex flex-col overflow-hidden transition-all duration-300 bg-white divide-y opacity-0 submenu divide-primary-50 max-h-0">
+                                      @child
+                                    </ul>
+                                    <!-- nested submenu end -->
+                                  </li>
+                                </face>
+                              
+    
+                              </basis>
                         <li class="flex items-center py-3 ">
 
                             <a href="/درباره-ما" class="w-full text-zinc-900">درباره ما</a>

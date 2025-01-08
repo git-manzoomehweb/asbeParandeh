@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         submenu.style.maxHeight = null;
         submenu.style.opacity = "0";
       } else {
-        submenu.style.maxHeight = submenu.scrollHeight + "px";
+        submenu.style.maxHeight = "400px";  
         submenu.style.opacity = "1";
       }
     });
@@ -271,8 +271,6 @@ async function RenderFormFooter() {
   inputElementVisa7.setAttribute("placeholder", "شماره تماس");
 }
 
-
-
 function uploadDocumentVisa(args) {
   document.querySelector("#visa-form-resize .Loading_Form").style.display =
     "block";
@@ -307,9 +305,8 @@ async function OnProcessedEditObjectVisa(args) {
   } else {
     refreshCaptchaVisa();
     setTimeout(() => {
-      document.querySelector(
-        "#visa-form-resize .Loading_Form"
-      ).style.display = "none";
+      document.querySelector("#visa-form-resize .Loading_Form").style.display =
+        "none";
       document.querySelector("#visa-form-resize .message-api").innerHTML =
         "خطایی رخ داده, لطفا مجدد اقدام کنید.";
     }, 2000);
@@ -330,7 +327,10 @@ async function RenderFormVisa() {
   var inputElementVisa7 = document.querySelector(
     ".previous-name-form input[data-bc-text-input]"
   );
-  inputElementVisa7.setAttribute("placeholder", "نام قبلی ( در صورت تغییر نام )");
+  inputElementVisa7.setAttribute(
+    "placeholder",
+    "نام قبلی ( در صورت تغییر نام )"
+  );
 
   var inputElementVisa7 = document.querySelector(
     " .birth-form input[data-bc-text-input]"
@@ -403,7 +403,7 @@ async function RenderFormVisa() {
     " .date-in-form input[data-bc-text-input]"
   );
   inputElementVisa7.setAttribute("placeholder", "تاریخ ورود مورد انتظار");
-  
+
   var inputElementVisa7 = document.querySelector(
     " .date-out-form input[data-bc-text-input]"
   );
@@ -422,7 +422,10 @@ async function RenderFormVisa() {
   var inputElementVisa7 = document.querySelector(
     " .componey-address-form textarea[data-bc-text-input]"
   );
-  inputElementVisa7.setAttribute("placeholder", "آدرس و شماره تماس کارفرما یا دانشگاه");
+  inputElementVisa7.setAttribute(
+    "placeholder",
+    "آدرس و شماره تماس کارفرما یا دانشگاه"
+  );
 
   var inputElementVisa7 = document.querySelector(
     " .wife-name-form input[data-bc-text-input]"
@@ -440,114 +443,114 @@ async function RenderFormVisa() {
   inputElementVisa7.setAttribute("placeholder", "تاریخ تکمیل فرم");
 }
 
-if(document.querySelector(".footer-swiper")){
-var footerSwiper = new Swiper(".footer-swiper", {
-  slidesPerView: 3,
-  speed: 400,
-  centeredSlides: false,
-  spaceBetween: 30,
-  grabCursor: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    1024: {
-      slidesPerView: 9,
-      spaceBetween: 50,
+if (document.querySelector(".footer-swiper")) {
+  var footerSwiper = new Swiper(".footer-swiper", {
+    slidesPerView: 3,
+    speed: 400,
+    centeredSlides: false,
+    spaceBetween: 30,
+    grabCursor: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
     },
-  },
-});
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 9,
+        spaceBetween: 50,
+      },
+    },
+  });
 }
 
-if(document.querySelector(".travel-swiper")){
-var travelSwiper = new Swiper(".travel-swiper", {
-  slidesPerView: 1,
-  speed: 400,
-  centeredSlides: false,
-  spaceBetween: 30,
-  grabCursor: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next-custom",
-    prevEl: ".swiper-button-prev-custom",
-  },
-  breakpoints: {
-    1024: {
-      slidesPerView: 1,
-      spaceBetween: 50,
+if (document.querySelector(".travel-swiper")) {
+  var travelSwiper = new Swiper(".travel-swiper", {
+    slidesPerView: 1,
+    speed: 400,
+    centeredSlides: false,
+    spaceBetween: 30,
+    grabCursor: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
     },
-  },
-});
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next-custom",
+      prevEl: ".swiper-button-prev-custom",
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 1,
+        spaceBetween: 50,
+      },
+    },
+  });
 }
 
-if(document.querySelector(".travel-swiper-mobile")){
-var travelSwiperMobile = new Swiper(".travel-swiper-mobile", {
-  slidesPerView: 1,
-  speed: 400,
-  centeredSlides: false,
-  spaceBetween: 30,
-  grabCursor: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next-custom",
-    prevEl: ".swiper-button-prev-custom",
-  },
-  breakpoints: {
-    1024: {
-      slidesPerView: 1,
-      spaceBetween: 50,
+if (document.querySelector(".travel-swiper-mobile")) {
+  var travelSwiperMobile = new Swiper(".travel-swiper-mobile", {
+    slidesPerView: 1,
+    speed: 400,
+    centeredSlides: false,
+    spaceBetween: 30,
+    grabCursor: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
     },
-  },
-});
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next-custom",
+      prevEl: ".swiper-button-prev-custom",
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 1,
+        spaceBetween: 50,
+      },
+    },
+  });
 }
 
-if(document.querySelector(".tour-swiper")){
-var tourSwiper = new Swiper(".tour-swiper", {
-  slidesPerView: 1,
-  speed: 400,
-  centeredSlides: false,
-  spaceBetween: 30,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  loop: true,
-
-  navigation: {
-    nextEl: ".swiper-button-next-custom",
-    prevEl: ".swiper-button-prev-custom",
-  },
-  breakpoints: {
-    1024: {
-      slidesPerView: 4,
-      spaceBetween: 12,
+if (document.querySelector(".tour-swiper")) {
+  var tourSwiper = new Swiper(".tour-swiper", {
+    slidesPerView: 1,
+    speed: 400,
+    centeredSlides: false,
+    spaceBetween: 30,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
     },
-  },
-});
+    loop: true,
+
+    navigation: {
+      nextEl: ".swiper-button-next-custom",
+      prevEl: ".swiper-button-prev-custom",
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 12,
+      },
+    },
+  });
 }
