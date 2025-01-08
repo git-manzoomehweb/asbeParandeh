@@ -546,7 +546,7 @@ var tourSwiper = new Swiper(".tour-swiper", {
   breakpoints: {
     1024: {
       slidesPerView: 4,
-      spaceBetween: 50,
+      spaceBetween: 12,
     },
   },
 });
