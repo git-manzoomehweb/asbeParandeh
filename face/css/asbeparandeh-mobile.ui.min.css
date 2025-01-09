@@ -376,6 +376,10 @@ body {
   min-height: 11rem;
 }
 
+.min-h-\[320px\] {
+  min-height: 320px;
+}
+
 .w-0 {
   width: 0px;
 }
@@ -1472,6 +1476,10 @@ body {
   margin-bottom: 24px;
 }
 
+.visa-form-mobile [data-bc-items] > :first-child {
+  display: none;
+}
+
 
 
 .Basis_Calendar .selected_date {
@@ -1578,4 +1586,8 @@ body {
 }
 .calendar-footer input, .calendar-footer ::placeholder {
   font-family: "DanaFaNum";
+}
+
+ul.header-nested-menu > li {
+  padding: 10px 40px; 
 }

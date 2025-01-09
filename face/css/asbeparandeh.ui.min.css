@@ -241,6 +241,9 @@
   height: 4rem;
 }
 
+.h-\[273px\] {
+  height: 273px;
+}
 .h-\[370px\] {
   height: 370px;
 }
@@ -285,8 +288,16 @@
   max-height: 100vh;
 }
 
+.max-h-\[457px\] {
+  max-height: 457px;
+}
+
 .min-h-44 {
   min-height: 11rem;
+}
+
+.min-h-\[272px\] {
+  min-height: 272px;
 }
 
 .w-0 {
@@ -1577,6 +1588,10 @@
   font-weight: bold;
   font-size: 18px;
   margin-bottom: 24px;
+}
+
+.visa-form [data-bc-items] > :first-child {
+  display: none;
 }
 
 .Basis_Calendar .selected_date {
