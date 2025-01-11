@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         async function secondContent() {
           try {
+           
             const firstResponse = await fetch(
               `/article-load-items.bc?catid=${cmsQuery}`
             );

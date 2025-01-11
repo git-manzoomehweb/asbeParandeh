@@ -4,6 +4,7 @@
   position: relative;
 }
 
+
 .inset-0 {
   inset: 0px;
 }
@@ -213,9 +214,6 @@
   display: inline-block;
 }
 
-.flex {
-  display: flex;
-}
 
 .grid {
   display: grid;
@@ -1345,6 +1343,9 @@
   .lg\:border-solid {
     border-style: solid;
   }
+  .lg\:top-\[26rem\] {
+    top: 26rem;
+}
 }
 
 @media (min-width: 1280px) {
@@ -1699,3 +1700,4 @@
 .calendar-footer input, .calendar-footer ::placeholder {
   font-family: "DanaFaNum";
 }
+
