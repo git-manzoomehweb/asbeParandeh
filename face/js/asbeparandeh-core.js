@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         submenu.style.maxHeight = null;
         submenu.style.opacity = "0";
       } else {
-        submenu.style.maxHeight = "400px";  
+        submenu.style.maxHeight = "400px";
         submenu.style.opacity = "1";
       }
     });
@@ -69,7 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         async function secondContent() {
           try {
-           
             const firstResponse = await fetch(
               `/article-load-items.bc?catid=${cmsQuery}`
             );
@@ -147,7 +146,7 @@ async function loadSearchEngine(url, sectionload) {
                 }
               });
               LoadHotel();
-            })
+            });
           } else if (pathnamehome == "/flight") {
             sessionStorage.setItem("pageName", "flight");
             $("#flight-type-items").show();
@@ -227,12 +226,7 @@ async function loadSearchEngine(url, sectionload) {
               LoadTour();
             });
           }
-
-          
         }
-        
-
-        
       }
     };
   } catch (error) {}
@@ -502,7 +496,7 @@ if (document.querySelector(".travel-swiper")) {
     spaceBetween: 30,
     grabCursor: true,
     autoplay: {
-      delay: 2500,
+      delay: 4500,
       disableOnInteraction: false,
     },
     loop: true,
@@ -510,11 +504,40 @@ if (document.querySelector(".travel-swiper")) {
       el: ".swiper-pagination",
       clickable: true,
     },
+    breakpoints: {
+      1024: {
+        slidesPerView: 1,
+        spaceBetween: 50,
+      },
+    },
+  });
+}
+
+if (document.querySelector(".gallery-swiper")) {
+  var gallerySwiper = new Swiper(".gallery-swiper", {
+    slidesPerView: 1,
+    speed: 400,
+    centeredSlides: false,
+    spaceBetween: 30,
+    grabCursor: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    loop: true,
     navigation: {
       nextEl: ".swiper-button-next-custom",
       prevEl: ".swiper-button-prev-custom",
     },
     breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
       1024: {
         slidesPerView: 1,
         spaceBetween: 50,
@@ -552,27 +575,29 @@ if (document.querySelector(".travel-swiper-mobile")) {
   });
 }
 
-if (document.querySelector(".tour-swiper")) {
-  var tourSwiper = new Swiper(".tour-swiper", {
-    slidesPerView: 1,
-    speed: 400,
-    centeredSlides: false,
-    spaceBetween: 30,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    loop: true,
-
-    navigation: {
-      nextEl: ".swiper-button-next-custom",
-      prevEl: ".swiper-button-prev-custom",
-    },
-    breakpoints: {
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 12,
+  if (document.querySelector(".tour-swiper")) {
+    var tourSwiper = new Swiper(".tour-swiper", {
+      slidesPerView: 1,
+      speed: 400,
+      centeredSlides: false,
+      spaceBetween: 30,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
       },
-    },
-  });
-}
+  
+      navigation: {
+        nextEl: ".swiper-button-next-custom",
+        prevEl: ".swiper-button-prev-custom",
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 12,
+        },
+      },
+    });
+
+    tourSwiper.update();
+  }
+

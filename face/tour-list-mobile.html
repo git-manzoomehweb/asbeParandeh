@@ -1,5 +1,5 @@
 <basis core="dbsource" source="basiscore" lid="1" mid="20" name="db" catid="[##cms.query.catid##]">
-    <member name="tour-list" type="list" link="tour.bc" propertyid="8181,8077,8076,10000504" perpage="12" size="311x219"
+    <member name="tour-list" type="list" link="tour.bc" propertyid="8181,8077,8076,10000504" perpage="4" size="311x219"
         pageno="[##cms.query.pagenum|(1)##]" order="ord" />
     <member name="paging" type="list" request="paging" count="3" parentname="tour-list" />
 </basis>
@@ -45,25 +45,25 @@
     <basis core="call" file="header.inc"  pageindex="[##cms.cms.pageindex##]"/>
     <main>
         <section>
-            <div class="absolute left-0 right-0 top-0">
+            <div class="absolute top-0 left-0 right-0">
                 <div class="absolute z-10 text-center text-white left-0 right-0 top-[20%]">
                     <div>تور های
                         <basis core="group" if=" '[##cms.query.catid##]' <> '210283' " >
                             <basis core="print" datamembername="db.scalar">
                                 <face>
-                                    <h1 class="font-bold text-5xl">@column1</h1>
+                                    <h1 class="text-5xl font-bold">@column1</h1>
                                 </face>
                             </basis>
                         </basis>
                         <basis core="group" if=" '[##cms.query.catid##]' = '210283' " >
-                            <h1 class="font-bold text-5xl">اسب پرنده</h1>
+                            <h1 class="text-5xl font-bold">اسب پرنده</h1>
                         </basis>
                     </div>
                     <h2>بــا اسب پــرنــده بــه دوردنیــا پــرواز کــن</h2>
                 </div>
                 <img src="[##cms.cms.cdn##]/images/banner.jpg" alt="banner" class="w-full object-cover h-[578px]" width="320"
                     height="578" loading="lazy" />
-                <div class="bg-gradient-to-b from-transparent to-specialcolor-1 absolute inset-0"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-specialcolor-1"></div>
                 <img src="[##cms.cms.cdn##]/images/man-with-backpack-road 1.png" alt="man-with-backpack-road"
                     class="absolute bottom-0 left-0 right-0 mx-auto" width="288" height="354" loading="lazy" />
 
@@ -114,20 +114,20 @@
             </ul>
             <basis core="list" datamembername="db.tour-list">
                 <layout>
-                    <div class="mt-4 flex flex-col gap-2">
+                    <div class="flex flex-col gap-2 mt-4">
                         <!-- ایتم های تور های در حال اجرا -->
                         @child
                     </div>
                 </layout>
                 <face filter="link is null">
-                    <a href="/tour.bc?id=@id" class="relative rounded-xl overflow-hidden border border-zinc-300 border-solid">
+                    <a href="/tour.bc?id=@id" class="relative overflow-hidden border border-solid rounded-xl border-zinc-300">
                         <img src="@00311X00219prp" alt="@title" width="100%" height="219"
                             loading="lazy">
                         <div
                             class="relative z-10 w-[95%] bg-white border-2 border-dashed border-primary-100 rounded-xl -mt-9  mx-auto flex items-center justify-between py-2 px-3">
                             <div>
-                                <h2 class="text-zinc-600 text-sm">شروع قیمت:</h2>
-                                <div class="text-zinc-900 text-sm">@prp_8181</div>
+                                <h2 class="text-sm text-zinc-600">شروع قیمت:</h2>
+                                <div class="text-sm text-zinc-900">@prp_8181</div>
                             </div>
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16.25 24.2743L31.25 24.2743" stroke="#445E87" stroke-width="1.5"
@@ -137,19 +137,19 @@
                             </svg>
                         </div>
                         <div class="px-2 py-4">
-                            <h2 class="font-bold text-lg mb-3">@title</h2>
+                            <h2 class="mb-3 text-lg font-bold">@title</h2>
                             <ul class="flex justify-between">
-                                <li class=" flex flex-col gap-4 pl-4">
+                                <li class="flex flex-col gap-4 pl-4 ">
                                     <span class="text-sm text-zinc-600">مدت سفر</span>
                                     <span class="text-sm text-zinc-900">@prp_8076</span>
                                 </li>
                                 <div class="max-h-screen border border-solid border-primary-100"></div>
-                                <li class=" flex flex-col gap-4 px-4">
+                                <li class="flex flex-col gap-4 px-4 ">
                                     <span class="text-sm text-zinc-600">مدت سفر</span>
                                     <span class="text-sm text-zinc-900">@prp_8077</span>
                                 </li>
                                 <div class="max-h-screen border border-solid border-primary-100"></div>
-                                <li class=" flex flex-col gap-4 pr-4">
+                                <li class="flex flex-col gap-4 pr-4 ">
                                     <span class="text-sm text-zinc-600">ایرلاین</span>
                                     <span class="text-sm text-zinc-900">@prp_10000504</span>
                                 </li>
@@ -158,14 +158,14 @@
                     </a>
                 </face>
                 <face>
-                    <a href="@link" class="relative rounded-xl overflow-hidden border border-zinc-300 border-solid">
+                    <a href="@link" class="relative overflow-hidden border border-solid rounded-xl border-zinc-300">
                         <img src="@00311X00219prp" alt="@title" width="100%" height="219"
                             loading="lazy">
                         <div
                             class="relative z-10 w-[95%] bg-white border-2 border-dashed border-primary-100 rounded-xl -mt-9  mx-auto flex items-center justify-between py-2 px-3">
                             <div>
-                                <h2 class="text-zinc-600 text-sm">شروع قیمت:</h2>
-                                <div class="text-zinc-900 text-sm">@prp_8181</div>
+                                <h2 class="text-sm text-zinc-600">شروع قیمت:</h2>
+                                <div class="text-sm text-zinc-900">@prp_8181</div>
                             </div>
                             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16.25 24.2743L31.25 24.2743" stroke="#445E87" stroke-width="1.5"
@@ -175,19 +175,19 @@
                             </svg>
                         </div>
                         <div class="px-2 py-4">
-                            <h2 class="font-bold text-lg mb-3">@title</h2>
+                            <h2 class="mb-3 text-lg font-bold">@title</h2>
                             <ul class="flex justify-between">
-                                <li class=" flex flex-col gap-4 pl-4">
+                                <li class="flex flex-col gap-4 pl-4 ">
                                     <span class="text-sm text-zinc-600">مدت سفر</span>
                                     <span class="text-sm text-zinc-900">@prp_8076</span>
                                 </li>
                                 <div class="max-h-screen border border-solid border-primary-100"></div>
-                                <li class=" flex flex-col gap-4 px-4">
+                                <li class="flex flex-col gap-4 px-4 ">
                                     <span class="text-sm text-zinc-600">مدت سفر</span>
                                     <span class="text-sm text-zinc-900">@prp_8077</span>
                                 </li>
                                 <div class="max-h-screen border border-solid border-primary-100"></div>
-                                <li class=" flex flex-col gap-4 pr-4">
+                                <li class="flex flex-col gap-4 pr-4 ">
                                     <span class="text-sm text-zinc-600">ایرلاین</span>
                                     <span class="text-sm text-zinc-900">@prp_10000504</span>
                                 </li>
@@ -318,10 +318,10 @@
                 </face>
             </basis>
 
-            <div class="bg-primary-50 rounded-xl p-3">
-                <img src="[##cms.cms.cdn##]/images/person-contact.png" class="-mt-32 mx-auto mb-14" alt="person-contact" width="226" height="226">
+            <div class="p-3 bg-primary-50 rounded-xl">
+                <img src="[##cms.cms.cdn##]/images/person-contact.png" class="mx-auto -mt-32 mb-14" alt="person-contact" width="226" height="226">
                 <div>
-                    <h2 class="text-zinc-900 text-lg font-bold mb-2">با مشاورین ما در ارتباط باشید</h2>
+                    <h2 class="mb-2 text-lg font-bold text-zinc-900">با مشاورین ما در ارتباط باشید</h2>
                     <div class="text-sm text-zinc-900">رزرو تور های و ارائه خدمات تلفنی و آنلاین را با اسب پرنده تجربه کنید</div>
                 </div>
                 <div class="flex flex-col form-moshavereh-mobile w-[75%] mt-6" id="contact-form-resize">
@@ -338,7 +338,7 @@
                     <basis core="callback" run="atclient" method="uploadDocumentFooter" triggers="upload.datafooter">
                     </basis>
 
-                    <div class="flex items-center flex-col mt-3 captcha-button">
+                    <div class="flex flex-col items-center mt-3 captcha-button">
                         <div id="captchaContainer"
                             class="captchaContainerclass flex-[3] captcha-sefaresh ml-2.5 max-xl:ml-0 max-xl:mb-[20px]"
                             data-bc-answer-container data-bc-schema-info-multi="0" data-bc-schema-info-word="58"
@@ -361,7 +361,7 @@
                                 </face>
                             </basis>
                         </div>
-                        <button class="flex items-center mt-3 justify-center flex-1 w-full h-16 text-white transition-all duration-300 bg-primary-900 rounded-xl hover:bg-secondary-500 y-2 wpx-4 data-body-btn"
+                        <button class="flex items-center justify-center flex-1 w-full h-16 mt-3 text-white transition-all duration-300 bg-primary-900 rounded-xl hover:bg-secondary-500 y-2 wpx-4 data-body-btn"
                             type="button" data-btn-uploadfooter><span class="">ارسال</span></button>
                         <div
                             class="Loading_Form hidden data-body-btn w-[126px] h-12 px-4 py-2 bg-secondary-800 rounded-2xl justify-center items-center gap-2.5">

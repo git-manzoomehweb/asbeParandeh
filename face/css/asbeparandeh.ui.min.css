@@ -239,6 +239,10 @@
   height: 4rem;
 }
 
+.h-\[147px\] {
+  height: 147px;
+}
+
 .h-\[273px\] {
   height: 273px;
 }
@@ -563,10 +567,6 @@
 
 .rounded-3xl {
   border-radius: 1.5rem;
-}
-
-.rounded-\[30px\] {
-  border-radius: 30px;
 }
 
 .rounded-\[32px\] {

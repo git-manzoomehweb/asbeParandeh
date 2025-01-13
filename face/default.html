@@ -1,15 +1,15 @@
 <basis core="dbsource" source="media" name="db" lid="1" usedforid="2371632" sourcemid="article">
   <member name="audio" type="list" format="audio" link="article.bc" order="ord" />
 </basis>
-<basis core="dbsource" source="basiscore" lid="1" mid="20" name="db" catid="[##cms.query.catid##]">
+<basis core="dbsource" source="basiscore" lid="1" mid="20" name="db" catid="212666">
   <member name="visa-list" type="list" link="visa.bc" propertyid="3087433" perpage="7" size="88x88" order="ord" />
 </basis>
 
-<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.catid##]">
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="210287">
   <member name="travel-list" type="list" link="article.bc" propertyid="7244" perpage="3" size="620x370" order="ord" />
 </basis>
 
-<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.catid##]">
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="212052">
   <member name="article-list" type="list" link="article.bc" propertyid="7244,7231" perpage="3" size="443x245"
     order="ord" />
 </basis>
@@ -18,6 +18,11 @@
   <member name="cat" type="tree" request="cat" parentid="212712" order="ord">
   </member>
 </basis>
+
+<basis core="dbsource" source="media" lid="1" name="db" usedforid="[##cms.query.id##]" sourcemid="article">
+  <member type="list" name="gallery" format="4" order="ord"></member>
+  </basis>
+  
 
 
 
@@ -63,6 +68,7 @@
   <!-- common styles for all page -->
   <link href="https://cdn.basiscore.net/basisfly.com/css/reservation_multiLang_css_calendar.css" type="text/css"
     rel="stylesheet" />
+    
   <basis core="call" file="style.inc" />
 </head>
 
@@ -79,11 +85,11 @@
             <h1 class="font-bold text-[150px]">Antalya</h1>
           </div>
           <img src="[##cms.cms.cdn##]/images/man-with-backpack-road 1.png" alt="man-with-backpack-road"
-            class="object-cover w-[397px] h-[606px]" width="397" height="606"  />
+            class="object-cover w-[397px] h-[606px]" width="397" height="606" />
         </div>
         <div class="flex">
           <img src="[##cms.cms.cdn##]/images/Universities-approved-by-the-Ministry-of-Science-in-Italy-min.jpg"
-            alt="view-ancient-greek" class="w-1/2 object-cover h-[809px]" width="1920" height="809"  />
+            alt="view-ancient-greek" class="w-1/2 object-cover h-[809px]" width="1920" height="809" />
           <img src="[##cms.cms.cdn##]/images/Universities-approved-by-the-Ministry-of-Science-in-Italy-1-min.jpg"
             alt="view-ancient-greek" class="w-1/2 object-cover h-[809px]" width="1920" height="809" />
           <img src="[##cms.cms.cdn##]/images/view-ancient-greek-architecture-with-temple-structure-min.jpg"
@@ -307,78 +313,98 @@
     </section>
     <section class="mt-24 bg-primary-50">
 
-      <!-- Slider main container -->
-      <div class="swiper travel-swiper xl:max-w-7xl">
-        <!-- If we need navigation buttons -->
-        <div class="absolute top-[40%] z-10 flex w-[610px] justify-between max-xl:left-[1%] xl:left-0">
-          <div class="swiper-button-prev-custom">
-            <div class="transition-all duration-300 rounded-full bg-primary-600 hover:bg-secondary-500">
-              <svg width="52" height="52" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.25 24.2744L31.25 24.2744" stroke="#fff" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path d="M22.3008 30.2988L16.2508 24.2748L22.3008 18.2498" stroke="#fff" stroke-width="1.5"
-                  stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </div>
-          </div>
-          <div class="swiper-button-next-custom">
-            <div class="transition-all duration-300 rounded-full bg-primary-600 hover:bg-secondary-500">
-              <svg width="52" height="52" class="-scale-x-100" viewBox="0 0 48 48" fill="none"
+      <div class="flex items-center gap-10 max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mx-auto">
+        <!-- Slider main container -->
+        <div class="w-1/2 swiper travel-swiper">
+          <!-- Additional required wrapper -->
+          <basis core="list" datamembername="db.travel-list">
+            <layout>
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                @child
+              </div>
+            </layout>
+            <face filter="link is null">
+              <div class="pt-6 pb-10 swiper-slide bg-primary-50">
+                <div class="flex gap-10 ">
+                  <div class="mt-10">
+                    <h2 class="mb-2 text-2xl font-bold text-zinc-900">@title</h2>
+                    <div class="text-sm text-justify line-clamp-6">@prp_7244</div>
+                    <a href="/article.bc?id=@id"
+                      class="flex items-center justify-center w-40 h-16 mt-6 text-white transition-all duration-300 bg-primary-900 rounded-xl hover:bg-secondary-500">مشاهده
+                      افر</a>
+                  </div>
+
+                </div>
+              </div>
+            </face>
+            <face>
+              <div class="pt-6 pb-10 swiper-slide bg-primary-50">
+                <div class="flex gap-10 ">
+                  <div class="mt-10">
+                    <h2 class="mb-2 text-2xl font-bold text-zinc-900">@title</h2>
+                    <div class="text-sm text-justify line-clamp-6">@prp_7244</div>
+                    <a href="@link"
+                      class="flex items-center justify-center w-40 h-16 mt-6 text-white transition-all duration-300 bg-primary-900 rounded-xl hover:bg-secondary-500">مشاهده
+                      افر</a>
+                  </div>
+
+                </div>
+              </div>
+            </face>
+          </basis>
+
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- Slider main container -->
+        <div class="w-1/2 swiper gallery-swiper">
+          <!-- If we need navigation buttons -->
+          <div class="absolute top-[40%] z-10 flex w-[620px] justify-between max-xl:left-[1%] xl:left-0">
+            <div class="swiper-button-prev-custom">
+              <div class="transition-all duration-300 rounded-full bg-primary-600 hover:bg-secondary-500">
+                <svg width="52" height="52" class="-scale-x-100" viewBox="0 0 48 48" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path d="M16.25 24.2744L31.25 24.2744" stroke="#fff" stroke-width="1.5" stroke-linecap="round"
                   stroke-linejoin="round" />
                 <path d="M22.3008 30.2988L16.2508 24.2748L22.3008 18.2498" stroke="#fff" stroke-width="1.5"
                   stroke-linecap="round" stroke-linejoin="round" />
               </svg>
+              </div>
+            </div>
+            <div class="swiper-button-next-custom">
+              <div class="transition-all duration-300 rounded-full bg-primary-600 hover:bg-secondary-500">
+                <svg width="52" height="52" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.25 24.2744L31.25 24.2744" stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M22.3008 30.2988L16.2508 24.2748L22.3008 18.2498" stroke="#fff" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
             </div>
           </div>
+          <!-- Additional required wrapper -->
+          <basis core="print" datamembername="db.gallery">
+            <layout>
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                @child
+              </div>
+            </layout>
+            <face>
+              <div class="swiper-slide">
+                <img  src="/@largeIMG"
+                  class="img-responsive rounded-full object-cover w-[620px] h-[370px] border-8 border-solid border-primary-100"
+                  alt="villa" width="100%" height="370">
+              </div>
+            </face>
+          </basis>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev-custom"></div>
+          <div class="swiper-button-next-custom"></div>
         </div>
-        <!-- Additional required wrapper -->
-        <basis core="list" datamembername="db.travel-list">
-          <layout>
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              @child
-            </div>
-          </layout>
-          <face filter="link is null">
-            <div class="pt-6 pb-10 swiper-slide bg-primary-50">
-              <div class="max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mx-auto flex gap-10">
-                <div class="mt-10">
-                  <h2 class="mb-2 text-2xl font-bold text-zinc-900">@title</h2>
-                  <div class="text-sm text-justify line-clamp-6">@prp_7244</div>
-                  <a href="/article.bc?id=@id"
-                    class="flex items-center justify-center w-40 h-16 mt-6 text-white transition-all duration-300 bg-primary-900 rounded-xl hover:bg-secondary-500">مشاهده
-                    افر</a>
-                </div>
-                <img src="@00620X00370prp"
-                  class="rounded-full object-cover w-[620px] h-[370px] border-8 border-solid border-primary-100"
-                  alt="villa" width="100%" height="370">
-
-              </div>
-            </div>
-          </face>
-          <face>
-            <div class="pt-6 pb-10 swiper-slide bg-primary-50">
-              <div class="max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mx-auto flex gap-10">
-                <div class="mt-10">
-                  <h2 class="mb-2 text-2xl font-bold text-zinc-900">@title</h2>
-                  <div class="text-sm text-justify line-clamp-6">@prp_7244</div>
-                  <a href="@link"
-                    class="flex items-center justify-center w-40 h-16 mt-6 text-white transition-all duration-300 bg-primary-900 rounded-xl hover:bg-secondary-500">مشاهده
-                    افر</a>
-                </div>
-                <img src="@00620X00370prp"
-                  class="rounded-full object-cover w-[620px] h-[370px] border-8 border-solid border-primary-100"
-                  alt="villa" width="100%" height="370">
-
-              </div>
-            </div>
-          </face>
-        </basis>
-
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
       </div>
     </section>
     <basis core="list" datamembername="db.article-list">
@@ -398,8 +424,8 @@
       </layout>
       <face filter="link is null and RowNumber in(1)">
         <div class="flex col-span-2 overflow-hidden border border-solid border-primary-200 rounded-xl group">
-          <img src="@00443X00245prp" class="object-cover transition-all duration-300 group-hover:grayscale"
-            alt="@title" width="100%" height="230">
+          <img src="@00443X00245prp" class="object-cover transition-all duration-300 group-hover:grayscale" alt="@title"
+            width="443" height="230">
           <div class="px-6 pt-4 pb-6">
             <h2 class="mb-2 text-lg font-bold text-zinc-900">@title</h2>
             <div class="text-sm text-justify text-zinc-900 line-clamp-4">@prp_7244</div>
@@ -423,8 +449,8 @@
       </face>
       <face filter="RowNumber in(1)">
         <div class="flex col-span-2 overflow-hidden border border-solid border-primary-200 rounded-xl group">
-          <img src="@00443X00245prp" class="object-cover transition-all duration-300 group-hover:grayscale"
-            alt="@title" width="100%" height="230">
+          <img src="@00443X00245prp" class="object-cover transition-all duration-300 group-hover:grayscale" alt="@title"
+            width="443" height="230">
           <div class="px-6 pt-4 pb-6">
             <h2 class="mb-2 text-lg font-bold text-zinc-900">@title</h2>
             <div class="text-sm text-justify text-zinc-900 line-clamp-4">@prp_7244</div>
@@ -469,8 +495,8 @@
               <span class="text-sm text-zinc-600">@prp_7231</span>
             </div>
           </div>
-          <img src="@00443X00245prp" class="object-cover transition-all duration-300 group-hover:grayscale"
-            alt="@title" width="100%" height="230">
+          <img src="@00443X00245prp" class="object-cover transition-all duration-300 group-hover:grayscale" alt="@title"
+            width="443" height="230">
         </div>
       </face>
       <face filter="RowNumber in(2)">
@@ -495,16 +521,16 @@
               <span class="text-sm text-zinc-600">@prp_7231</span>
             </div>
           </div>
-          <img src="@00443X00245prp" class="object-cover transition-all duration-300 group-hover:grayscale"
-            alt="@title" width="100%" height="230">
+          <img src="@00443X00245prp" class="object-cover transition-all duration-300 group-hover:grayscale" alt="@title"
+            width="443" height="230">
         </div>
       </face>
 
       <face filter="link is null and RowNumber in(3)">
         <div
           class="col-start-3 row-span-2 row-start-1 overflow-hidden border border-solid border-primary-200 rounded-xl group">
-          <img src="@00443X00245prp" class="object-cover transition-all duration-300 group-hover:grayscale"
-            alt="@title" width="100%" height="245">
+          <img src="@00443X00245prp" class="object-cover transition-all duration-300 group-hover:grayscale" alt="@title"
+            width="443" height="245">
           <div class="px-6 pt-4 pb-6">
             <h2 class="mb-2 text-lg font-bold text-zinc-900">@title</h2>
             <div class="text-sm text-justify text-zinc-900 line-clamp-4">@prp_7244</div>
@@ -529,8 +555,8 @@
       <face filter="RowNumber in(3)">
         <div
           class="col-start-3 row-span-2 row-start-1 overflow-hidden border border-solid border-primary-200 rounded-xl group">
-          <img src="@00443X00245prp" class="object-cover transition-all duration-300 group-hover:grayscale"
-            alt="@title" width="100%" height="245">
+          <img src="@00443X00245prp" class="object-cover transition-all duration-300 group-hover:grayscale" alt="@title"
+            width="443" height="245">
           <div class="px-6 pt-4 pb-6">
             <h2 class="mb-2 text-lg font-bold text-zinc-900">@title</h2>
             <div class="text-sm text-justify text-zinc-900 line-clamp-4">@prp_7244</div>
