@@ -1506,7 +1506,7 @@ body {
   background: var(--secondary);
 }
 .day.days_available {
-  background: #3f2f12;
+  background: var(--primary);
 }
 .calendar-switch {
   color: var(--primary);
