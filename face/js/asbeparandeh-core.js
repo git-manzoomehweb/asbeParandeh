@@ -488,28 +488,23 @@ if (document.querySelector(".footer-swiper")) {
   });
 }
 
-if (document.querySelector(".travel-swiper")) {
-  var travelSwiper = new Swiper(".travel-swiper", {
+if (document.querySelector(".gallery-swiper-mobile")) {
+  var gallerySwiper = new Swiper(".gallery-swiper-mobile", {
     slidesPerView: 1,
     speed: 400,
     centeredSlides: false,
     spaceBetween: 30,
     grabCursor: true,
     autoplay: {
-      delay: 4500,
+      delay: 2500,
       disableOnInteraction: false,
     },
     loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+    navigation: {
+      nextEl: ".swiper-button-next-custom",
+      prevEl: ".swiper-button-prev-custom",
     },
-    breakpoints: {
-      1024: {
-        slidesPerView: 1,
-        spaceBetween: 50,
-      },
-    },
+
   });
 }
 
@@ -601,3 +596,5 @@ if (document.querySelector(".travel-swiper-mobile")) {
     tourSwiper.update();
   }
 
+
+  

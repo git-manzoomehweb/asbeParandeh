@@ -1,12 +1,13 @@
 <basis core="dbsource" source="media" name="db" lid="1" usedforid="2371632" sourcemid="article">
   <member name="audio" type="list" format="audio" link="article.bc" order="ord" />
 </basis>
+
 <basis core="dbsource" source="basiscore" lid="1" mid="20" name="db" catid="212666">
   <member name="visa-list" type="list" link="visa.bc" propertyid="3087433" perpage="7" size="88x88" order="ord" />
 </basis>
 
-<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="210287">
-  <member name="travel-list" type="list" link="article.bc" propertyid="7244" perpage="3" size="620x370" order="ord" />
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" usedforid="2371639">
+  <member name="travel-list" type="view" size="620x370" propertyid="7244"/>
 </basis>
 
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="212052">
@@ -19,7 +20,7 @@
   </member>
 </basis>
 
-<basis core="dbsource" source="media" lid="1" name="db" usedforid="[##cms.query.id##]" sourcemid="article">
+<basis core="dbsource" source="media" lid="1" name="db" usedforid="2371639" sourcemid="article">
   <member type="list" name="gallery" format="4" order="ord"></member>
   </basis>
   
@@ -223,9 +224,13 @@
           </div>
         </layout>
         <face>
-          <audio controls>
-            <source src="@largeIMG" type="audio/mp3">
-          </audio>
+          <div class="flex flex-col justify-center border border-solid border-secondary-400 p-5 rounded-2xl shadow-lg">
+            <h2 class="font-bold text-lg mb-2">@name</h2>
+            <div class="text-zinc-700 text-sm mb-2">@description</div>
+            <audio controls>
+              <source src="@largeIMG" type="audio/mp3">
+            </audio>
+          </div>
         </face>
       </basis>
 
@@ -311,46 +316,30 @@
       </basis>
 
     </section>
-    <section class="mt-24 bg-primary-50">
+    <section class="mt-24 bg-primary-50 pt-6 pb-10 ">
+      <div class="max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mx-auto flex items-center gap-10">
+      <div class="w-1/2">
 
-      <div class="flex items-center gap-10 max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mx-auto">
-        <!-- Slider main container -->
-        <div class="w-1/2 swiper travel-swiper">
-          <!-- Additional required wrapper -->
-          <basis core="list" datamembername="db.travel-list">
+          <basis core="print" datamembername="db.travel-list">
             <layout>
-              <div class="swiper-wrapper">
-                <!-- Slides -->
-                @child
+              <div class="bg-primary-50">
+                <div class="flex gap-10 ">
+                  <div class="mt-10">
+                    @child
+
+                    <a href="/article.bc?id=2371639"
+                      class="flex items-center justify-center w-40 h-16 mt-6 text-white transition-all duration-300 bg-primary-900 rounded-xl hover:bg-secondary-500">مشاهده
+                      افر</a>
+                  </div>
+
+                </div>
               </div>
             </layout>
-            <face filter="link is null">
-              <div class="pt-6 pb-10 swiper-slide bg-primary-50">
-                <div class="flex gap-10 ">
-                  <div class="mt-10">
-                    <h2 class="mb-2 text-2xl font-bold text-zinc-900">@title</h2>
-                    <div class="text-sm text-justify line-clamp-6">@prp_7244</div>
-                    <a href="/article.bc?id=@id"
-                      class="flex items-center justify-center w-40 h-16 mt-6 text-white transition-all duration-300 bg-primary-900 rounded-xl hover:bg-secondary-500">مشاهده
-                      افر</a>
-                  </div>
-
-                </div>
-              </div>
+            <face filter="TypeID in(150)">
+              <h2 class="mb-2 text-2xl font-bold text-zinc-900">@text</h2>
             </face>
-            <face>
-              <div class="pt-6 pb-10 swiper-slide bg-primary-50">
-                <div class="flex gap-10 ">
-                  <div class="mt-10">
-                    <h2 class="mb-2 text-2xl font-bold text-zinc-900">@title</h2>
-                    <div class="text-sm text-justify line-clamp-6">@prp_7244</div>
-                    <a href="@link"
-                      class="flex items-center justify-center w-40 h-16 mt-6 text-white transition-all duration-300 bg-primary-900 rounded-xl hover:bg-secondary-500">مشاهده
-                      افر</a>
-                  </div>
-
-                </div>
-              </div>
+            <face filter="TypeID in(129)">
+              <div class="text-sm text-justify line-clamp-6">@largetext</div>
             </face>
           </basis>
 
@@ -394,7 +383,7 @@
             </layout>
             <face>
               <div class="swiper-slide">
-                <img  src="/@largeIMG"
+                <img src="/@largeIMG"
                   class="img-responsive rounded-full object-cover w-[620px] h-[370px] border-8 border-solid border-primary-100"
                   alt="villa" width="100%" height="370">
               </div>

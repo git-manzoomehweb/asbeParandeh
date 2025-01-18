@@ -302,16 +302,20 @@
             <h2 class="mb-6 text-2xl font-bold">تجربه مسافران</h2>
             <basis core="list" datamembername="db.audio">
                 <layout>
-                    <div class="flex justify-between">
-                        @child
-                    </div>
+                  <div class="flex justify-between">
+                    @child
+                  </div>
                 </layout>
                 <face>
+                  <div class="flex flex-col justify-center border border-solid border-secondary-400 p-5 rounded-2xl shadow-lg">
+                    <h2 class="font-bold text-lg mb-2">@name</h2>
+                    <div class="text-zinc-700 text-sm mb-2">@description</div>
                     <audio controls>
-                        <source src="@largeIMG" type="audio/mp3">
-                      </audio>
+                      <source src="@largeIMG" type="audio/mp3">
+                    </audio>
+                  </div>
                 </face>
-            </basis>
+              </basis>
 
         </section>
         <section class="flex gap-8 max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mx-auto my-16">

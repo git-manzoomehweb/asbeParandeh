@@ -231,10 +231,6 @@
   height: 3rem;
 }
 
-.h-14 {
-  height: 3.5rem;
-}
-
 .h-16 {
   height: 4rem;
 }
@@ -1700,4 +1696,11 @@
 .calendar-footer input, .calendar-footer ::placeholder {
   font-family: "DanaFaNum";
 }
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-panel {
+  background-color: #EBE6DB;
+  color: #000;
+}
+
 
