@@ -551,7 +551,7 @@ object {
 
 img,
 video {
-  max-width: 100%;
+
   height: auto;
 }
 
@@ -734,6 +734,10 @@ body {
 
 .h-full {
   height: 100%;
+}
+
+.max-w-full {
+  max-width: 100%;
 }
 
 .max-h-0 {
@@ -1065,7 +1069,7 @@ body {
 }
 
 :root {
-  --primary: #D7B46A;
+  --primary: #445E87;
   --primary-50: #e3f1ff;
   --primary-100: #cce2f7;
   --primary-200: #aecfef;
@@ -1077,7 +1081,7 @@ body {
   --primary-800: #516e8c;
   --primary-900: #445e87;
   --primary-950: #354969;
-  --secondary: #445E87;
+  --secondary: #D7B46A;
   --secondary-50: #ebe6db;
   --secondary-100: #c9bfb1;
   --secondary-200: #a39583;
@@ -1478,4 +1482,23 @@ body {
 .itemInput,
 .login-btn {
   font-family: "DanaFaNum" !important;
+}
+
+.date__details a, .tourItinerary__item__step {
+  background-color: #445E87 !important;
+}
+.tour_contact_info{
+  background-color: #D7B46A !important;
+}
+.bg-secondary.w-\[60px\].h-\[60px\].rounded-xl.text-center.mt-2.check-contrast{
+  background-color: #445E87 !important;
+}
+.layout__body__container .tourItinerary__item__content img{
+  width: 200px !important;
+}
+
+@media (min-width: 1024px) {
+  .layout__body__container .lg\:mt--16 {
+      margin-top: 0 !important;
+  }
 }
