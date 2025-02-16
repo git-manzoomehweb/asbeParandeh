@@ -7,7 +7,12 @@
 </basis>
 
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" usedforid="2371639">
-  <member name="travel-list" type="view" size="620x370" propertyid="7244"/>
+  <member name="travel-list" type="view" size="620x370" propertyid="7244" />
+</basis>
+
+<basis core="dbsource" source="basiscore" lid="1" mid="20" name="images-slider">
+  <member name="cat" type="tree" request="cat" parentid="212664" order="ord">
+  </member>
 </basis>
 
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="212052">
@@ -22,8 +27,8 @@
 
 <basis core="dbsource" source="media" lid="1" name="db" usedforid="2371639" sourcemid="article">
   <member type="list" name="gallery" format="4" order="ord"></member>
-  </basis>
-  
+</basis>
+
 
 
 
@@ -69,7 +74,7 @@
   <!-- common styles for all page -->
   <link href="https://cdn.basiscore.net/basisfly.com/css/reservation_multiLang_css_calendar.css" type="text/css"
     rel="stylesheet" />
-    
+
   <basis core="call" file="style.inc" />
 </head>
 
@@ -77,31 +82,78 @@
   <basis core="call" file="header.inc" />
 
   <main>
-    <section>
-      <div class="absolute top-0 left-0 right-0 mt-20">
-        <div
-          class="absolute flex gap-16 z-10 text-center text-white left-0 max-xl:right-[4%] xl:right-[14%] 2xl:right-[24%] top-[20%]">
-          <div>
-            <h2 class="text-3xl font-bold">بــا اسب پــرنــده بــه دوردنیــا پــرواز کــن</h2>
-            <h1 class="font-bold text-[150px]">Antalya</h1>
+    <section class="-mt-12">
+      <!-- Slider main container -->
+      <div class="swiper swiper-image-slider">
+        <basis core="tree" datamembername="images-slider.cat" idcol="catid" parentidcol="parentid"
+        nullvalue="212664">
+          <layout>
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              @child
+            </div>
+          </layout>
+          <face filter="link is null and RowNumber not in(1)">
+            <a href="/tour-list.bc?catid=@catid" class="overflow-hidden swiper-slide">
+              <img src="@image" alt="view-ancient-greek"
+                class="img-one object-cover w-full h-[809px]" width="1920" height="809" />
+                <div class=" absolute top-60 left-0 max-xl:right-[4%] xl:right-[14%] 2xl:right-[24%]">
+                  <h1 class="font-bold text-[150px] text text-white drop-shadow-[2px_4px_6px_rgba(0,0,0,0.9)]">@title</h1>
+                </div>
+            </a>
+          </face>
+          <face filter="RowNumber not in(1)">
+            <a href="@link" class="overflow-hidden swiper-slide">
+              <img src="@image" alt="view-ancient-greek"
+                class="img-one object-cover w-full h-[809px]" width="1920" height="809" />
+                <div class=" absolute top-60 left-0 max-xl:right-[4%] xl:right-[14%] 2xl:right-[24%]">
+                  <h1 class="font-bold text-[150px] text text-white drop-shadow-[2px_4px_6px_rgba(0,0,0,0.9)]">@title</h1>
+                </div>
+            </a>
+          </face>
+        </basis>
+
+        <!-- If we need navigation buttons -->
+        <div class="absolute flex items-center justify-between w-4/5 top-[60%] left-0 right-0 mx-auto z-30">
+          <div class="zoomOutBtn swiper-button-prev-custom group">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                class="transition-all duration-300 group-hover:fill-secondary-400"
+                d="M7 24C7 14.6262 14.6262 7 24 7C33.3738 7 41 14.6262 41 24C41 33.3738 33.3738 41 24 41C14.6262 41 7 33.3738 7 24ZM9.55 24C9.55 31.9679 16.0321 38.45 24 38.45C31.9679 38.45 38.45 31.9679 38.45 24C38.45 16.0321 31.9679 9.55 24 9.55C16.0321 9.55 9.55 16.0321 9.55 24ZM20.644 17.1983C21.1404 16.7002 21.9479 16.6985 22.4477 17.1949L28.3739 23.0973C28.5671 23.2877 28.6916 23.5347 28.7337 23.7991L28.7496 24C28.7496 24.3383 28.6153 24.6647 28.3739 24.9027L22.4477 30.8034C21.9479 31.3015 21.1404 31.2981 20.644 30.8C20.1476 30.3002 20.1476 29.4927 20.6474 28.9963L25.6692 24L20.6474 19.002C20.1476 18.5056 20.1476 17.6981 20.644 17.1983Z"
+                fill="#A1C2E2" />
+            </svg>
           </div>
-          <img src="[##cms.cms.cdn##]/images/man-with-backpack-road 1.png" alt="man-with-backpack-road"
-            class="object-cover w-[397px] h-[606px]" width="397" height="606" />
-        </div>
-        <div class="flex">
-          <img src="[##cms.cms.cdn##]/images/Universities-approved-by-the-Ministry-of-Science-in-Italy-min.jpg"
-            alt="view-ancient-greek" class="w-1/2 object-cover h-[809px]" width="1920" height="809" />
-          <img src="[##cms.cms.cdn##]/images/Universities-approved-by-the-Ministry-of-Science-in-Italy-1-min.jpg"
-            alt="view-ancient-greek" class="w-1/2 object-cover h-[809px]" width="1920" height="809" />
-          <img src="[##cms.cms.cdn##]/images/view-ancient-greek-architecture-with-temple-structure-min.jpg"
-            alt="view-ancient-greek"
-            class="absolute inset-0 mx-auto object-cover rounded-b-[80px] max-xl:w-[97%] xl:max-w-7xl" width="1920"
-            height="809" />
+          <div class="zoomOutBtn swiper-button-next-custom group">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                class="transition-all duration-300 group-hover:fill-secondary-400"
+                d="M41 24C41 33.3738 33.3738 41 24 41C14.6262 41 7 33.3738 7 24C7 14.6262 14.6262 7 24 7C33.3738 7 41 14.6262 41 24ZM38.45 24C38.45 16.0321 31.9679 9.55 24 9.55C16.0321 9.55 9.55 16.0321 9.55 24C9.55 31.9679 16.0321 38.45 24 38.45C31.9679 38.45 38.45 31.9679 38.45 24ZM27.356 30.8017C26.8596 31.2998 26.0521 31.3015 25.5523 30.8051L19.6261 24.9027C19.4329 24.7123 19.3084 24.4653 19.2663 24.2009L19.2504 24C19.2504 23.6617 19.3847 23.3353 19.6261 23.0973L25.5523 17.1966C26.0521 16.6985 26.8596 16.7019 27.356 17.2C27.8524 17.6998 27.8524 18.5073 27.3526 19.0037L22.3308 24L27.3526 28.998C27.8524 29.4944 27.8524 30.3019 27.356 30.8017Z"
+                fill="#A1C2E2" />
+            </svg>
+          </div>
         </div>
 
       </div>
+
+      <div
+        class="absolute flex gap-16 z-10 text-center text-white left-0 max-xl:right-[4%] xl:right-[14%] 2xl:right-[24%] top-64">
+        <div>
+          <h2 class="text-3xl font-bold drop-shadow-[2px_4px_6px_rgba(0,0,0,0.9)]">بــا اسب پــرنــده بــه دوردنیــا پــرواز کــن</h2>
+        </div>
+        <div class="character">
+          <img src="[##cms.cms.cdn##]/images/man-with-backpack-road 1.png" alt="man-with-backpack-road"
+            class="" width="360" height="606" />
+        </div>
+      </div>
+      <div class="flex">
+        <!-- <img src="[##cms.cms.cdn##]/images/Universities-approved-by-the-Ministry-of-Science-in-Italy-min.jpg"
+            alt="view-ancient-greek" class="hidden w-1/2 object-cover h-[809px]" width="1920" height="809" /> -->
+        <!-- <img src="[##cms.cms.cdn##]/images/Universities-approved-by-the-Ministry-of-Science-in-Italy-1-min.jpg"
+            alt="view-ancient-greek" class="hidden w-1/2 object-cover h-[809px]" width="1920" height="809" /> -->
+      </div>
       <!-- searchbox -->
-      <section id="searchbox" class="mt-[32rem] min-h-[272px] max-xl:w-[97%] xl:max-w-7xl mx-auto">
+      <section id="searchbox" class="-mt-72 min-h-[272px] max-xl:w-[97%] xl:max-w-7xl mx-auto">
         <div class="relative z-10 flex justify-center w-full mt-24 mb-24 text-center loading"><svg aria-hidden="true"
             class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-primary" viewBox="0 0 100 101" fill="none"
             xmlns="http://www.w3.org/2000/svg">
@@ -224,9 +276,9 @@
           </div>
         </layout>
         <face>
-          <div class="flex flex-col justify-center border border-solid border-secondary-400 p-5 rounded-2xl shadow-lg">
-            <h2 class="font-bold text-lg mb-2">@name</h2>
-            <div class="text-zinc-700 text-sm mb-2">@description</div>
+          <div class="flex flex-col justify-center p-5 border border-solid shadow-lg border-secondary-400 rounded-2xl">
+            <h2 class="mb-2 text-lg font-bold">@name</h2>
+            <div class="mb-2 text-sm text-zinc-700">@description</div>
             <audio controls>
               <source src="@largeIMG" type="audio/mp3">
             </audio>
@@ -316,9 +368,9 @@
       </basis>
 
     </section>
-    <section class="mt-24 bg-primary-50 pt-6 pb-10 ">
+    <section class="pt-6 pb-10 mt-24 bg-primary-50 ">
       <div class="max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mx-auto flex items-center gap-10">
-      <div class="w-1/2">
+        <div class="w-1/2">
 
           <basis core="print" datamembername="db.travel-list">
             <layout>
@@ -354,12 +406,12 @@
             <div class="swiper-button-prev-custom">
               <div class="transition-all duration-300 rounded-full bg-primary-600 hover:bg-secondary-500">
                 <svg width="52" height="52" class="-scale-x-100" viewBox="0 0 48 48" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.25 24.2744L31.25 24.2744" stroke="#fff" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path d="M22.3008 30.2988L16.2508 24.2748L22.3008 18.2498" stroke="#fff" stroke-width="1.5"
-                  stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.25 24.2744L31.25 24.2744" stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M22.3008 30.2988L16.2508 24.2748L22.3008 18.2498" stroke="#fff" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
               </div>
             </div>
             <div class="swiper-button-next-custom">

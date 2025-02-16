@@ -1040,7 +1040,7 @@ function SelectPlace(element) {
     if ($(element).closest(".city").find(".FCD2").val()) {
       $(element)
         .closest("form")
-        .find(".Basis_Date_Box")
+        .find("#flight-hotel-boxes")
         .find(".start_date")
         .trigger("onclick");
     } else {

@@ -412,7 +412,7 @@ fieldset hr {
   margin: 0 auto;
 }
 .loading-img {
-  margin-top: 4em;
+  margin-top: 1em;
 }
 /*<!--------------------------------END CSS LIST TEMPLATE 3-------------------------------*/
 /*<!--------------------------------START CSS VIEW TEMPLATE 3-------------------------------*/
@@ -424,7 +424,7 @@ fieldset hr {
   background-color: #3f2f12;
 }
 .next-btn:hover {
-  background-color: #387066;
+  background-color: #3f2f12;
 }
 .prev-passengers {
   border-bottom: 2px solid #3f2f12;
@@ -434,11 +434,11 @@ fieldset hr {
   fill: #3f2f12;
 }
 .prev-passengers:hover {
-  border-color: #387066 !important;
-  color: #387066 !important;
+  border-color: #3f2f12 !important;
+  color: #3f2f12 !important;
 }
 .prev-passengers:hover svg {
-  fill: #387066;
+  fill: #3f2f12;
 }
 .passengers-prev-title svg {
   fill: #3f2f12;
@@ -481,7 +481,7 @@ fieldset hr {
   color: #fff !important;
 }
 .login-btn:hover {
-  background-color: #387066;
+  background-color: #3f2f12;
 }
 .login-btn:hover {
   box-shadow: 0 10px 13px -10px #0c2d33;
