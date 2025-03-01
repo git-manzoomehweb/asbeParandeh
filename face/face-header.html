@@ -1,0 +1,164 @@
+<basis core="tree" datamembername="tour.cat" idcol="catid" parentidcol="parentid" nullvalue="210283">
+    <layout>
+        <li class="relative flex h-full group">
+            <div class="flex items-center justify-between cursor-pointer toggle-dropdown">
+                <a href="/tours" class="flex items-center gap-2 transition-all duration-300 group text-zinc-900 hover:text-secondary-200">تورها
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-all duration-300 group-hover:rotate-180">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2499 16.914L3.83594 8.5L5.24994 7.086L12.2499 14.086L19.2499 7.086L20.6639 8.5L12.2499 16.914Z" fill="#18181B" class="transition-all duration-300 group-hover:fill-secondary-200" />
+                    </svg>
+                </a>
+            </div>
+            <!-- submenu -->
+            <ul class="absolute z-30 flex flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-300 bg-white shadow-md opacity-0 rounded-xl top-full group-hover:visible group-hover:opacity-100">
+                @child
+            </ul>
+            <!-- submenu end -->
+        </li>
+    </layout>
+    <face level="end" filter="link is null">
+        <li class="py-1 transition-all duration-300 rounded-md hover:bg-primary-800 group/levelthree">
+            <a href="/tour-list.bc?catid=@catid" class="block w-full transition-all duration-300 text-zinc-900 group-hover/levelthree:text-white">@title</a>
+        </li>
+    </face>
+    <face level="end">
+        <li class="py-1 transition-all duration-300 rounded-md hover:bg-primary-800 group/levelthree">
+            <a href="@link" class="block w-full transition-all duration-300 text-zinc-900 group-hover/levelthree:text-white">@title</a>
+        </li>
+    </face>
+    <face level="1" filter="link is null">
+        <li class="relative py-1 transition-all duration-300 rounded-md group/leveltwo hover:bg-primary-800">
+            <div class="flex justify-between cursor-pointer text-zinc-900 group-hover/leveltwo:text-white">
+                <a href="/tour-list.bc?catid=@catid" class="transition-all duration-300 text-zinc-900 group-hover/leveltwo:text-white">@title</a>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-all duration-300 group-hover/leveltwo:rotate-90">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2499 16.914L3.83594 8.5L5.24994 7.086L12.2499 14.086L19.2499 7.086L20.6639 8.5L12.2499 16.914Z" fill="#18181B" class="transition-all duration-300 group-hover/leveltwo:fill-white" />
+                </svg>
+            </div>
+            <ul class="absolute top-0 z-30 flex flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-300 bg-white shadow-md opacity-0 right-60 rounded-xl group-hover/leveltwo:visible group-hover/leveltwo:opacity-100">
+                @child
+            </ul>
+        </li>
+    </face>
+    <face level="1">
+        <li class="relative py-1 transition-all duration-300 rounded-md group/leveltwo hover:bg-primary-800">
+            <div class="flex justify-between cursor-pointer">
+                <a href="@link" class="transition-all duration-300 text-zinc-900 group-hover/leveltwo:text-white">@title</a>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-all duration-300 group-hover/leveltwo:rotate-90">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2499 16.914L3.83594 8.5L5.24994 7.086L12.2499 14.086L19.2499 7.086L20.6639 8.5L12.2499 16.914Z" fill="#18181B" class="transition-all duration-300 group-hover/leveltwo:fill-white" />
+                </svg>
+            </div>
+            <ul class="absolute top-0 z-30 flex flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-300 bg-white shadow-md opacity-0 right-60 rounded-xl group-hover/leveltwo:visible group-hover/leveltwo:opacity-100">
+                @child
+            </ul>
+        </li>
+    </face>
+</basis>
+
+<basis core="tree" datamembername="visa.cat" idcol="catid" parentidcol="parentid" nullvalue="212665">
+    <layout>
+        <li class="relative flex h-full group">
+            <div class="flex items-center justify-between cursor-pointer toggle-dropdown">
+                <a href="/visa" class="flex items-center gap-2 transition-all duration-300 group text-zinc-900 hover:text-secondary-200">ویزا
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-all duration-300 group-hover:rotate-180">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2499 16.914L3.83594 8.5L5.24994 7.086L12.2499 14.086L19.2499 7.086L20.6639 8.5L12.2499 16.914Z" fill="#18181B" class="transition-all duration-300 group-hover:fill-secondary-200" />
+                    </svg>
+                </a>
+            </div>
+            <!-- submenu -->
+            <ul class="absolute z-30 flex flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-300 bg-white shadow-md opacity-0 rounded-xl top-full group-hover:visible group-hover:opacity-100">
+                @child
+            </ul>
+            <!-- submenu end -->
+        </li>
+    </layout>
+    <face level="end" filter="link is null">
+        <li class="py-1 transition-all duration-300 rounded-md hover:bg-primary-800 group/levelthree">
+            <a href="/visa-list.bc?catid=@catid" class="block w-full transition-all duration-300 text-zinc-900 group-hover/levelthree:text-white">@title</a>
+        </li>
+    </face>
+    <face level="end">
+        <li class="py-1 transition-all duration-300 rounded-md hover:bg-primary-800 group/levelthree">
+            <a href="@link" class="block w-full transition-all duration-300 text-zinc-900 group-hover/levelthree:text-white">@title</a>
+        </li>
+    </face>
+    <face level="1" filter="link is null">
+        <li class="relative py-1 transition-all duration-300 rounded-md group/leveltwo hover:bg-primary-800">
+            <div class="flex justify-between cursor-pointer text-zinc-900 group-hover/leveltwo:text-white">
+                <a href="/visa-list.bc?catid=@catid" class="transition-all duration-300 text-zinc-900 group-hover/leveltwo:text-white">@title</a>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-all duration-300 group-hover/leveltwo:rotate-90">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2499 16.914L3.83594 8.5L5.24994 7.086L12.2499 14.086L19.2499 7.086L20.6639 8.5L12.2499 16.914Z" fill="#18181B" class="transition-all duration-300 group-hover/leveltwo:fill-white" />
+                </svg>
+            </div>
+            <ul class="absolute top-0 z-30 flex flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-300 bg-white shadow-md opacity-0 right-60 rounded-xl group-hover/leveltwo:visible group-hover/leveltwo:opacity-100">
+                @child
+            </ul>
+        </li>
+    </face>
+    <face level="1">
+        <li class="relative py-1 transition-all duration-300 rounded-md group/leveltwo hover:bg-primary-800">
+            <div class="flex justify-between cursor-pointer">
+                <a href="@link" class="transition-all duration-300 text-zinc-900 group-hover/leveltwo:text-white">@title</a>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-all duration-300 group-hover/leveltwo:rotate-90">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2499 16.914L3.83594 8.5L5.24994 7.086L12.2499 14.086L19.2499 7.086L20.6639 8.5L12.2499 16.914Z" fill="#18181B" class="transition-all duration-300 group-hover/leveltwo:fill-white" />
+                </svg>
+            </div>
+            <ul class="absolute top-0 z-30 flex flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-300 bg-white shadow-md opacity-0 right-60 rounded-xl group-hover/leveltwo:visible group-hover/leveltwo:opacity-100">
+                @child
+            </ul>
+        </li>
+    </face>
+</basis>
+
+<basis core="tree" datamembername="tourism.cat" idcol="catid" parentidcol="parentid" nullvalue="210286">
+    <layout>
+        <li class="relative flex h-full group">
+            <div class="flex items-center justify-between cursor-pointer toggle-dropdown">
+                <a href="/Tourism-content" class="flex items-center gap-2 transition-all duration-300 group text-zinc-900 hover:text-secondary-200">مطالب گردشگری
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-all duration-300 group-hover:rotate-180">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2499 16.914L3.83594 8.5L5.24994 7.086L12.2499 14.086L19.2499 7.086L20.6639 8.5L12.2499 16.914Z" fill="#18181B" class="transition-all duration-300 group-hover:fill-secondary-200" />
+                    </svg>
+                </a>
+            </div>
+            <!-- submenu -->
+            <ul class="absolute z-30 flex flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-300 bg-white shadow-md opacity-0 rounded-xl top-full group-hover:visible group-hover:opacity-100">
+                @child
+            </ul>
+            <!-- submenu end -->
+        </li>
+    </layout>
+    <face level="end" filter="link is null">
+        <li class="py-1 transition-all duration-300 rounded-md hover:bg-primary-800 group/levelthree">
+            <a href="/article-list.bc?catid=@catid" class="block w-full transition-all duration-300 text-zinc-900 group-hover/levelthree:text-white">@title</a>
+        </li>
+    </face>
+    <face level="end">
+        <li class="py-1 transition-all duration-300 rounded-md hover:bg-primary-800 group/levelthree">
+            <a href="@link" class="block w-full transition-all duration-300 text-zinc-900 group-hover/levelthree:text-white">@title</a>
+        </li>
+    </face>
+    <face level="1" filter="link is null">
+        <li class="relative py-1 transition-all duration-300 rounded-md group/leveltwo hover:bg-primary-800">
+            <div class="flex justify-between cursor-pointer text-zinc-900 group-hover/leveltwo:text-white">
+                <a href="/article-list.bc?catid=@catid" class="transition-all duration-300 text-zinc-900 group-hover/leveltwo:text-white">@title</a>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-all duration-300 group-hover/leveltwo:rotate-90">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2499 16.914L3.83594 8.5L5.24994 7.086L12.2499 14.086L19.2499 7.086L20.6639 8.5L12.2499 16.914Z" fill="#18181B" class="transition-all duration-300 group-hover/leveltwo:fill-white" />
+                </svg>
+            </div>
+            <ul class="absolute top-0 z-30 flex flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-300 bg-white shadow-md opacity-0 right-60 rounded-xl group-hover/leveltwo:visible group-hover/leveltwo:opacity-100">
+                @child
+            </ul>
+        </li>
+    </face>
+    <face level="1">
+        <li class="relative py-1 transition-all duration-300 rounded-md group/leveltwo hover:bg-primary-800">
+            <div class="flex justify-between cursor-pointer">
+                <a href="@link" class="transition-all duration-300 text-zinc-900 group-hover/leveltwo:text-white">@title</a>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-all duration-300 group-hover/leveltwo:rotate-90">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2499 16.914L3.83594 8.5L5.24994 7.086L12.2499 14.086L19.2499 7.086L20.6639 8.5L12.2499 16.914Z" fill="#18181B" class="transition-all duration-300 group-hover/leveltwo:fill-white" />
+                </svg>
+            </div>
+            <ul class="absolute top-0 z-30 flex flex-col invisible w-64 gap-2 p-4 font-medium transition-all duration-300 bg-white shadow-md opacity-0 right-60 rounded-xl group-hover/leveltwo:visible group-hover/leveltwo:opacity-100">
+                @child
+            </ul>
+        </li>
+    </face>
+</basis>
